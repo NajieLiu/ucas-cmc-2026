@@ -1,0 +1,85 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.3, nodesep=0.22];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled",
+        penwidth=1.5, margin="0.13,0.07", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="拿到一个微分方程题", shape=oval, fillcolor="#3949ab", fontcolor="white",
+        color="#283593", fontsize=19, penwidth=2.2];
+
+  // ===== ① 二阶常系数（蓝）：四步横向链 =====
+  b1 [label="是二阶常系数？\n（y''、y'、y 前的系数是常数）", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  c11 [label="特征方程", color="#1976d2", fontsize=14];
+  c12 [label="齐次通解", color="#1976d2", fontsize=14];
+  c13 [label="（非齐次）待定系数", color="#1976d2", fontsize=14];
+  c14 [label="初值定常数", color="#1976d2", fontsize=14];
+
+  // ===== ② 一阶（绿）：六个子判定 → 解法（2 列 × 3 行） =====
+  b2 [label="是一阶？\n（只有 y' 与 y）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  d1 [label="能分离？\n（y'=φ(x)ψ(y)）", color="#2e7d32", fontsize=14];
+  m1 [label="分离积分", color="#2e7d32", fontsize=14];
+  d2 [label="同次/只含 y/x？", color="#2e7d32", fontsize=14];
+  m2 [label="u=y/x", color="#2e7d32", fontsize=14];
+  d3 [label="y'+P(x)y=Q(x)？", color="#2e7d32", fontsize=14];
+  m3 [label="线性公式", color="#2e7d32", fontsize=14];
+  d4 [label="y'+Py=Qy^n？", color="#2e7d32", fontsize=14];
+  m4 [label="伯努利\nz=y^(1-n)", color="#2e7d32", fontsize=14];
+  d5 [label="凑得动微分？\n（x dx、y dy、x dy-y dx）", color="#2e7d32", fontsize=14];
+  m5 [label="凑微分四式", color="#2e7d32", fontsize=14];
+  d6 [label="分式线性\n（带常数项）？", color="#2e7d32", fontsize=14];
+  m6 [label="平移化齐次", color="#2e7d32", fontsize=14];
+
+  // ===== ③ 高阶（橙）：三解法横向排 =====
+  b3 [label="是高阶？\n（y''=f(x) / y''=f(y,y') / 欧拉型）", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+  c31 [label="逐次积分", color="#e65100", fontsize=14];
+  c32 [label="令 p=y'", color="#e65100", fontsize=14];
+  c33 [label="x=e^t\n（保底项）", color="#e65100", fontsize=14];
+
+  // ===== ④ 隐藏型（紫）=====
+  b4 [label="题面没有\"方程\"二字？\n（积分恒等式、路径无关、偏导条件）", fillcolor="#f3e5f5", color="#6a1b9a", fontsize=16];
+  c41 [label="隐藏型：求导或代入，\n先把方程\"挖\"出来", color="#6a1b9a", fontsize=14];
+
+  // ===== 结尾：永远要做的一步（绿底重点）=====
+  end [label="最后一步（永远要做）：\n回代原变量 + 定常数\n（通解留 C，特解算到底）",
+       fillcolor="#e8f5e9", color="#2e7d32", fontsize=15, penwidth=2.2];
+
+  // ---- 纵向主链（四个判定自上而下依次检查）----
+  root -> b1;
+  b1 -> b2 [weight=6];
+  b2 -> b3 [constraint=false];
+  b3 -> b4 [weight=6];
+  b4 -> end [weight=6];
+
+  // b3 的层级锚：钉在六格最后一行的下方（不可见）
+  d3 -> b3 [style=invis; weight=4];
+
+  // ---- ① 四步横向链（与 b1 同行）----
+  b1 -> c11; c11 -> c12; c12 -> c13; c13 -> c14;
+  { rank=same; b1; c11; c12; c13; c14; }
+
+  // ---- ② 六格：行1（b2 + 第一对 + 第二对）----
+  b2 -> d1;
+  { rank=same; b2; d1; m1; d4; m4; }
+  { rank=same; d2; m2; d5; m5; }
+  { rank=same; d3; m3; d6; m6; }
+
+  // 行内左右顺序锚定（不可见链）
+  m1 -> d4 [style=invis; weight=5];
+  d1 -> d2 [style=invis]; d2 -> d3 [style=invis];
+  d4 -> d5 [style=invis]; d5 -> d6 [style=invis];
+  m1 -> m2 [style=invis]; m2 -> m3 [style=invis];
+  m4 -> m5 [style=invis]; m5 -> m6 [style=invis];
+
+  // ---- ③ 三解法横排（与 b3 同行）----
+  b3 -> c31; c31 -> c32; c32 -> c33;
+  { rank=same; b3; c31; c32; c33; }
+
+  // ---- ④ 隐藏型（与 b4 同行）----
+  b4 -> c41;
+  { rank=same; b4; c41; }
+
+  // ---- 配对线（原文横向箭头：判定 → 解法）----
+  edge [style=dashed, constraint=false, color="#9e9e9e", arrowsize=0.7];
+  d1 -> m1; d2 -> m2; d3 -> m3; d4 -> m4; d5 -> m5; d6 -> m6;
+}

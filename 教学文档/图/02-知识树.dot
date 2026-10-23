@@ -1,0 +1,52 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.45, nodesep=0.18];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled",
+        penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="极限的\"证明面\"与连续性", fillcolor="#3949ab", fontcolor="white", color="#283593",
+        fontsize=19, penwidth=2.2];
+
+  // 支1：极限存在性的证明（蓝）
+  b1 [label="极限存在性的证明\n（怎么知道极限在）", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  w1 [label="夹逼\n（放缩）", color="#1976d2", fontsize=14];
+  w2 [label="单调有界\n（递推）", color="#1976d2", fontsize=14];
+  w3 [label="介值/零点\n（造 F）", color="#1976d2", fontsize=14];
+  e1 [label="两侧同极限", color="#1976d2", fontsize=14];
+  e1ab [label="数列版\n积分版", color="#1976d2", fontsize=14];
+  c1 [label="收敛即可设 A", color="#1976d2", fontsize=14];
+  c2 [label="猜界→有界→单调→取极限\n（书写四步，评分点全在这）", color="#1976d2", fontsize=14];
+  e2 [label="两端异号\n即存在", color="#1976d2", fontsize=14];
+
+  // 支2：连续性理论（绿）
+  b2 [label="连续性理论\n（函数断没断）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  d1 [label="定义三合一", color="#2e7d32", fontsize=14];
+  d2 [label="左=右=值", color="#2e7d32", fontsize=14];
+  d3 [label="间断点分类", color="#2e7d32", fontsize=14];
+  d4 [label="第一类/第二类", color="#2e7d32", fontsize=14];
+  d5 [label="可去/跳跃/无穷/振荡", color="#2e7d32", fontsize=14];
+
+  // 支3：连续函数的"福利"（橙）
+  b3 [label="连续函数的\"福利\"\n（闭区间上能干什么）", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+  g1 [label="有界性\n\"有界\"", color="#e65100", fontsize=14];
+  g2 [label="最值定理\n\"取得到\"", color="#e65100", fontsize=14];
+  g3 [label="介值定理\n\"能取中间值\"", color="#e65100", fontsize=14];
+  F [label="构造辅助函数 F", color="#e65100", fontsize=14];
+
+  root -> b1; root -> b2; root -> b3;
+
+  b1 -> w1; b1 -> w2; b1 -> w3;
+  w1 -> e1; e1 -> e1ab;
+  w2 -> c1; c1 -> c2;
+  w3 -> e2;
+
+  b2 -> d1; d1 -> d2; d2 -> d3; d3 -> d4; d4 -> d5;
+
+  b3 -> g1; b3 -> g2; b3 -> g3;
+
+  // 三「福利」沿原文 └──┴──┘ 汇合线收束到「构造辅助函数 F」（虚线，不扰主树布局）
+  edge [style=dashed, constraint=false, color="#9e9e9e"];
+  g1 -> F; g3 -> F;
+  g2 -> F [constraint=true];
+}

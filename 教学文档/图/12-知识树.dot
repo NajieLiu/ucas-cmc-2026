@@ -1,0 +1,49 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.45, nodesep=0.22, ordering=out];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled", penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="数项级数（本篇）", fillcolor="#3949ab", fontcolor="white", color="#283593", fontsize=19, penwidth=2.2];
+
+  j [label="判敛\n（收不收敛？）", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  q [label="求和\n（和是多少？）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  z [label="综合\n（与极限/积分/数列）", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+
+  j1 [label="正项级数\n（三大判别法；\n放缩估阶）", color="#1976d2", fontsize=14];
+  j2 [label="交错/任意项\n（Leibniz；\n条件收敛）", color="#1976d2", fontsize=14];
+  j3 [label="抽象证明\n（构造控制级数）", color="#1976d2", fontsize=14];
+
+  q1 [label="裂项\n（望远镜）", color="#2e7d32", fontsize=14];
+  q2 [label="展开式取值\n（特殊点）", color="#2e7d32", fontsize=14];
+
+  z1 [label="递推型\n（数列+级数）", color="#e65100", fontsize=14];
+  z2 [label="含积分放缩\n（16A六/\n12届七型）", color="#e65100", fontsize=14];
+
+  bar [label="基准级数：几何 Σqⁿ、p 级数 Σ1/nᵖ、Σ1/(n lnᵖn)\n——一切比较的\"标尺\"", color="#616161", fillcolor="#f5f5f5", fontsize=13];
+
+  // weight=3：钉住「求和/综合」的层号，避免 dot 为了缩短它们与子节点的边而把父节点下移
+  root -> j;
+  root -> q [weight=3];
+  root -> z [weight=3];
+  j -> j1; j -> j2; j -> j3;
+  q -> q1; q -> q2;
+  z -> z1; z -> z2;
+
+  // 汇聚虚线：在 ordering=out 下，j3 先声明的出边排最左，故 j3->bar 放在最前
+  j3 -> bar [style=dashed, constraint=false, color="#9e9e9e", arrowsize=0.6, penwidth=1.2];
+
+  // 排版用不可见边：将「求和」「综合」的子节点下移一层，控制总宽度（不改变挂接关系）
+  j3 -> q1 [style=invis];
+  j3 -> q2 [style=invis];
+  j3 -> z1 [style=invis];
+  j3 -> z2 [style=invis];
+
+  // 隐形锚点：把底部横条定到第 4 层，避免 dot 将其贴到最左
+  j2 -> bar [style=invis, minlen=2];
+  { rank=sink; bar; }
+
+  edge [style=dashed, constraint=false, color="#9e9e9e", arrowsize=0.6, penwidth=1.2];
+  j1 -> bar;
+  j2 -> bar;
+}

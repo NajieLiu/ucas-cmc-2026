@@ -1,0 +1,33 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.45, nodesep=0.22];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled", penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="多元函数微分学", fillcolor="#3949ab", fontcolor="white", color="#283593", fontsize=19, penwidth=2.2];
+
+  q [label="求导技术", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  g [label="几何应用", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  e [label="极值与优化", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+
+  // 求导技术支（蓝）：三个子节点竖排
+  q1 [label="复合\nf₁f₂·链式\n二阶", color="#1976d2", fontsize=14];
+  q2 [label="隐函数\n两边求·z是函数\n组合偏导", color="#1976d2", fontsize=14];
+  q3 [label="可微性\n线性化\nΔz≈Afx+Bfy+o(ρ)", color="#1976d2", fontsize=14];
+
+  // 几何应用支（绿）
+  g1 [label="切平面\n法向量\n(fx,fy,-1)·∇F", color="#2e7d32", fontsize=14];
+  g2 [label="曲线切线\n叉积\nr'=n₁×n₂", color="#2e7d32", fontsize=14];
+  g3 [label="相切\n法向共线+代入\n切点双满足", color="#2e7d32", fontsize=14];
+
+  // 极值与优化支（橙）
+  e1 [label="无条件\nAC-B²", color="#e65100", fontsize=14];
+  e2 [label="闭区域\n三步\n内部/边界·角点\n比较", color="#e65100", fontsize=14];
+  e3 [label="条件极值\nLagrange·L=f+λφ\n代回比较", color="#e65100", fontsize=14];
+
+  root -> q; root -> g; root -> e;
+
+  q -> q1; q1 -> q2; q2 -> q3;
+  g -> g1; g1 -> g2; g2 -> g3;
+  e -> e1; e1 -> e2; e2 -> e3;
+}

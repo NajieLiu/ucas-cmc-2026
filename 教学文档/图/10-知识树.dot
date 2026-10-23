@@ -1,0 +1,42 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.45, nodesep=0.21];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled", penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="重积分", fillcolor="#3949ab", fontcolor="white", color="#283593", fontsize=19, penwidth=2.2];
+
+  b1 [label="二重积分\n（平面·两层循环）", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  b2 [label="三重积分\n（空间·三层循环）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  b3 [label="应用与综合", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+
+  d1 [label="直角坐标\n定限口诀", color="#1976d2", fontsize=14];
+  d2 [label="极坐标 (r,θ)\nrdrdθ 因子", color="#1976d2", fontsize=14];
+  d3 [label="换序（换域）\n画域换序", color="#1976d2", fontsize=14];
+  d4 [label="对称性\n（奇偶/轮换）\n∫x²=∫y²\n=½∫(x²+y²)", color="#1976d2", fontsize=14];
+
+  t1 [label="先一后二\n（穿线）\nz 上下\n两曲面", color="#2e7d32", fontsize=14];
+  t2 [label="先二后一\n（切片）\n截面面积", color="#2e7d32", fontsize=14];
+  t3 [label="球柱坐标\n（dV 因子）\n旋转体/两种\n坐标对比", color="#2e7d32", fontsize=14];
+
+  u1 [label="体积/质量", color="#e65100", fontsize=14];
+  u2 [label="质心公式", color="#e65100", fontsize=14];
+  u3 [label="转动惯量", color="#e65100", fontsize=14];
+
+  m [label="与极限综合\n（区域半径 r→0：\n先积分子，再泰勒配阶）", fillcolor="#fce4ec", color="#ad1457", fontsize=14];
+
+  root -> b1; root -> b2; root -> b3;
+
+  b1 -> d1; d1 -> d2; d2 -> d3; d3 -> d4;
+  b2 -> t1; b2 -> t2; b2 -> t3;
+  b3 -> u1; b3 -> u2; b3 -> u3;
+
+  { rank=same; t1; t2; t3; }
+
+  d4 -> m [style=invis];
+  t2 -> m [style=invis];
+
+  edge [style=dashed, constraint=false, color="#9e9e9e"];
+  b1 -> m;
+  b2 -> m;
+}

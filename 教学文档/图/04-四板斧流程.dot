@@ -1,0 +1,26 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.55, nodesep=0.3];
+  node [fontname="Microsoft YaHei", fontsize=16, shape=box, style="rounded,filled",
+        penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75,
+        fontname="Microsoft YaHei", fontsize=13, fontcolor="#455a64"];
+
+  // 问题节点（三步问答主链）
+  q1 [label="① 数点：结论里有几个\n中值点？", fillcolor="#e3f2fd", color="#1976d2"];
+  q2 [label="② 看有没有 f″：", fillcolor="#e3f2fd", color="#1976d2"];
+  q3 [label="③ 看结论里有没有\n\"能算出来的常数\"：", fillcolor="#e3f2fd", color="#1976d2"];
+
+  // 板斧出口（结局节点）
+  aC [label="板斧 C\n（若还含 f″，\n则 C+D 混用）", fillcolor="#e8f5e9", color="#2e7d32", penwidth=1.8];
+  aD [label="板斧 D\n（Taylor）", fillcolor="#e8f5e9", color="#2e7d32", penwidth=1.8];
+  aB [label="板斧 B", fillcolor="#e8f5e9", color="#2e7d32", penwidth=1.8];
+  aA [label="板斧 A\n（原函数法）", fillcolor="#e8f5e9", color="#2e7d32", penwidth=1.8];
+
+  q1 -> q2 [label="一个", weight=10];
+  q1 -> aC [label="两个/三个"];
+  q2 -> q3 [label="没有", weight=10];
+  q2 -> aD [label="有"];
+  q3 -> aB [label="有（如端点值、\n积分值算出的数）"];
+  q3 -> aA [label="没有\n（纯 f、f′、ξ 的关系）"];
+}

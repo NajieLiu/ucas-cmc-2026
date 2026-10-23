@@ -1,0 +1,62 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.45, nodesep=0.22];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled",
+        penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="曲线曲面积分", fillcolor="#3949ab", fontcolor="white", color="#283593",
+        fontsize=19, penwidth=2.2];
+
+  // 两大枝：曲线（蓝）/ 曲面（绿）
+  c  [label="曲线（一维）", fillcolor="#e3f2fd", color="#1976d2", fontsize=16, penwidth=2.0];
+  s  [label="曲面（二维）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16, penwidth=2.0];
+
+  // 各分第一类 / 第二类
+  c1 [label="第一类\n（对弧长 ds）", fillcolor="#e3f2fd", color="#1976d2", fontsize=15];
+  c2 [label="第二类\n（对坐标 dx/dy/dz）", fillcolor="#e3f2fd", color="#1976d2", fontsize=15];
+  s1 [label="第一类\n（对面积 dS）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=15];
+  s2 [label="第二类\n（对坐标 dydz/\ndzdx/dxdy）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=15];
+
+  // 曲线第一类（对弧长 ds）三步
+  c1a [label="参数化", color="#1976d2", fontsize=14];
+  c1b [label="代方程", color="#1976d2", fontsize=14];
+  c1c [label="轮换对称", color="#1976d2", fontsize=14];
+
+  // 曲线第二类（对坐标）四种款式
+  c2a [label="平面闭：Green", color="#1976d2", fontsize=14];
+  c2b [label="空间：参数化", color="#1976d2", fontsize=14];
+  c2c [label="奇点：挖洞", color="#1976d2", fontsize=14];
+  c2d [label="无关：路径无关/全微分", color="#1976d2", fontsize=14];
+
+  // 曲面第一类（对面积 dS）
+  s1a [label="投影法", color="#2e7d32", fontsize=14];
+  s1b [label="dS=√(1+zx²+zy²)", color="#2e7d32", fontsize=14];
+
+  // 曲面第二类（对坐标）
+  s2a [label="单张：合一投影", color="#2e7d32", fontsize=14];
+  s2b [label="闭合：Gauss 补面", color="#2e7d32", fontsize=14];
+
+  // 重点框：对称性三件套
+  tk   [label="对称性三件套\n轮换 / 奇偶 / cosγ", fillcolor="#fce4ec", color="#ad1457", fontsize=15];
+
+  // 底部重点框：三大定理
+  main [label="三大定理（边界↔内部）\nGreen：环流=旋度和\nGauss：通量=散度和\nStokes：环流=旋度和（空间版）",
+        fillcolor="#fce4ec", color="#ad1457", fontsize=16, penwidth=2.2];
+
+  root -> c; root -> s;
+  c -> c1; c -> c2;
+  s -> s1; s -> s2;
+  c1 -> c1a; c1a -> c1b; c1b -> c1c;
+  c2 -> c2a; c2a -> c2b; c2b -> c2c; c2c -> c2d;
+  s1 -> s1a; s1a -> s1b;
+  s2 -> s2a; s2a -> s2b;
+
+  // 对称性三件套：横跨两类曲面积分的呼应框（虚线关联）
+  s1b -> tk [style=dashed, color="#9e9e9e", arrowhead=none];
+  s2b -> tk [style=dashed, color="#9e9e9e", arrowhead=none];
+
+  // 三大定理：底部汇总框（不可见边定位在整图下方）
+  c2d -> main [style=invis];
+  tk -> main [style=invis];
+}

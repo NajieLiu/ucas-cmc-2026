@@ -1,0 +1,38 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.45, nodesep=0.22];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled",
+        penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="导数与微分计算", fillcolor="#3949ab", fontcolor="white", color="#283593",
+        fontsize=19, penwidth=2.2];
+
+  // 支1：求导技术（蓝 #1976d2）
+  d [label="求导技术", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  d1 [label="复合\n链式\n一层一层乘", color="#1976d2", fontsize=14];
+  d2 [label="隐函数\n补 y'\n两边求导\n二阶", color="#1976d2", fontsize=14];
+  d3 [label="参数/反\n倒过来\ndy/dx = y'/x'\n再除", color="#1976d2", fontsize=14];
+
+  // 支2：高阶导数（绿 #2e7d32）；「四条路线」为注解行，下挂原文列出的两条
+  h [label="高阶导数", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  hn [label="四条路线", color="#616161", fillcolor="#f5f5f5", fontsize=13];
+  h1 [label="部分分式\n递推\n有理式拆项", color="#2e7d32", fontsize=14];
+  h2 [label="Leibniz\n点值归零\n(x-x₀)ⁿ\n低阶全消\n只剩一项", color="#2e7d32", fontsize=14];
+
+  // 支3：微分与几何（橙 #e65100）
+  g [label="微分与几何", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+  g1 [label="微分\n形式不变\n凑微分", color="#e65100", fontsize=14];
+  g2 [label="切线\n法线\n点斜式", color="#e65100", fontsize=14];
+  g3 [label="曲率\n弧长\nK=|y''|\n/(1+y'²)^{3/2}", color="#e65100", fontsize=14];
+
+  root -> d; root -> h; root -> g;
+
+  d -> d1; d -> d2; d -> d3;
+  h -> hn; hn -> h1; hn -> h2;
+  g -> g1; g -> g2; g -> g3;
+
+  { rank=same; d; h; g; }
+  { rank=same; d1; d2; d3; hn; g1; g2; g3; }
+  { rank=same; h1; h2; }
+}

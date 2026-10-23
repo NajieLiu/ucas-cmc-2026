@@ -1,0 +1,26 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.5, nodesep=0.32];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled",
+        penwidth=1.5, margin="0.14,0.09", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="x₀ 是间断点", fillcolor="#3949ab", fontcolor="white", color="#283593",
+        fontsize=19, penwidth=2.2];
+
+  b1 [label="第一类\n（左右极限都存在）", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  b2 [label="第二类\n（至少一侧极限不存在）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+
+  l1 [label="左右极限相等\n（但 ≠ f(x₀)\n或 f(x₀) 无定义）\n── 可去间断点", color="#1976d2", fontsize=14];
+  l2 [label="左右极限不等\n── 跳跃间断点", color="#1976d2", fontsize=14];
+  l3 [label="趋于无穷\n── 无穷间断点", color="#2e7d32", fontsize=14];
+  l4 [label="振荡\n── 振荡间断点", color="#2e7d32", fontsize=14];
+
+  { rank=same; b1; b2; }
+  { rank=same; l1; l2; l3; l4; }
+
+  root -> b1; root -> b2;
+
+  b1 -> l1; b1 -> l2;
+  b2 -> l3; b2 -> l4;
+}

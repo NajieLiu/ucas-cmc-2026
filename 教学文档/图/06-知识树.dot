@@ -1,0 +1,37 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.45, nodesep=0.22];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled", penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="定积分应用与积分不等式", fillcolor="#3949ab", fontcolor="white", color="#283593", fontsize=19, penwidth=2.2];
+
+  a [label="几何/物理应用\n（微元法→五公式）", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  b [label="积分不等式/恒等式\n（\"四板斧\"）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  c [label="积分序列与误差\n（把 n 和积分搅在一起）", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+
+  a1 [label="面积 上减下", color="#1976d2", fontsize=14];
+  a2 [label="体积 圆盘/柱壳", color="#1976d2", fontsize=14];
+  a3 [label="弧长 √(1+f'²)", color="#1976d2", fontsize=14];
+  a4 [label="侧面积 2π|f|√(1+f'²)", color="#1976d2", fontsize=14];
+  a5 [label="平行截面 ∫A(x)", color="#1976d2", fontsize=14];
+  a6 [label="功/压力/引力（保底）", color="#1976d2", fontsize=14];
+
+  b1 [label="① Cauchy-Schwarz", color="#2e7d32", fontsize=14];
+  b2 [label="② 分部积分配恒等式", color="#2e7d32", fontsize=14];
+  b3 [label="③ 对称化（二重转化）", color="#2e7d32", fontsize=14];
+  b4 [label="④ 放缩与取等分析", color="#2e7d32", fontsize=14];
+  b5 [label="变限积分辅助函数\n（单调性两级构造）", color="#2e7d32", fontsize=14];
+
+  c1 [label="含参序列：换元挪 n", color="#e65100", fontsize=14];
+  c2 [label="剪尾估头 + 夹逼", color="#e65100", fontsize=14];
+  c3 [label="黎曼和误差：端点/中点", color="#e65100", fontsize=14];
+  c4 [label="两张成品公式", color="#e65100", fontsize=14];
+  c5 [label="积分中值定理与估值\n（配夹逼处理 ξ）", color="#e65100", fontsize=14];
+
+  root -> a; root -> b; root -> c;
+
+  a -> a1; a1 -> a2; a2 -> a3; a3 -> a4; a4 -> a5; a5 -> a6;
+  b -> b1; b1 -> b2; b2 -> b3; b3 -> b4; b4 -> b5;
+  c -> c1; c1 -> c2; c2 -> c3; c3 -> c4; c4 -> c5;
+}

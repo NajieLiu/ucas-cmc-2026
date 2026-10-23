@@ -1,0 +1,39 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.5, nodesep=0.22];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled", penwidth=1.5, margin="0.14,0.09", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="幂级数 与 傅里叶级数", fillcolor="#3949ab", fontcolor="white", color="#283593", fontsize=19, penwidth=2.2];
+
+  p [label="幂级数 Σaₙ(x-x₀)ⁿ", fillcolor="#e8eaf6", color="#3949ab", fontsize=16];
+  q [label="傅里叶级数（三角级数）", fillcolor="#e8eaf6", color="#3949ab", fontsize=16];
+
+  p1 [label="收敛半径\n(三件套)", fillcolor="#e3f2fd", color="#1976d2", fontsize=15];
+  p2 [label="和函数\n(两招半)", fillcolor="#e8f5e9", color="#2e7d32", fontsize=15];
+  p3 [label="展开(间接法)\n(查字典拼装)", fillcolor="#fff3e0", color="#e65100", fontsize=15];
+  q1 [label="Dirichlet 定理\n(收敛值三档)", fillcolor="#f3e5f5", color="#6a1b9a", fontsize=15];
+  q2 [label="正交性/系数\n(证明应用)", fillcolor="#e0f2f1", color="#00695c", fontsize=15];
+
+  b1 [label="标准型比值/根值\n缺项型换元\n端点单独验", color="#1976d2", fontsize=14, height=0.92];
+  b2 [label="逐项求导/逐项积分\n索引平移+配展开式\n端点补\"洞\"", color="#2e7d32", fontsize=14, height=0.92];
+  b3 [label="拆项·求导·积分\n+五个基本展开", color="#e65100", fontsize=14, height=0.92];
+  b4 [label="连续点 f(x)\n间断点左右平均\n端点再平均一次", color="#6a1b9a", fontsize=14, height=0.92];
+  b5 [label="系数唯一性\n两个周期夹系数\n稠密性(另解)", color="#00695c", fontsize=14, height=0.92];
+
+  bar [label="幂级数与极限综合", fillcolor="#f5f5f5", color="#616161", fontsize=14, width=9.2];
+
+  { rank=same; p; q; }
+  { rank=same; p1; p2; p3; q1; q2; }
+  { rank=same; b1; b2; b3; b4; b5; }
+
+  root -> p; root -> q;
+
+  p -> p1; p -> p2; p -> p3;
+  q -> q1; q -> q2;
+
+  p1 -> b1; p2 -> b2; p3 -> b3; q1 -> b4; q2 -> b5;
+
+  edge [style=dashed, color="#9e9e9e", penwidth=1.2];
+  b1 -> bar; b2 -> bar; b3 -> bar; b4 -> bar; b5 -> bar;
+}

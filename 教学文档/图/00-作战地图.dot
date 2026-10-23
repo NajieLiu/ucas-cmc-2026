@@ -1,0 +1,36 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.5, nodesep=0.25];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled",
+        penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="难度梯度\n（150 分钟的作战地图）", fillcolor="#3949ab", fontcolor="white",
+        color="#283593", fontsize=19, penwidth=2.2];
+
+  // 三个时间段（时间轴里程碑，按色板 2 绿 -> 3 橙 -> 6 玫红 递进）
+  t1 [label="0–40 分钟", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  t2 [label="40–90 分钟", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+  t3 [label="90–150分钟", fillcolor="#fce4ec", color="#ad1457", fontsize=16];
+
+  // 各段完整文字（白底 + 本段色边）
+  d1 [label="填空 30 分：以\"回归教材\"\n的基础计算为主——极限、\n求导、积分、偏导、几何，\n方法全是教材例题级的套路。\n目标：30 分拿 24–30。",
+      color="#2e7d32", fontsize=14];
+  d2 [label="第 2–4 道大题（约 42 分）：\nODE 换元求解、多元积分计算、\n几何/极限综合——\n思路明确、按步骤给分，\n\"会套路+敢动笔\"就有分。",
+      color="#e65100", fontsize=14];
+  d3 [label="卷末两道题（28 分）：\n积分不等式/恒等式、级数证明、\n构造型证明——真正的拉分层。\n目标：写足框架，抢第一问。",
+      color="#ad1457", fontsize=14];
+
+  root -> t1;
+  t1 -> t2;
+  t2 -> t3;
+
+  edge [constraint=false];
+  t1 -> d1;
+  t2 -> d2;
+  t3 -> d3;
+
+  { rank=same; t1; d1; }
+  { rank=same; t2; d2; }
+  { rank=same; t3; d3; }
+}

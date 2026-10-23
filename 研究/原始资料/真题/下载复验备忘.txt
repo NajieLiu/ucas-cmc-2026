@@ -1,0 +1,65 @@
+# CMC 真题素材库 · 下载直链复验备忘（纯文本备份，防链接失效后溯源）
+# 更新：2026-10-10
+# 用法：需要时用浏览器打开，或复制到终端执行（curl 段落）。微信链接（mp.weixin.qq.com）不在本表内——见 微信来源清单.md。
+
+# ── 1. GitHub 开源库（1–13届初赛 / 1–12届决赛 试题 PDF；大陆访问可能间歇超时，重试即可）
+https://github.com/Iamnotphage/CMC-SpeedRun/tree/main/source/真题
+#   raw 示例（第6届决赛）:
+#   curl -LO "https://raw.githubusercontent.com/Iamnotphage/CMC-SpeedRun/main/source/%E7%9C%9F%E9%A2%98/06-%E7%AC%AC%E5%85%AD%E5%B1%8A/2015%E5%B9%B403%E6%9C%88-%E9%9D%9E%E6%95%B0%E5%AD%A6%E7%B1%BB-%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%86%B3%E8%B5%9B%E8%AF%95%E5%8D%B7.pdf"
+
+# ── 2. 成都文理学院（第1–14届初赛含参考答案 zip；本库只取1–9届，10–14届亦在此）
+https://sxjm.cdcas.edu.cn/wjxz/sxjsst/C700502index_1.htm
+#   第1届 zip: https://sxjm.cdcas.edu.cn/rootfiles/2024/10/26/1728353777295545-1728353777378289.zip
+#   第9届 zip: https://sxjm.cdcas.edu.cn/rootfiles/2024/10/26/1728353779004697-1728353779017541.zip
+
+# ── 3. 官网 cmathc.org.cn（11届初赛题+官方解答；16届决赛A/B；下载中心）
+https://www.cmathc.org.cn/static/upload/file/jsst/第十一届全国大学生数学竞赛初赛（非数学类）试题及参考答案.pdf
+https://www.cmathc.org.cn/static/upload/file/jsst/第十六届全国大学生数学竞赛决赛（非数学A类）试题及答案解析.pdf
+https://www.cmathc.org.cn/static/upload/file/jsst/第十六届全国大学生数学竞赛决赛（非数学B类）试题及答案解析.pdf
+https://www.cmathc.org.cn/xiazai_4/
+
+# ── 4. 官网 cmathc.cn（仅 http 可用）（9/10/11/12/14届决赛题+解；10届初赛答案；7届初赛答案照片页）
+curl -LO http://www.cmathc.cn/upfiles/file/201803/20180328171305467.pdf   # 9届决赛试题
+curl -LO http://www.cmathc.cn/upfiles/file/201803/20180328171314783.pdf   # 9届决赛答案
+curl -LO http://www.cmathc.cn/upfiles/file/201903/201903fsxst.pdf         # 10届决赛题+解
+curl -LO http://www.cmathc.cn/upfiles/file/202105/20210515165247187.pdf   # 11届决赛题+解
+curl -LO http://www.cmathc.cn/upfiles/file/202105/20210515164846467.pdf   # 12届决赛题+解
+curl -LO http://www.cmathc.cn/upfiles/file/202305/20230529081605755.pdf   # 14届决赛题+解
+curl -LO http://www.cmathc.cn/upfiles/file/201811/20181105200103252.pdf   # 10届初赛答案
+#   7届初赛答案照片页: http://www.cmathc.cn/article/48.html
+#   7届/8届决赛照片页: http://www.cmathc.cn/article/52.html 、 http://www.cmathc.cn/article/91.html
+
+# ── 5. 比赛信息网 172xiaoyuan（图片版：13/15届决赛、初赛/决赛模拟题）
+http://bisai.172xiaoyuan.com/shuxuejingsai/zhenti/9838.html   # 13届决赛（非数学）题+解
+http://bisai.172xiaoyuan.com/shuxuejingsai/zhenti/9729.html   # 15届决赛（非数学）题+解
+http://bisai.172xiaoyuan.com/shuxuejingsai/zhenti/10063.html  # 初赛模拟（非数学）
+http://bisai.172xiaoyuan.com/shuxuejingsai/zhenti/10070.html  # 决赛模拟（非数学）
+
+# ── 6. 西安电子科技大学实验中心（17届初赛 A/B LaTeX 精排版，下载即文件名标注）
+https://stsy.xidian.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1393966656&wbfileid=B322126624A6786E1249C5BBC900490E   # A类
+https://stsy.xidian.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1393966656&wbfileid=AE33A70C2187B116117EBD08443D932C   # B类
+
+# ── 7. 网易转载（17届决赛回忆版试题全文）
+https://www.163.com/dy/article/KQQBD8U8054535JN.html
+
+# ── 8. 网盘类（需登录/人工，仅供参考）
+#   官方汇总·百度网盘（1-17届初赛）：https://pan.baidu.com/s/1yqZxS03k3PO7Wd4Aj4RjIQ?pwd=1234 （提取码1234，另有图形验证码）
+#   夸克网盘·初赛模拟 rar 6.7MB：https://pan.quark.cn/s/e3ca5d964986 （匿名可查清单，下载需登录/客户端）
+#   夸克网盘·决赛模拟 rar 4.0MB：https://pan.quark.cn/s/1bca10486d71
+
+# ── 9. 缺口闭合批次（2026-10-10 晚，全部非微信源）
+#   第1届决赛答案（浙科大官方扫描）:
+#   https://lxy.zust.edu.cn/__local/3/BB/A8/04B1C79F935462BCE3731A2BE34_321B1524_2218D.pdf?e=.pdf
+#   Frees-CMC 镜像仓库（2-8届决赛答案等，路径 sources/past_papers/，raw 可直下）:
+#   https://github.com/Frees-Ling/Frees-CMC/tree/main/sources/past_papers
+#     示例（第2届）: https://raw.githubusercontent.com/Frees-Ling/Frees-CMC/main/sources/past_papers/第2届全国大学生数学竞赛赛题/第2届全国大学生数学竞赛非数学类决赛试卷参考答案（2011年） .pdf
+#   上理工 RAR（1-6届非专业组决赛/预赛；内含4届评分细则、6届参考答案）:
+#   http://lxy.usst.edu.cn/_upload/article/files/56/3a/c61b46f648098973d50034c733aa/0a17f760-e6a8-41a0-a59b-03ff87f96559.rar
+#   中科大 RAR（5届决赛试卷及评分细则）:
+#   http://ahmath.ustc.edu.cn/_upload/article/files/8d/74/e008148b4d1aa7b6633033c2376b/505e71df-eba2-4e04-a368-71130952da23.rar
+#   网易号 17届决赛 A类（正式版题+详细解答）: https://www.163.com/dy/article/KS0UTDPC054535JN.html
+#   网易号 17届决赛 B类（正式版题+参考答案）: https://www.163.com/dy/article/KS3H7N71054535JN.html
+#   网易号 1-17届汇编（仅试题，71图，未入库）: https://www.163.com/dy/article/L749TKPJ054535JN.html
+
+# ── 10. 微信（可选复核源，已无必须项）
+#   全部缺口已由非微信源闭合；16 篇图文清单见 微信来源清单.md（按用户要求未做脚本抓取）

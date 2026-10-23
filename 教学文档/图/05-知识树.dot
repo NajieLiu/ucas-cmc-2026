@@ -1,0 +1,55 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.45, nodesep=0.22];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled", penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="一元积分计算", fillcolor="#3949ab", fontcolor="white", color="#283593", fontsize=19, penwidth=2.2];
+
+  b1 [label="不定积分\n（找回原函数）", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  b2 [label="定积分\n（算出一个数）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  b3 [label="变限积分 / 广义积分\n（积出来的函数 /\n无穷区间）", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+
+  h1 [label="三把扳手", fillcolor="#e3f2fd", color="#1976d2", fontsize=15];
+  h2 [label="技巧包四件", fillcolor="#e8f5e9", color="#2e7d32", fontsize=15];
+  h3 [label="两套视角", fillcolor="#fff3e0", color="#e65100", fontsize=15];
+
+  cw [label="凑微分", color="#1976d2", fontsize=14];
+  hy [label="换元", color="#1976d2", fontsize=14];
+  fb [label="分部", color="#1976d2", fontsize=14];
+  rs [label="有理式\"除—凑\"两板斧", color="#1976d2", fontsize=14];
+  sj [label="三角有理式（对称拆分）", color="#1976d2", fontsize=14];
+  fc [label="定积分为常数的函数方程\n（设定为\"数\"，\n造方程解出）", color="#1976d2", fontsize=14];
+
+  t1 [label="① 对称奇偶", color="#2e7d32", fontsize=14];
+  t2 [label="② 区间再现", color="#2e7d32", fontsize=14];
+  t3 [label="③ 周期平移", color="#2e7d32", fontsize=14];
+  t4 [label="④ 恒等变形凑导数", color="#2e7d32", fontsize=14];
+  t5 [label="分部互消（配对）", color="#2e7d32", fontsize=14];
+  t6 [label="被积三角式的导数结构", color="#2e7d32", fontsize=14];
+  t7 [label="+ arctan e^x + arctan e^(-x) = π/2", color="#2e7d32", fontsize=14];
+
+  v1 [label="变限积分：\n换元分离 + 求导", color="#e65100", fontsize=14];
+  v2 [label="洛必达 / 等价 / 单调性", color="#e65100", fontsize=14];
+  g1 [label="广义积分：\n拆成极限", color="#e65100", fontsize=14];
+  g2 [label="p 积分 / 判敛 + 求值", color="#e65100", fontsize=14];
+
+  root -> b1; root -> b2; root -> b3;
+
+  b1 -> h1;
+  h1 -> cw; cw -> hy; hy -> fb;
+  fb -> rs; rs -> sj; sj -> fc;
+
+  b2 -> h2;
+  h2 -> t1; t1 -> t2; t2 -> t3; t3 -> t4; t4 -> t5; t5 -> t6; t6 -> t7;
+
+  b3 -> h3;
+  h3 -> v1; v1 -> v2;
+  h3 -> g1; g1 -> g2;
+
+  // 配对虚线：原文长横线相接的两列（凑微分─① 对称奇偶 / 换元─③ 周期平移 / 分部─分部互消（配对））
+  edge [style=dashed, constraint=false, color="#9e9e9e", dir=none, penwidth=1.2];
+  cw -> t1;
+  hy -> t3;
+  fb -> t5;
+}

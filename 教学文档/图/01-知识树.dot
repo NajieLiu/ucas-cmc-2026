@@ -1,0 +1,30 @@
+digraph G {
+  bgcolor="white";
+  graph [ranksep=0.45, nodesep=0.22];
+  node [fontname="Microsoft YaHei", fontsize=15, shape=box, style="rounded,filled", penwidth=1.5, margin="0.13,0.08", fillcolor="white"];
+  edge [penwidth=1.4, color="#5f6368", arrowsize=0.75];
+
+  root [label="极限的计算", fillcolor="#3949ab", fontcolor="white", color="#283593", fontsize=19, penwidth=2.2];
+
+  f [label="函数极限\n（x 连续地跑）", fillcolor="#e3f2fd", color="#1976d2", fontsize=16];
+  s [label="数列极限\n（n 离散地跳）", fillcolor="#e8f5e9", color="#2e7d32", fontsize=16];
+  i [label="含积分的极限\n（变限积分 / 含参）", fillcolor="#fff3e0", color="#e65100", fontsize=16];
+
+  f1 [label="等价无穷小\n乘除因子·一阶", color="#1976d2", fontsize=14];
+  f2 [label="泰勒展开\n相减抵消·高阶", color="#1976d2", fontsize=14];
+  f3 [label="洛必达\n导数比", color="#1976d2", fontsize=14];
+
+  s1 [label="夹逼准则\n通项放缩·上下界", color="#2e7d32", fontsize=14];
+  s2 [label="单调有界+不动点\n先证收敛再取极限\n循环论证是大忌", color="#2e7d32", fontsize=14];
+
+  i1 [label="换元消「包裹」", color="#e65100", fontsize=14];
+  i2 [label="变限积分求导", color="#e65100", fontsize=14];
+  i3 [label="积分中值", color="#e65100", fontsize=14];
+  i4 [label="夹逼", color="#e65100", fontsize=14];
+
+  root -> f; root -> s; root -> i;
+
+  f -> f1; f -> f2; f -> f3;
+  s -> s1; s -> s2;
+  i -> i1; i1 -> i2; i2 -> i3; i3 -> i4;
+}
