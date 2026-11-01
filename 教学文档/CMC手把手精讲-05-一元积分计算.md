@@ -960,61 +960,65 @@ t^2x^2\cdot x(1-t)=x^2\ \Rightarrow\ x=\frac{1}{t^2(1-t)},\qquad y=tx=\frac{1}{t
 
 <!-- integral-examples:end -->
 
+<!-- integral-tail:start -->
+
+> [查看易错点、自测题与结语的 LaTeX 源码](公式源码/05-易错点与自测.md)
+
 # 五、易错点清单（每条都是"考场上真丢过分的地方"）
 
 > 用法：每条先看 ❌（错误示范，很多是你"觉得对"的写法），默想 3 秒"错在哪"，再看 ✅。考前最后一天，只看这张表。
 
 **① 定积分换元不换限（头号杀手）**
-❌ $`\displaystyle\int_0^{1}\frac{x\,\mathrm{d}x}{\sqrt{1-x^2}}`$ 换元 $`x=\sin t`$ 后，算出原函数回代 $`x=0,1`$ 的老限。
-✅ 换元的同时把限一起换：$`x=0\to t=0`$，$`x=1\to t=\dfrac{\pi}{2}`$，写成 $`\displaystyle\int_0^{\pi/2}\sin t\,\mathrm{d}t=1`$。**"换了变量，老限作废"**——不定积分回代、定积分换限，两条路泾渭分明。
+❌ <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5947909925206a26-dark.svg"><img src="图/05-精讲公式/5947909925206a26-light.svg" alt="\displaystyle\int_0^{1}\frac{x\,\mathrm{d}x}{\sqrt{1-x^2}}"></picture> 换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b18bd4c9c8237bb6-dark.svg"><img src="图/05-精讲公式/b18bd4c9c8237bb6-light.svg" alt="x=\sin t"></picture> 后，算出原函数回代 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/153e151216e8bf07-dark.svg"><img src="图/05-精讲公式/153e151216e8bf07-light.svg" alt="x=0,1"></picture> 的老限。
+✅ 换元的同时把限一起换：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/63b142c341b6b6f7-dark.svg"><img src="图/05-精讲公式/63b142c341b6b6f7-light.svg" alt="x=0\to t=0"></picture>，<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/7b96547bc4cc6d5f-dark.svg"><img src="图/05-精讲公式/7b96547bc4cc6d5f-light.svg" alt="x=1\to t=\dfrac{\pi}{2}"></picture>，写成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/7c5bad8a43f44d8c-dark.svg"><img src="图/05-精讲公式/7c5bad8a43f44d8c-light.svg" alt="\displaystyle\int_0^{\pi/2}\sin t\,\mathrm{d}t=1"></picture>。**"换了变量，老限作废"**——不定积分回代、定积分换限，两条路泾渭分明。
 
 **② 不定积分换元后忘了回代**
-❌ $`\displaystyle\int\frac{\mathrm{d}x}{x\ln x}=\ln\lvert\ln x\rvert`$（漏 $`+C`$ 是小儿科，真正的坑是把答案写成 $`t`$ 的函数）。
-✅ 换元 $`t=\ln x`$ 算出 $`\ln\lvert t\rvert+C`$ 后**必须把 $`t=\ln x`$ 换回来**：$`\ln\lvert\ln x\rvert+C`$——因为题目要的是 $`x`$ 的函数。
+❌ <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2cef5021a45617d5-dark.svg"><img src="图/05-精讲公式/2cef5021a45617d5-light.svg" alt="\displaystyle\int\frac{\mathrm{d}x}{x\ln x}=\ln\lvert\ln x\rvert"></picture>（漏 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b8b27abf6051728d-dark.svg"><img src="图/05-精讲公式/b8b27abf6051728d-light.svg" alt="+C"></picture> 是小儿科，真正的坑是把答案写成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9c1d2a3a6024e581-dark.svg"><img src="图/05-精讲公式/9c1d2a3a6024e581-light.svg" alt="t"></picture> 的函数）。
+✅ 换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/43151bc100d0b8d3-dark.svg"><img src="图/05-精讲公式/43151bc100d0b8d3-light.svg" alt="t=\ln x"></picture> 算出 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9194e8f4ed24dd37-dark.svg"><img src="图/05-精讲公式/9194e8f4ed24dd37-light.svg" alt="\ln\lvert t\rvert+C"></picture> 后**必须把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/43151bc100d0b8d3-dark.svg"><img src="图/05-精讲公式/43151bc100d0b8d3-light.svg" alt="t=\ln x"></picture> 换回来**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a56020a4b53bf771-dark.svg"><img src="图/05-精讲公式/a56020a4b53bf771-light.svg" alt="\ln\lvert\ln x\rvert+C"></picture>——因为题目要的是 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd17c3345d8ec87a-dark.svg"><img src="图/05-精讲公式/bd17c3345d8ec87a-light.svg" alt="x"></picture> 的函数。
 
 **③ 分部积分的系数与符号**
-❌ $`\displaystyle\int x\ln x\,\mathrm{d}x=\frac{x^2}{2}\ln x-\int\frac{x}{2}\,\mathrm{d}x`$（把 $`\dfrac{\mathrm{d}u}{u}`$ 写丢）或把 $`uv`$ 前的符号写反。
-✅ 选 $`u=\ln x`$、$`\mathrm{d}v=x\,\mathrm{d}x`$ 后 $`\mathrm{d}u=\dfrac{\mathrm{d}x}{x}`$、$`v=\dfrac{x^2}{2}`$，$`\displaystyle\int x\ln x\,\mathrm{d}x=\frac{x^2}{2}\ln x-\frac{x^2}{4}+C`$。**写完花 10 秒求导验算**——不定积分是可验证的，别浪费这个特权。
+❌ <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/97ffb1f8ce463e03-dark.svg"><img src="图/05-精讲公式/97ffb1f8ce463e03-light.svg" alt="\displaystyle\int x\ln x\,\mathrm{d}x=\frac{x^2}{2}\ln x-\int\frac{x}{2}\,\mathrm{d}x"></picture>（把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e7d66ac9b78aaafc-dark.svg"><img src="图/05-精讲公式/e7d66ac9b78aaafc-light.svg" alt="\dfrac{\mathrm{d}u}{u}"></picture> 写丢）或把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b66cf927201e561b-dark.svg"><img src="图/05-精讲公式/b66cf927201e561b-light.svg" alt="uv"></picture> 前的符号写反。
+✅ 选 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e6f775557220eb4a-dark.svg"><img src="图/05-精讲公式/e6f775557220eb4a-light.svg" alt="u=\ln x"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f839f85a5c160c76-dark.svg"><img src="图/05-精讲公式/f839f85a5c160c76-light.svg" alt="\mathrm{d}v=x\,\mathrm{d}x"></picture> 后 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0c2b531435499395-dark.svg"><img src="图/05-精讲公式/0c2b531435499395-light.svg" alt="\mathrm{d}u=\dfrac{\mathrm{d}x}{x}"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e082558b352f289b-dark.svg"><img src="图/05-精讲公式/e082558b352f289b-light.svg" alt="v=\dfrac{x^2}{2}"></picture>，<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4a195f9aa3814808-dark.svg"><img src="图/05-精讲公式/4a195f9aa3814808-light.svg" alt="\displaystyle\int x\ln x\,\mathrm{d}x=\frac{x^2}{2}\ln x-\frac{x^2}{4}+C"></picture>。**写完花 10 秒求导验算**——不定积分是可验证的，别浪费这个特权。
 
-**④ 幂函数积分公式的"$`-1`$ 特例"**
-❌ $`\displaystyle\int\frac{\mathrm{d}x}{x}=\frac{x^0}{0}+C`$（$`n=-1`$ 时公式失效）；或 $`\displaystyle\int x^3\,\mathrm{d}x=3x^2+C`$（把积分当求导）。
-✅ $`\displaystyle\int x^n\,\mathrm{d}x=\frac{x^{n+1}}{n+1}+C\ (n\ne-1)`$；$`n=-1`$ 时是 $`\ln\lvert x\rvert+C`$。**"幂次加一除以新幂次"**，念出声再下笔。
+**④ 幂函数积分公式的"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/3380c951c6fd0f6c-dark.svg"><img src="图/05-精讲公式/3380c951c6fd0f6c-light.svg" alt="-1"></picture> 特例"**
+❌ <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/53934736744beb00-dark.svg"><img src="图/05-精讲公式/53934736744beb00-light.svg" alt="\displaystyle\int\frac{\mathrm{d}x}{x}=\frac{x^0}{0}+C"></picture>（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d5f339f42948f190-dark.svg"><img src="图/05-精讲公式/d5f339f42948f190-light.svg" alt="n=-1"></picture> 时公式失效）；或 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/573451f3d0f5e97f-dark.svg"><img src="图/05-精讲公式/573451f3d0f5e97f-light.svg" alt="\displaystyle\int x^3\,\mathrm{d}x=3x^2+C"></picture>（把积分当求导）。
+✅ <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2b69789c9eda974b-dark.svg"><img src="图/05-精讲公式/2b69789c9eda974b-light.svg" alt="\displaystyle\int x^n\,\mathrm{d}x=\frac{x^{n+1}}{n+1}+C\ (n\ne-1)"></picture>；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d5f339f42948f190-dark.svg"><img src="图/05-精讲公式/d5f339f42948f190-light.svg" alt="n=-1"></picture> 时是 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4e1eeee82e99bb14-dark.svg"><img src="图/05-精讲公式/4e1eeee82e99bb14-light.svg" alt="\ln\lvert x\rvert+C"></picture>。**"幂次加一除以新幂次"**，念出声再下笔。
 
 **⑤ 变限积分求导漏链式因子**
-❌ $`\dfrac{\mathrm{d}}{\mathrm{d}x}\displaystyle\int_0^{x^2}e^{t}\,\mathrm{d}t=e^{x^2}`$。
-✅ 上限是函数要乘它的导数：$`=e^{x^2}\cdot2x`$。**上限不是"光板 $`x`$"时，必须多问一句"上限的导数是谁"。**
+❌ <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/33cdf64f00be646d-dark.svg"><img src="图/05-精讲公式/33cdf64f00be646d-light.svg" alt="\dfrac{\mathrm{d}}{\mathrm{d}x}\displaystyle\int_0^{x^2}e^{t}\,\mathrm{d}t=e^{x^2}"></picture>。
+✅ 上限是函数要乘它的导数：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9527919ece35d67c-dark.svg"><img src="图/05-精讲公式/9527919ece35d67c-light.svg" alt="=e^{x^2}\cdot2x"></picture>。**上限不是"光板 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd17c3345d8ec87a-dark.svg"><img src="图/05-精讲公式/bd17c3345d8ec87a-light.svg" alt="x"></picture>"时，必须多问一句"上限的导数是谁"。**
 
-**⑥ 被积函数含 $`x`$ 的变限积分不换元就求导**
-❌ 对 $`\displaystyle\int_0^{x}f(x-t)\,\mathrm{d}t`$ 直接套"求导 $`=f(x-t)\big|_{t=x}`$"。
-✅ 先换元 $`u=x-t`$ 分离：$`\displaystyle\int_0^{x}f(x-t)\,\mathrm{d}t=\int_0^{x}f(u)\,\mathrm{d}u`$，再谈求导。**变量进了被积函数，一定是"换元优先于求导"。**
+**⑥ 被积函数含 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd17c3345d8ec87a-dark.svg"><img src="图/05-精讲公式/bd17c3345d8ec87a-light.svg" alt="x"></picture> 的变限积分不换元就求导**
+❌ 对 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f1aa162a7d579266-dark.svg"><img src="图/05-精讲公式/f1aa162a7d579266-light.svg" alt="\displaystyle\int_0^{x}f(x-t)\,\mathrm{d}t"></picture> 直接套"求导 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2244e0ed34c59d31-dark.svg"><img src="图/05-精讲公式/2244e0ed34c59d31-light.svg" alt="=f(x-t)\big|_{t=x}"></picture>"。
+✅ 先换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/650778b750d906d0-dark.svg"><img src="图/05-精讲公式/650778b750d906d0-light.svg" alt="u=x-t"></picture> 分离：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5b1c0d4cba6c0843-dark.svg"><img src="图/05-精讲公式/5b1c0d4cba6c0843-light.svg" alt="\displaystyle\int_0^{x}f(x-t)\,\mathrm{d}t=\int_0^{x}f(u)\,\mathrm{d}u"></picture>，再谈求导。**变量进了被积函数，一定是"换元优先于求导"。**
 
 **⑦ 滥用对称性（不验奇偶就直接扔）**
-❌ 看到区间 $`[-1,1]`$ 就把 $`\displaystyle\int_{-1}^{1}\frac{\mathrm{d}x}{1+x^2}`$ 写成 0，或对 $`\arctan x`$ 型函数想当然。
-✅ 对称化的**合法动作只有两个**：真奇函数直接扔（=0）；中点为对称的区间上用 $`\int_{-a}^{a}f=\int_0^a[f(x)+f(-x)]\mathrm{d}x`$ **逐点合并**。⚠️ 特别注意：**不能把对称区间拆成两个各自发散的广义积分**（如 $`\int_{-1}^1\frac{\mathrm{d}x}{x}`$——按柯西主值可为 0，但按广义积分定义是发散，**两种定义不能混用**）。
+❌ 看到区间 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a6747200107d622c-dark.svg"><img src="图/05-精讲公式/a6747200107d622c-light.svg" alt="[-1,1]"></picture> 就把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c9913a9f8ee958a3-dark.svg"><img src="图/05-精讲公式/c9913a9f8ee958a3-light.svg" alt="\displaystyle\int_{-1}^{1}\frac{\mathrm{d}x}{1+x^2}"></picture> 写成 0，或对 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b73c3fcfd8790626-dark.svg"><img src="图/05-精讲公式/b73c3fcfd8790626-light.svg" alt="\arctan x"></picture> 型函数想当然。
+✅ 对称化的**合法动作只有两个**：真奇函数直接扔（=0）；中点为对称的区间上用 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c2b7fedf13df8631-dark.svg"><img src="图/05-精讲公式/c2b7fedf13df8631-light.svg" alt="\int_{-a}^{a}f=\int_0^a[f(x)+f(-x)]\mathrm{d}x"></picture> **逐点合并**。⚠️ 特别注意：**不能把对称区间拆成两个各自发散的广义积分**（如 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/59701934e41ff512-dark.svg"><img src="图/05-精讲公式/59701934e41ff512-light.svg" alt="\int_{-1}^1\frac{\mathrm{d}x}{x}"></picture>——按柯西主值可为 0，但按广义积分定义是发散，**两种定义不能混用**）。
 
 **⑧ 加减结构上直接"拆积分"（广义积分版拆分纪律）**
-❌ 对 $`\displaystyle\int_1^{+\infty}\Big(\frac{1}{x}-\frac{1}{x+1}\Big)\mathrm{d}x`$ 拆成 $`\int_1^{+\infty}\frac{\mathrm{d}x}{x}-\int_1^{+\infty}\frac{\mathrm{d}x}{x+1}`$ 再算——两块**各自都发散**，"$`\infty-\infty`$"没有任何意义。
-✅ 先合并、再算：$`\dfrac{1}{x}-\dfrac{1}{x+1}=\dfrac{1}{x(x+1)}`$，于是 $`\displaystyle\int_1^{N}\frac{\mathrm{d}x}{x(x+1)}=\ln\frac{x}{x+1}\Big|_1^N=\ln\frac{N}{N+1}+\ln 2\to\ln 2`$，**收敛**。**与极限的"拆分纪律"同款：拆开的每一块必须各自收敛/存在——合并能救，拆散会死。**（⚠️ 顺便：本题如果下限改成 $`0`$，则 $`x=0`$ 处是真性瑕点、原积分发散——"下限写 1 还是写 0"是命题人埋的第二个雷。）
+❌ 对 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/df8c139015c43886-dark.svg"><img src="图/05-精讲公式/df8c139015c43886-light.svg" alt="\displaystyle\int_1^{+\infty}\Big(\frac{1}{x}-\frac{1}{x+1}\Big)\mathrm{d}x"></picture> 拆成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/6d640a973b8d3f87-dark.svg"><img src="图/05-精讲公式/6d640a973b8d3f87-light.svg" alt="\int_1^{+\infty}\frac{\mathrm{d}x}{x}-\int_1^{+\infty}\frac{\mathrm{d}x}{x+1}"></picture> 再算——两块**各自都发散**，"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2b7286c2fcee4ec2-dark.svg"><img src="图/05-精讲公式/2b7286c2fcee4ec2-light.svg" alt="\infty-\infty"></picture>"没有任何意义。
+✅ 先合并、再算：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c737806389c9a176-dark.svg"><img src="图/05-精讲公式/c737806389c9a176-light.svg" alt="\dfrac{1}{x}-\dfrac{1}{x+1}=\dfrac{1}{x(x+1)}"></picture>，于是 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/8b6002fbbf2268a4-dark.svg"><img src="图/05-精讲公式/8b6002fbbf2268a4-light.svg" alt="\displaystyle\int_1^{N}\frac{\mathrm{d}x}{x(x+1)}=\ln\frac{x}{x+1}\Big|_1^N=\ln\frac{N}{N+1}+\ln 2\to\ln 2"></picture>，**收敛**。**与极限的"拆分纪律"同款：拆开的每一块必须各自收敛/存在——合并能救，拆散会死。**（⚠️ 顺便：本题如果下限改成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a5b1e8e492504edc-dark.svg"><img src="图/05-精讲公式/a5b1e8e492504edc-light.svg" alt="0"></picture>，则 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5c5cb9962a3d1baa-dark.svg"><img src="图/05-精讲公式/5c5cb9962a3d1baa-light.svg" alt="x=0"></picture> 处是真性瑕点、原积分发散——"下限写 1 还是写 0"是命题人埋的第二个雷。）
 
 **⑨ 对"定积分为常数"的方程求导**
-❌ 把 $`f(x)=3x^2-\displaystyle\int_0^2f(x)\,\mathrm{d}x-2`$ 两边求导，得到 $`f'(x)=6x`$，再"积分回来"套常数。
-✅ $`\displaystyle\int_0^2f`$ 是**常数**，求导直接变 0（信息全灭）。正确动作是**设常数**：令 $`A=\int_0^2f`$，两边积分造方程（精讲 10 的模板）。**"会变的才配求导，是数的只能设参。"**
+❌ 把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d911ad59ed8ccfb9-dark.svg"><img src="图/05-精讲公式/d911ad59ed8ccfb9-light.svg" alt="f(x)=3x^2-\displaystyle\int_0^2f(x)\,\mathrm{d}x-2"></picture> 两边求导，得到 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/123892a764e1b716-dark.svg"><img src="图/05-精讲公式/123892a764e1b716-light.svg" alt="f'(x)=6x"></picture>，再"积分回来"套常数。
+✅ <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/11bb27f2c21838f8-dark.svg"><img src="图/05-精讲公式/11bb27f2c21838f8-light.svg" alt="\displaystyle\int_0^2f"></picture> 是**常数**，求导直接变 0（信息全灭）。正确动作是**设常数**：令 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/885b345a8f833633-dark.svg"><img src="图/05-精讲公式/885b345a8f833633-light.svg" alt="A=\int_0^2f"></picture>，两边积分造方程（精讲 10 的模板）。**"会变的才配求导，是数的只能设参。"**
 
 **⑩ 广义积分不认瑕点 / 不写极限**
-❌ 直接把 $`+\infty`$ 代进 $`\left[-\dfrac{1}{x}\right]_1^{+\infty}`$ 式子里，全程不写 $`\lim`$；或对 $`\displaystyle\int_0^{1}\frac{\mathrm{d}x}{x^2}`$ 硬套公式得 $`-1`$（发散的东西算出了一个数）。
-✅ 每一处"毛病"（无穷限、瑕点）都拆开、写 $`\lim`$；先判敛散再谈值。**发散就是发散，写出"发散"两个字也是满分的一部分。**
+❌ 直接把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/28c4bac89eabfdc8-dark.svg"><img src="图/05-精讲公式/28c4bac89eabfdc8-light.svg" alt="+\infty"></picture> 代进 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/53b484e33e67b4cf-dark.svg"><img src="图/05-精讲公式/53b484e33e67b4cf-light.svg" alt="\left[-\dfrac{1}{x}\right]_1^{+\infty}"></picture> 式子里，全程不写 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5c9bcf6e54920426-dark.svg"><img src="图/05-精讲公式/5c9bcf6e54920426-light.svg" alt="\lim"></picture>；或对 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/20bffeedadde527e-dark.svg"><img src="图/05-精讲公式/20bffeedadde527e-light.svg" alt="\displaystyle\int_0^{1}\frac{\mathrm{d}x}{x^2}"></picture> 硬套公式得 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/3380c951c6fd0f6c-dark.svg"><img src="图/05-精讲公式/3380c951c6fd0f6c-light.svg" alt="-1"></picture>（发散的东西算出了一个数）。
+✅ 每一处"毛病"（无穷限、瑕点）都拆开、写 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5c9bcf6e54920426-dark.svg"><img src="图/05-精讲公式/5c9bcf6e54920426-light.svg" alt="\lim"></picture>；先判敛散再谈值。**发散就是发散，写出"发散"两个字也是满分的一部分。**
 
 **⑪ 绝对值 / 取整不化简不分段**
-❌ 对 $`\displaystyle\int\lvert x-1\rvert\,\mathrm{d}x`$ 直接"当成正数"积。
-✅ 先求零点 $`x=1`$、按零点分段，每段上把绝对值打开成 $`\pm`$ 具体式子（精讲 7 的"先化简导数"是同一纪律的高级版：**能化简的绝对值先化简，化简不了的再分段**）。
+❌ 对 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/65122bfacf82c3b7-dark.svg"><img src="图/05-精讲公式/65122bfacf82c3b7-light.svg" alt="\displaystyle\int\lvert x-1\rvert\,\mathrm{d}x"></picture> 直接"当成正数"积。
+✅ 先求零点 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f86265827fdbcb39-dark.svg"><img src="图/05-精讲公式/f86265827fdbcb39-light.svg" alt="x=1"></picture>、按零点分段，每段上把绝对值打开成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/259edb9a7861af50-dark.svg"><img src="图/05-精讲公式/259edb9a7861af50-light.svg" alt="\pm"></picture> 具体式子（精讲 7 的"先化简导数"是同一纪律的高级版：**能化简的绝对值先化简，化简不了的再分段**）。
 
-**⑫ 有理函数不化真分式、"凑 $`d(x\pm\frac1x)`$"记反方向**
-❌ 对 $`\displaystyle\int\frac{x^2}{1+x^2}\mathrm{d}x`$ 直接想万能代换；或对 $`\dfrac{x^2+1}{x^4+1}`$ 去凑 $`x+\dfrac{1}{x}`$。
-✅ 假分式先长除：$`\dfrac{x^2}{1+x^2}=1-\dfrac{1}{1+x^2}`$；对称型方向口诀——**分子 $`x^2+1`$ 配 $`x-\dfrac1x`$，分子 $`x^2-1`$ 配 $`x+\dfrac1x`$**（用"求导对消"当场验证：$`\mathrm{d}(x-\frac1x)=(1+\frac{1}{x^2})\mathrm{d}x`$ 会配出 $`x^2+1`$）。
+**⑫ 有理函数不化真分式、"凑 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/fb838ef50add8f37-dark.svg"><img src="图/05-精讲公式/fb838ef50add8f37-light.svg" alt="d(x\pm\frac1x)"></picture>"记反方向**
+❌ 对 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4dc6ca4c31050763-dark.svg"><img src="图/05-精讲公式/4dc6ca4c31050763-light.svg" alt="\displaystyle\int\frac{x^2}{1+x^2}\mathrm{d}x"></picture> 直接想万能代换；或对 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ea02072b0c62457e-dark.svg"><img src="图/05-精讲公式/ea02072b0c62457e-light.svg" alt="\dfrac{x^2+1}{x^4+1}"></picture> 去凑 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f7bf36758bdb1d93-dark.svg"><img src="图/05-精讲公式/f7bf36758bdb1d93-light.svg" alt="x+\dfrac{1}{x}"></picture>。
+✅ 假分式先长除：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ee2465fd1f2224e5-dark.svg"><img src="图/05-精讲公式/ee2465fd1f2224e5-light.svg" alt="\dfrac{x^2}{1+x^2}=1-\dfrac{1}{1+x^2}"></picture>；对称型方向口诀——**分子 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4cf1da663150ec99-dark.svg"><img src="图/05-精讲公式/4cf1da663150ec99-light.svg" alt="x^2+1"></picture> 配 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/38f57fa900bd8cc2-dark.svg"><img src="图/05-精讲公式/38f57fa900bd8cc2-light.svg" alt="x-\dfrac1x"></picture>，分子 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/64772e84db177a02-dark.svg"><img src="图/05-精讲公式/64772e84db177a02-light.svg" alt="x^2-1"></picture> 配 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/47a87d55626faf5d-dark.svg"><img src="图/05-精讲公式/47a87d55626faf5d-light.svg" alt="x+\dfrac1x"></picture>**（用"求导对消"当场验证：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/02a90f7ce0b684a7-dark.svg"><img src="图/05-精讲公式/02a90f7ce0b684a7-light.svg" alt="\mathrm{d}(x-\frac1x)=(1+\frac{1}{x^2})\mathrm{d}x"></picture> 会配出 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4cf1da663150ec99-dark.svg"><img src="图/05-精讲公式/4cf1da663150ec99-light.svg" alt="x^2+1"></picture>）。
 
 **⑬ 结果形式不检查**
-❌ 定积分算完答案里还带着 $`x`$ 或 $`C`$；$`\ln`$ 里套负数不写绝对值；$`1+\sqrt2`$ 与 $`\sqrt2-1`$ 的对数形式来回犹豫。
-✅ 三条收尾自检：**定积分结果是数**（不含 $`x`$、不含 $`C`$）；**不定积分必带 $`C`$**；$`\ln\lvert\cdot\rvert`$ 的绝对值能写就写。填空答案化为最简（如 $`\dfrac{1}{\sqrt2}=\dfrac{\sqrt2}{2}`$）。
+❌ 定积分算完答案里还带着 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd17c3345d8ec87a-dark.svg"><img src="图/05-精讲公式/bd17c3345d8ec87a-light.svg" alt="x"></picture> 或 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd15d8a2d57a2bf3-dark.svg"><img src="图/05-精讲公式/bd15d8a2d57a2bf3-light.svg" alt="C"></picture>；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/8e037d9284d3df9c-dark.svg"><img src="图/05-精讲公式/8e037d9284d3df9c-light.svg" alt="\ln"></picture> 里套负数不写绝对值；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/7c8651b0f7e3d05e-dark.svg"><img src="图/05-精讲公式/7c8651b0f7e3d05e-light.svg" alt="1+\sqrt2"></picture> 与 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/42af2df7ae765ac1-dark.svg"><img src="图/05-精讲公式/42af2df7ae765ac1-light.svg" alt="\sqrt2-1"></picture> 的对数形式来回犹豫。
+✅ 三条收尾自检：**定积分结果是数**（不含 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd17c3345d8ec87a-dark.svg"><img src="图/05-精讲公式/bd17c3345d8ec87a-light.svg" alt="x"></picture>、不含 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd15d8a2d57a2bf3-dark.svg"><img src="图/05-精讲公式/bd15d8a2d57a2bf3-light.svg" alt="C"></picture>）；**不定积分必带 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd15d8a2d57a2bf3-dark.svg"><img src="图/05-精讲公式/bd15d8a2d57a2bf3-light.svg" alt="C"></picture>**；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/17af9f6ecbd2bd79-dark.svg"><img src="图/05-精讲公式/17af9f6ecbd2bd79-light.svg" alt="\ln\lvert\cdot\rvert"></picture> 的绝对值能写就写。填空答案化为最简（如 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/dd53b05ad599ee92-dark.svg"><img src="图/05-精讲公式/dd53b05ad599ee92-light.svg" alt="\dfrac{1}{\sqrt2}=\dfrac{\sqrt2}{2}"></picture>）。
 
 ---
 
@@ -1023,102 +1027,82 @@ t^2x^2\cdot x(1-t)=x^2\ \Rightarrow\ x=\frac{1}{t^2(1-t)},\qquad y=tx=\frac{1}{t
 > 规则：**先合上答案，限时做**。1–4 题每题 3 分钟，5–7 题每题 5 分钟。做完对照答案，错题回炉到对应章节。
 > （除注明外，均为**类型题·仿竞赛风格**——难度与填空第 1–3 题对齐；答案里标了对应的"方法出处"。）
 
-❓ **自测 1（分部积分，§3.2）**：$`\displaystyle\int_0^1x\arctan x\,\mathrm{d}x=\underline{\qquad}`$。
+❓ **自测 1（分部积分，§3.2）**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/13891b9f6b931265-dark.svg"><img src="图/05-精讲公式/13891b9f6b931265-light.svg" alt="\displaystyle\int_0^1x\arctan x\,\mathrm{d}x=\underline{\qquad}"></picture>。
 
-❓ **自测 2（区间再现，§3.6）**：$`\displaystyle\int_0^{\frac{\pi}{2}}\frac{\sin x}{\sin x+\cos x}\,\mathrm{d}x=\underline{\qquad}`$。
+❓ **自测 2（区间再现，§3.6）**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4287c350c585d557-dark.svg"><img src="图/05-精讲公式/4287c350c585d557-light.svg" alt="\displaystyle\int_0^{\frac{\pi}{2}}\frac{\sin x}{\sin x+\cos x}\,\mathrm{d}x=\underline{\qquad}"></picture>。
 
-❓ **自测 3（对称奇偶，§3.6）**：$`\displaystyle\int_{-1}^{1}\Big(x^3e^{x^4}+\sqrt{1-x^2}\Big)\mathrm{d}x=\underline{\qquad}`$。
+❓ **自测 3（对称奇偶，§3.6）**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9910dd79e28a792a-dark.svg"><img src="图/05-精讲公式/9910dd79e28a792a-light.svg" alt="\displaystyle\int_{-1}^{1}\Big(x^3e^{x^4}+\sqrt{1-x^2}\Big)\mathrm{d}x=\underline{\qquad}"></picture>。
 
-❓ **自测 4（广义积分，§3.9）**：$`\displaystyle\int_1^{+\infty}\frac{\ln x}{x^2}\,\mathrm{d}x=\underline{\qquad}`$。
+❓ **自测 4（广义积分，§3.9）**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/871d5a849bccac9e-dark.svg"><img src="图/05-精讲公式/871d5a849bccac9e-light.svg" alt="\displaystyle\int_1^{+\infty}\frac{\ln x}{x^2}\,\mathrm{d}x=\underline{\qquad}"></picture>。
 
-❓ **自测 5（变限积分 + 极限，§3.7）**：$`\lim\limits_{x\to 0}\dfrac{\displaystyle\int_0^x\sin(t^2)\,\mathrm{d}t}{x^3}=\underline{\qquad}`$。
+❓ **自测 5（变限积分 + 极限，§3.7）**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/806743c233d5dd17-dark.svg"><img src="图/05-精讲公式/806743c233d5dd17-light.svg" alt="\lim\limits_{x\to 0}\dfrac{\displaystyle\int_0^x\sin(t^2)\,\mathrm{d}t}{x^3}=\underline{\qquad}"></picture>。
 
-❓ **自测 6（定积分为常数，§3.8）**：设连续函数 $`f(x)`$ 满足 $`f(x)=x^2-2\displaystyle\int_0^1f(x)\,\mathrm{d}x`$，求 $`f(x)`$。
+❓ **自测 6（定积分为常数，§3.8）**：设连续函数 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e827cdf016fed3d7-dark.svg"><img src="图/05-精讲公式/e827cdf016fed3d7-light.svg" alt="f(x)"></picture> 满足 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/586dc5e81dc64576-dark.svg"><img src="图/05-精讲公式/586dc5e81dc64576-light.svg" alt="f(x)=x^2-2\displaystyle\int_0^1f(x)\,\mathrm{d}x"></picture>，求 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e827cdf016fed3d7-dark.svg"><img src="图/05-精讲公式/e827cdf016fed3d7-light.svg" alt="f(x)"></picture>。
 
-❓ **自测 7（换元 + 区间再现综合，§3.3+§3.6）**：证明 $`\displaystyle\int_0^1\frac{\ln(1+x)}{1+x^2}\,\mathrm{d}x=\frac{\pi}{8}\ln 2`$。
+❓ **自测 7（换元 + 区间再现综合，§3.3+§3.6）**：证明 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f6c81dfd4cdc6597-dark.svg"><img src="图/05-精讲公式/f6c81dfd4cdc6597-light.svg" alt="\displaystyle\int_0^1\frac{\ln(1+x)}{1+x^2}\,\mathrm{d}x=\frac{\pi}{8}\ln 2"></picture>。
 
 ---
 
 ## 自测题答案与完整解答
 
-**答 1**：$`\dfrac{\pi}{4}-\dfrac{1}{2}`$。
-按"反对幂指三"，反三角排第一，$`u=\arctan x`$、$`\mathrm{d}v=x\,\mathrm{d}x`$：
+**答 1**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/dec715cef606b628-dark.svg"><img src="图/05-精讲公式/dec715cef606b628-light.svg" alt="\dfrac{\pi}{4}-\dfrac{1}{2}"></picture>。
+按"反对幂指三"，反三角排第一，<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d0773d8dd9f65e88-dark.svg"><img src="图/05-精讲公式/d0773d8dd9f65e88-light.svg" alt="u=\arctan x"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f839f85a5c160c76-dark.svg"><img src="图/05-精讲公式/f839f85a5c160c76-light.svg" alt="\mathrm{d}v=x\,\mathrm{d}x"></picture>：
 
-```math
-\int_0^1x\arctan x\,\mathrm{d}x=\frac{x^2}{2}\arctan x\Big|_0^1-\frac{1}{2}\int_0^1\frac{x^2}{1+x^2}\,\mathrm{d}x=\frac{\pi}{8}-\frac{1}{2}\int_0^1\Big(1-\frac{1}{1+x^2}\Big)\mathrm{d}x
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a066f4966a8d9e44-dark.svg"><img src="图/05-精讲公式/a066f4966a8d9e44-light.svg" alt="\int_0^1x\arctan x\,\mathrm{d}x=\frac{x^2}{2}\arctan x\Big|_0^1-\frac{1}{2}\int_0^1\frac{x^2}{1+x^2}\,\mathrm{d}x=\frac{\pi}{8}-\frac{1}{2}\int_0^1\Big(1-\frac{1}{1+x^2}\Big)\mathrm{d}x"></picture>
 
-```math
-=\frac{\pi}{8}-\frac{1}{2}\Big(1-\frac{\pi}{4}\Big)=\frac{\pi}{8}-\frac{1}{2}+\frac{\pi}{8}=\frac{\pi}{4}-\frac{1}{2}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d9934e479c3fe368-dark.svg"><img src="图/05-精讲公式/d9934e479c3fe368-light.svg" alt="=\frac{\pi}{8}-\frac{1}{2}\Big(1-\frac{\pi}{4}\Big)=\frac{\pi}{8}-\frac{1}{2}+\frac{\pi}{8}=\frac{\pi}{4}-\frac{1}{2}."></picture>
 
-> 方法出处：§3.2 分部 + §3.4 假分式长除。两个坑：分部后的 $`-\frac12`$ 别丢；$`\int_0^1\frac{\mathrm{d}x}{1+x^2}=\frac{\pi}{4}`$ 别写成 $`\frac{\pi}{2}`$。
+> 方法出处：§3.2 分部 + §3.4 假分式长除。两个坑：分部后的 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4c5a1167747a4639-dark.svg"><img src="图/05-精讲公式/4c5a1167747a4639-light.svg" alt="-\frac12"></picture> 别丢；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c251df3d43d4f05d-dark.svg"><img src="图/05-精讲公式/c251df3d43d4f05d-light.svg" alt="\int_0^1\frac{\mathrm{d}x}{1+x^2}=\frac{\pi}{4}"></picture> 别写成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/6785a05e87a279eb-dark.svg"><img src="图/05-精讲公式/6785a05e87a279eb-light.svg" alt="\frac{\pi}{2}"></picture>。
 
-**答 2**：$`\dfrac{\pi}{4}`$。
-区间 $`[0,\pi/2]`$ + 三角式 → 区间再现。换元 $`x\to\dfrac{\pi}{2}-x`$ 得 $`I=\displaystyle\int_0^{\pi/2}\frac{\cos x}{\cos x+\sin x}\,\mathrm{d}x`$，两式相加：
+**答 2**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d942c4842b80f925-dark.svg"><img src="图/05-精讲公式/d942c4842b80f925-light.svg" alt="\dfrac{\pi}{4}"></picture>。
+区间 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0e5293859c1e2d07-dark.svg"><img src="图/05-精讲公式/0e5293859c1e2d07-light.svg" alt="[0,\pi/2]"></picture> + 三角式 → 区间再现。换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/70ad062d3f0a5c11-dark.svg"><img src="图/05-精讲公式/70ad062d3f0a5c11-light.svg" alt="x\to\dfrac{\pi}{2}-x"></picture> 得 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c81ba7909b1339d2-dark.svg"><img src="图/05-精讲公式/c81ba7909b1339d2-light.svg" alt="I=\displaystyle\int_0^{\pi/2}\frac{\cos x}{\cos x+\sin x}\,\mathrm{d}x"></picture>，两式相加：
 
-```math
-2I=\int_0^{\pi/2}\frac{\sin x+\cos x}{\sin x+\cos x}\,\mathrm{d}x=\frac{\pi}{2}\ \Longrightarrow\ I=\frac{\pi}{4}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2c59fa0a6d719f1a-dark.svg"><img src="图/05-精讲公式/2c59fa0a6d719f1a-light.svg" alt="2I=\int_0^{\pi/2}\frac{\sin x+\cos x}{\sin x+\cos x}\,\mathrm{d}x=\frac{\pi}{2}\ \Longrightarrow\ I=\frac{\pi}{4}."></picture>
 
-> 方法出处：§3.6 区间再现（这是"配对出一半"的最简形态 $`I=\frac12\int_0^{\pi/2}1\,\mathrm{d}x`$）。**这道题的结论要背下来**：$`\int_0^{\pi/2}\frac{\sin x}{\sin x+\cos x}\mathrm{d}x=\frac{\pi}{4}`$——它是无数"对称分式"题的母版。
+> 方法出处：§3.6 区间再现（这是"配对出一半"的最简形态 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2e8c12dd5be98569-dark.svg"><img src="图/05-精讲公式/2e8c12dd5be98569-light.svg" alt="I=\frac12\int_0^{\pi/2}1\,\mathrm{d}x"></picture>）。**这道题的结论要背下来**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bf66d92bb1cbc156-dark.svg"><img src="图/05-精讲公式/bf66d92bb1cbc156-light.svg" alt="\int_0^{\pi/2}\frac{\sin x}{\sin x+\cos x}\mathrm{d}x=\frac{\pi}{4}"></picture>——它是无数"对称分式"题的母版。
 
-**答 3**：$`\dfrac{\pi}{2}`$。
-拆两块分别处理：$`x^3e^{x^4}`$ 是**奇函数**（奇×偶），对称区间上积分为 0；$`\sqrt{1-x^2}`$ 是**偶函数**，等于上半单位圆面积的一半翻倍 = 半圆面积：
+**答 3**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/6fa0fc9e0b5c9e4a-dark.svg"><img src="图/05-精讲公式/6fa0fc9e0b5c9e4a-light.svg" alt="\dfrac{\pi}{2}"></picture>。
+拆两块分别处理：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f8f53c5445eb4b18-dark.svg"><img src="图/05-精讲公式/f8f53c5445eb4b18-light.svg" alt="x^3e^{x^4}"></picture> 是**奇函数**（奇×偶），对称区间上积分为 0；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/cc240aee6852bde5-dark.svg"><img src="图/05-精讲公式/cc240aee6852bde5-light.svg" alt="\sqrt{1-x^2}"></picture> 是**偶函数**，等于上半单位圆面积的一半翻倍 = 半圆面积：
 
-```math
-\int_{-1}^1\sqrt{1-x^2}\,\mathrm{d}x=2\int_0^1\sqrt{1-x^2}\,\mathrm{d}x=2\cdot\frac{\pi}{4}=\frac{\pi}{2}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bed3a506fdb8bac8-dark.svg"><img src="图/05-精讲公式/bed3a506fdb8bac8-light.svg" alt="\int_{-1}^1\sqrt{1-x^2}\,\mathrm{d}x=2\int_0^1\sqrt{1-x^2}\,\mathrm{d}x=2\cdot\frac{\pi}{4}=\frac{\pi}{2}."></picture>
 
-> 方法出处：§3.6 对称奇偶。**用几何意义验 $`\int_0^1\sqrt{1-x^2}\mathrm{d}x=\frac{\pi}{4}`$**（四分之一圆面积）——比硬算三角换元快 10 倍。
+> 方法出处：§3.6 对称奇偶。**用几何意义验 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4cd8893e770474af-dark.svg"><img src="图/05-精讲公式/4cd8893e770474af-light.svg" alt="\int_0^1\sqrt{1-x^2}\mathrm{d}x=\frac{\pi}{4}"></picture>**（四分之一圆面积）——比硬算三角换元快 10 倍。
 
-**答 4**：$`1`$。
-先算原函数（分部，$`\ln x`$ 当 $`u`$）：
+**答 4**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/1f7a49960033094e-dark.svg"><img src="图/05-精讲公式/1f7a49960033094e-light.svg" alt="1"></picture>。
+先算原函数（分部，<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a38da1ea61a8452e-dark.svg"><img src="图/05-精讲公式/a38da1ea61a8452e-light.svg" alt="\ln x"></picture> 当 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bb064dfcf89d48e7-dark.svg"><img src="图/05-精讲公式/bb064dfcf89d48e7-light.svg" alt="u"></picture>）：
 
-```math
-\int\frac{\ln x}{x^2}\,\mathrm{d}x=-\frac{\ln x}{x}+\int\frac{\mathrm{d}x}{x^2}=-\frac{\ln x}{x}-\frac{1}{x}+C.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c71ba9fb10b10104-dark.svg"><img src="图/05-精讲公式/c71ba9fb10b10104-light.svg" alt="\int\frac{\ln x}{x^2}\,\mathrm{d}x=-\frac{\ln x}{x}+\int\frac{\mathrm{d}x}{x^2}=-\frac{\ln x}{x}-\frac{1}{x}+C."></picture>
 
 再按定义取极限：
 
-```math
-\int_1^{+\infty}\frac{\ln x}{x^2}\,\mathrm{d}x=\lim_{b\to+\infty}\Big[-\frac{\ln x}{x}-\frac{1}{x}\Big]_1^{b}=\lim_{b\to+\infty}\Big(0-0\Big)-\Big(0-1\Big)=1.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/cf6c321f7a49c3b4-dark.svg"><img src="图/05-精讲公式/cf6c321f7a49c3b4-light.svg" alt="\int_1^{+\infty}\frac{\ln x}{x^2}\,\mathrm{d}x=\lim_{b\to+\infty}\Big[-\frac{\ln x}{x}-\frac{1}{x}\Big]_1^{b}=\lim_{b\to+\infty}\Big(0-0\Big)-\Big(0-1\Big)=1."></picture>
 
-> 方法出处：§3.9。给了两处细节示范：① **收尾处 $`\lim`$ 必须写出来**（给分点）；② $`\dfrac{\ln x}{x}\to0`$（增长速度序：$`\ln`$ 远慢于任何正幂）与本积分收敛的"量级判断"（$`\frac{\ln x}{x^2}\le\frac{C}{x^{3/2}}`$ 型）一致。
+> 方法出处：§3.9。给了两处细节示范：① **收尾处 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5c9bcf6e54920426-dark.svg"><img src="图/05-精讲公式/5c9bcf6e54920426-light.svg" alt="\lim"></picture> 必须写出来**（给分点）；② <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/68dbed58ff6dd4bc-dark.svg"><img src="图/05-精讲公式/68dbed58ff6dd4bc-light.svg" alt="\dfrac{\ln x}{x}\to0"></picture>（增长速度序：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/8e037d9284d3df9c-dark.svg"><img src="图/05-精讲公式/8e037d9284d3df9c-light.svg" alt="\ln"></picture> 远慢于任何正幂）与本积分收敛的"量级判断"（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/973edb58660d07a8-dark.svg"><img src="图/05-精讲公式/973edb58660d07a8-light.svg" alt="\frac{\ln x}{x^2}\le\frac{C}{x^{3/2}}"></picture> 型）一致。
 
-**答 5**：$`\dfrac{1}{3}`$。
-验型 $`\dfrac{0}{0}`$；分母定阶 $`x^3`$ 已是三阶；分子洛必达（链式因子：上限的导数 $`=1`$，不额外出现）：
+**答 5**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d7c1f5e0cf6bac2f-dark.svg"><img src="图/05-精讲公式/d7c1f5e0cf6bac2f-light.svg" alt="\dfrac{1}{3}"></picture>。
+验型 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9d14530c3ac1920c-dark.svg"><img src="图/05-精讲公式/9d14530c3ac1920c-light.svg" alt="\dfrac{0}{0}"></picture>；分母定阶 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/8660e9adff36ee03-dark.svg"><img src="图/05-精讲公式/8660e9adff36ee03-light.svg" alt="x^3"></picture> 已是三阶；分子洛必达（链式因子：上限的导数 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c1e1e441a627d904-dark.svg"><img src="图/05-精讲公式/c1e1e441a627d904-light.svg" alt="=1"></picture>，不额外出现）：
 
-```math
-\lim_{x\to 0}\frac{\int_0^x\sin(t^2)\,\mathrm{d}t}{x^3}\overset{\text{洛}}{=}\lim_{x\to 0}\frac{\sin(x^2)}{3x^2}=\lim_{x\to 0}\frac{x^2}{3x^2}=\frac{1}{3}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/837548017037dbc7-dark.svg"><img src="图/05-精讲公式/837548017037dbc7-light.svg" alt="\lim_{x\to 0}\frac{\int_0^x\sin(t^2)\,\mathrm{d}t}{x^3}\overset{\text{洛}}{=}\lim_{x\to 0}\frac{\sin(x^2)}{3x^2}=\lim_{x\to 0}\frac{x^2}{3x^2}=\frac{1}{3}."></picture>
 
-> 方法出处：§3.7 模板 + 01 篇三件套。**"积分号里的等价"**（$`\sin(t^2)\sim t^2`$）可以在分子上直接做：$`\int_0^x\sin(t^2)\mathrm{d}t\sim\int_0^xt^2\mathrm{d}t=\frac{x^3}{3}`$——两行出答案。
+> 方法出处：§3.7 模板 + 01 篇三件套。**"积分号里的等价"**（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/09a09406d6f3a61b-dark.svg"><img src="图/05-精讲公式/09a09406d6f3a61b-light.svg" alt="\sin(t^2)\sim t^2"></picture>）可以在分子上直接做：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/8dcdba5543ccbee3-dark.svg"><img src="图/05-精讲公式/8dcdba5543ccbee3-light.svg" alt="\int_0^x\sin(t^2)\mathrm{d}t\sim\int_0^xt^2\mathrm{d}t=\frac{x^3}{3}"></picture>——两行出答案。
 
-**答 6**：$`f(x)=x^2-\dfrac{2}{9}`$。
-设常数 $`A=\displaystyle\int_0^1f(x)\,\mathrm{d}x`$，则 $`f(x)=x^2-2A`$。两边在 $`[0,1]`$ 积分：
+**答 6**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4890988ac460d6d2-dark.svg"><img src="图/05-精讲公式/4890988ac460d6d2-light.svg" alt="f(x)=x^2-\dfrac{2}{9}"></picture>。
+设常数 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9bd41c5c267da494-dark.svg"><img src="图/05-精讲公式/9bd41c5c267da494-light.svg" alt="A=\displaystyle\int_0^1f(x)\,\mathrm{d}x"></picture>，则 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/fd29eaaa17c81600-dark.svg"><img src="图/05-精讲公式/fd29eaaa17c81600-light.svg" alt="f(x)=x^2-2A"></picture>。两边在 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2eb2250576ee090a-dark.svg"><img src="图/05-精讲公式/2eb2250576ee090a-light.svg" alt="[0,1]"></picture> 积分：
 
-```math
-A=\int_0^1(x^2-2A)\,\mathrm{d}x=\frac{1}{3}-2A\ \Longrightarrow\ 3A=\frac{1}{3},\ A=\frac{1}{9}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b0c6ce052f08dd1f-dark.svg"><img src="图/05-精讲公式/b0c6ce052f08dd1f-light.svg" alt="A=\int_0^1(x^2-2A)\,\mathrm{d}x=\frac{1}{3}-2A\ \Longrightarrow\ 3A=\frac{1}{3},\ A=\frac{1}{9}."></picture>
 
-回代：$`f(x)=x^2-\dfrac{2}{9}`$。（自检：$`\int_0^1f=\frac13-\frac29=\frac19=A`$ ✓。）
+回代：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4890988ac460d6d2-dark.svg"><img src="图/05-精讲公式/4890988ac460d6d2-light.svg" alt="f(x)=x^2-\dfrac{2}{9}"></picture>。（自检：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ba5a7caa96a56bc1-dark.svg"><img src="图/05-精讲公式/ba5a7caa96a56bc1-light.svg" alt="\int_0^1f=\frac13-\frac29=\frac19=A"></picture> ✓。）
 > 方法出处：§3.8 / 精讲 10。这是"单手版"模板的最小演练。
 
-**答 7**：换元 $`x=\tan t`$（$`\mathrm{d}x=\sec^2t\,\mathrm{d}t`$，限 $`0\to0`$、$`1\to\dfrac{\pi}{4}`$）：
+**答 7**：换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/3defe7e96aa22ffb-dark.svg"><img src="图/05-精讲公式/3defe7e96aa22ffb-light.svg" alt="x=\tan t"></picture>（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/6272cf3b13adfdcb-dark.svg"><img src="图/05-精讲公式/6272cf3b13adfdcb-light.svg" alt="\mathrm{d}x=\sec^2t\,\mathrm{d}t"></picture>，限 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/76ece87555509dd5-dark.svg"><img src="图/05-精讲公式/76ece87555509dd5-light.svg" alt="0\to0"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e4fe869a1dbfeb04-dark.svg"><img src="图/05-精讲公式/e4fe869a1dbfeb04-light.svg" alt="1\to\dfrac{\pi}{4}"></picture>）：
 
-```math
-I=\int_0^1\frac{\ln(1+x)}{1+x^2}\,\mathrm{d}x=\int_0^{\pi/4}\ln(1+\tan t)\,\mathrm{d}t.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0409f000629d965f-dark.svg"><img src="图/05-精讲公式/0409f000629d965f-light.svg" alt="I=\int_0^1\frac{\ln(1+x)}{1+x^2}\,\mathrm{d}x=\int_0^{\pi/4}\ln(1+\tan t)\,\mathrm{d}t."></picture>
 
-**区间再现**（$`t\to\dfrac{\pi}{4}-t`$），用恒等式 $`1+\tan\Big(\dfrac{\pi}{4}-t\Big)=1+\dfrac{1-\tan t}{1+\tan t}=\dfrac{2}{1+\tan t}`$：
+**区间再现**（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/02c99d8811181338-dark.svg"><img src="图/05-精讲公式/02c99d8811181338-light.svg" alt="t\to\dfrac{\pi}{4}-t"></picture>），用恒等式 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/3944588dce792da3-dark.svg"><img src="图/05-精讲公式/3944588dce792da3-light.svg" alt="1+\tan\Big(\dfrac{\pi}{4}-t\Big)=1+\dfrac{1-\tan t}{1+\tan t}=\dfrac{2}{1+\tan t}"></picture>：
 
-```math
-I=\int_0^{\pi/4}\ln\frac{2}{1+\tan t}\,\mathrm{d}t=\frac{\pi}{4}\ln 2-I\ \Longrightarrow\ 2I=\frac{\pi}{4}\ln 2\ \Longrightarrow\ I=\frac{\pi}{8}\ln 2. \qquad\blacksquare
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c83274ca9f5d5cbb-dark.svg"><img src="图/05-精讲公式/c83274ca9f5d5cbb-light.svg" alt="I=\int_0^{\pi/4}\ln\frac{2}{1+\tan t}\,\mathrm{d}t=\frac{\pi}{4}\ln 2-I\ \Longrightarrow\ 2I=\frac{\pi}{4}\ln 2\ \Longrightarrow\ I=\frac{\pi}{8}\ln 2. \qquad\blacksquare"></picture>
 
-> 方法出处：§3.3（三角换元）+ §3.6（区间再现）的组合拳。这道题是"**换元把对数结构露出来、再现把对数结构消掉**"的典范：两个动作缺一不可。💡 记住这个"$`1+\tan`$ 的镜像恒等式"：它是 $`\ln(1+\tan t)`$ 类积分唯一的路。
+> 方法出处：§3.3（三角换元）+ §3.6（区间再现）的组合拳。这道题是"**换元把对数结构露出来、再现把对数结构消掉**"的典范：两个动作缺一不可。💡 记住这个"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0fcd3938bcdbbe62-dark.svg"><img src="图/05-精讲公式/0fcd3938bcdbbe62-light.svg" alt="1+\tan"></picture> 的镜像恒等式"：它是 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/8e01c20310cd63da-dark.svg"><img src="图/05-精讲公式/8e01c20310cd63da-light.svg" alt="\ln(1+\tan t)"></picture> 类积分唯一的路。
 
 ---
 
@@ -1138,7 +1122,7 @@ I=\int_0^{\pi/4}\ln\frac{2}{1+\tan t}\,\mathrm{d}t=\frac{\pi}{4}\ln 2-I\ \Longri
 §四 真题实战   10 道官方真题：8 道小题（每题 ≤6 分钟）+ 1 道 10 分 + 1 道 14 分模板
 ```
 
-**这一篇在整套 14 篇里的位置**：它是"计算双雄"的下半场（上半场是 03 篇求导）。从这里往后：**07 篇 ODE** 的每一步求解都要落地到"$`\int`$ 一算"；**10 篇重积分**的定限之后是"两个一元积分接力"；**11 篇曲线曲面积分**的最后一个等号永远是本篇的基本表；**12 篇级数**的积分判别与放缩全靠这里的直觉。一句话：**积分是后半本书的"通用货币"，今天兑换得越透，后面越省力。**
+**这一篇在整套 14 篇里的位置**：它是"计算双雄"的下半场（上半场是 03 篇求导）。从这里往后：**07 篇 ODE** 的每一步求解都要落地到"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b11a90082b892d58-dark.svg"><img src="图/05-精讲公式/b11a90082b892d58-light.svg" alt="\int"></picture> 一算"；**10 篇重积分**的定限之后是"两个一元积分接力"；**11 篇曲线曲面积分**的最后一个等号永远是本篇的基本表；**12 篇级数**的积分判别与放缩全靠这里的直觉。一句话：**积分是后半本书的"通用货币"，今天兑换得越透，后面越省力。**
 
 **下一篇预告（06 篇《定积分应用与积分不等式》）**：本篇解决的是"积分怎么**算**"；06 篇要解决"积分怎么**用**、怎么**估**"——几何物理应用（面积/体积/弧长）、**积分不等式四板斧**（15 届五、17 届六连续两年的 14 分压轴）、含参积分序列与黎曼和误差估计。分工一句话：**05 篇管"算得准"，06 篇管"证得住"**。今晚睡前可以先把 15 届五的题干抄一遍（06 篇精讲 5），看看自己现在的"第一步"能写到哪。
 
@@ -1146,14 +1130,14 @@ I=\int_0^{\pi/4}\ln\frac{2}{1+\tan t}\,\mathrm{d}t=\frac{\pi}{4}\ln 2-I\ \Longri
 
 ## 「积分计算防身八句话」（考前最后一天只看这段）
 
-1. **先看结构，再抄扳手**：能凑就凑（凑微分优先），凑不动换元（三角/根式/参数化），都不行上分部——**选 $`u`$ 顺序"反、对、幂、指、三"**。
+1. **先看结构，再抄扳手**：能凑就凑（凑微分优先），凑不动换元（三角/根式/参数化），都不行上分部——**选 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bb064dfcf89d48e7-dark.svg"><img src="图/05-精讲公式/bb064dfcf89d48e7-light.svg" alt="u"></picture> 顺序"反、对、幂、指、三"**。
 2. **定积分换限、不定积分回代**：两句话刻死。换了变量，老限作废；不定积分的答案里不许出现新变量。
-3. **对称区间先验奇偶**：$`\int_{-a}^af=\int_0^a[f(x)+f(-x)]\mathrm{d}x`$；$`\arctan e^x+\arctan e^{-x}=\dfrac{\pi}{2}`$ 见一次用一次。
-4. **三角区间想再现、周期因子数周期**：$`[0,\pi/2]`$、$`[0,\pi]`$ + 三角式 → 换 $`x\to`$ 中点镜像；$`|\sin x|`$ 类 → 数够几个整周期再乘。
-5. **"$`e^x\times`$ 三角"两套路**：凑导数（写成 $`[e^x\varphi(x)]'`$）或配对分部（两个积分互消）；被积式疑似某商的导数时，先猜再验（15 秒求导）。
+3. **对称区间先验奇偶**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/95e082769d19d08f-dark.svg"><img src="图/05-精讲公式/95e082769d19d08f-light.svg" alt="\int_{-a}^af=\int_0^a[f(x)+f(-x)]\mathrm{d}x"></picture>；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e62702fa339f4758-dark.svg"><img src="图/05-精讲公式/e62702fa339f4758-light.svg" alt="\arctan e^x+\arctan e^{-x}=\dfrac{\pi}{2}"></picture> 见一次用一次。
+4. **三角区间想再现、周期因子数周期**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0e5293859c1e2d07-dark.svg"><img src="图/05-精讲公式/0e5293859c1e2d07-light.svg" alt="[0,\pi/2]"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9c79690ea8c7c414-dark.svg"><img src="图/05-精讲公式/9c79690ea8c7c414-light.svg" alt="[0,\pi]"></picture> + 三角式 → 换 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/3276f0be10aa720d-dark.svg"><img src="图/05-精讲公式/3276f0be10aa720d-light.svg" alt="x\to"></picture> 中点镜像；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/1ec1cdc93cf22e5a-dark.svg"><img src="图/05-精讲公式/1ec1cdc93cf22e5a-light.svg" alt="|\sin x|"></picture> 类 → 数够几个整周期再乘。
+5. **"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/70f35361a1e7d0f6-dark.svg"><img src="图/05-精讲公式/70f35361a1e7d0f6-light.svg" alt="e^x\times"></picture> 三角"两套路**：凑导数（写成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f4ed389c5dffa9a5-dark.svg"><img src="图/05-精讲公式/f4ed389c5dffa9a5-light.svg" alt="[e^x\varphi(x)]'"></picture>）或配对分部（两个积分互消）；被积式疑似某商的导数时，先猜再验（15 秒求导）。
 6. **变限积分三纪律**：上限是函数 → 链式因子不能丢；被积函数含参 → 先换元分离；求极限 → 分母定阶 + 洛必达。
 7. **定积分为常数（S10）**：设参 → 造方程 → 解方程组；**方程两边积分/取极限，绝不求导**（求导信息全灭）。
-8. **广义积分**：拆极限、先判敛；$`p`$ 积分两支是标尺；条件收敛必须"收敛 + 非绝对"两半都写。收尾自检：**定积分是数、不定积分带 $`C`$**。
+8. **广义积分**：拆极限、先判敛；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/93fb02bb98928670-dark.svg"><img src="图/05-精讲公式/93fb02bb98928670-light.svg" alt="p"></picture> 积分两支是标尺；条件收敛必须"收敛 + 非绝对"两半都写。收尾自检：**定积分是数、不定积分带 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd15d8a2d57a2bf3-dark.svg"><img src="图/05-精讲公式/bd15d8a2d57a2bf3-light.svg" alt="C"></picture>**。
 
 > 💡 **学习建议**（按每天 1–2 小时、3 天节奏）：
 > 1. **第 1 天**：默写基本积分表 + 凑微分四式（错一条罚抄五遍）；做完自测 1–4；把 §3.1–3.6 的【适用信号】栏抄成一张小卡片。
@@ -1162,4 +1146,6 @@ I=\int_0^{\pi/4}\ln\frac{2}{1+\tan t}\,\mathrm{d}t=\frac{\pi}{4}\ln 2-I\ \Longri
 > 4. ✍️ **配套练习**：学完本篇后，直接做 `练习/专题练习/05-一元积分计算-练习.md`（19 题全真题 + 完整详解：A 组 11 题官方解答、B 组 8 题项目自写解答）。**必做题清单**：A1（10 届·分母带根号的分部）、A2（11 届·隐函数参数化）、A3（11 届·配对互消）、A6（13 补·区间再现）、A9+A10+A11（16/17 届·近三届填空与 S10 大题复用）、B5（5 届二·对称反演）、B6（6 届二·绝对值周期）、B8（9 届·凑微分）。做题时每题先限时、后对答案，错题标记"卡在哪一步"。
 > 5. 有任何一节没看懂，回来问我，我可以把任何一页再展开成十倍的细节。
 
-最后的最后：积分计算这件事，和极限一样——**不是"会不会"，是"熟不熟"**。你现在已经见过了"对称反演、区间再现、配对分部、设参解方程、周期切片"这些招式的真题形态；接下来要做的，只是让手比脑先动。当 $`\int_0^{\pi/2}\frac{\cos x}{1+\tan x}\mathrm{d}x`$ 这类题在你眼里变成"两行"的时候，你就知道这一篇已经值回票价了。加油喵！🐱📚
+最后的最后：积分计算这件事，和极限一样——**不是"会不会"，是"熟不熟"**。你现在已经见过了"对称反演、区间再现、配对分部、设参解方程、周期切片"这些招式的真题形态；接下来要做的，只是让手比脑先动。当 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/899c719a852cdf6f-dark.svg"><img src="图/05-精讲公式/899c719a852cdf6f-light.svg" alt="\int_0^{\pi/2}\frac{\cos x}{1+\tan x}\mathrm{d}x"></picture> 这类题在你眼里变成"两行"的时候，你就知道这一篇已经值回票价了。加油喵！🐱📚
+
+<!-- integral-tail:end -->

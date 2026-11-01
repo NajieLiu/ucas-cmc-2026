@@ -1,4 +1,4 @@
-// 将第五篇精讲 5–10 的公式预渲染为本地 SVG；读取保留的 Markdown 源码。
+// 将第五篇精讲 5–10、易错点、自测与结语的公式预渲染为本地 SVG。
 // 用法：在本目录 npm ci，再运行 node render_integral_examples.js。
 const fs = require('fs');
 const path = require('path');
@@ -85,14 +85,19 @@ function image(body, display) {
   return `<picture><source media="(prefers-color-scheme: dark)" srcset="${base}-dark.svg"><img src="${base}-light.svg" alt="${escape(body.replace(/\s+/g, ' ').trim())}"></picture>`;
 }
 
-let text = fs.readFileSync(source, 'utf8');
-const blocks = [];
-text = text.replace(/```math\r?\n([\s\S]*?)```/g, (match, body) => {
-  blocks.push(image(body.trim(), true));
-  return `@@DISPLAY_FORMULA_${blocks.length - 1}@@`;
-});
-text = text.replace(/\$`([^`\n]+)`\$/g, (match, body) => image(body, false));
-text = text.replace(/@@DISPLAY_FORMULA_(\d+)@@/g, (match, index) => blocks[Number(index)]);
+let displayCount = 0;
+function renderSource(file) {
+  let text = fs.readFileSync(file, 'utf8');
+  const blocks = [];
+  text = text.replace(/```math\r?\n([\s\S]*?)```/g, (match, body) => {
+    blocks.push(image(body.trim(), true));
+    return `@@DISPLAY_FORMULA_${blocks.length - 1}@@`;
+  });
+  text = text.replace(/\$`([^`\n]+)`\$/g, (match, body) => image(body, false));
+  displayCount += blocks.length;
+  return text.replace(/@@DISPLAY_FORMULA_(\d+)@@/g, (match, index) => blocks[Number(index)]);
+}
+const text = renderSource(source);
 const begin = '<!-- integral-examples:start -->';
 const end = '<!-- integral-examples:end -->';
 let page = fs.readFileSync(main, 'utf8');
@@ -100,5 +105,13 @@ const a = page.includes(begin) ? page.indexOf(begin) : page.indexOf('### 精讲 
 const b = page.includes(end) ? page.indexOf(end) + end.length : page.indexOf('# 五、易错点清单', a);
 if (a < 0 || b < a) throw new Error('未找到精讲 5–10 的范围');
 const result = `${begin}\n\n> [查看精讲 5–10 的 LaTeX 源码](公式源码/05-精讲5至10.md)\n\n${text.trim()}\n\n${end}\n\n`;
-fs.writeFileSync(main, page.slice(0, a) + result + page.slice(b).replace(/^\s*\n/, ''));
-console.log(`已生成 ${seen.size} 个公式的明暗主题 SVG（${blocks.length} 个独立公式块）。`);
+page = page.slice(0, a) + result + page.slice(b).replace(/^\s*\n/, '');
+const tailBegin = '<!-- integral-tail:start -->';
+const tailEnd = '<!-- integral-tail:end -->';
+const tailStart = page.includes(tailBegin) ? page.indexOf(tailBegin) : page.indexOf('# 五、易错点清单');
+const tailStop = page.includes(tailEnd) ? page.indexOf(tailEnd) + tailEnd.length : page.length;
+if (tailStart < 0 || tailStop < tailStart) throw new Error('未找到易错点清单的范围');
+const tail = renderSource(path.join(root, '教学文档/公式源码/05-易错点与自测.md'));
+page = page.slice(0, tailStart) + `${tailBegin}\n\n> [查看易错点、自测题与结语的 LaTeX 源码](公式源码/05-易错点与自测.md)\n\n${tail.trim()}\n\n${tailEnd}\n` + page.slice(tailStop).trimEnd();
+fs.writeFileSync(main, page);
+console.log(`已生成 ${seen.size} 个公式的明暗主题 SVG（${displayCount} 个独立公式块）。`);
