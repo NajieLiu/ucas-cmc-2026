@@ -168,7 +168,7 @@
 > 又 $`f`$ 非负，即 $`0 \leqslant f(x+h)`$，于是对一切 $`h`$ 都有
 >
 > ```math
-> \frac{M}{2}h^2 + f'(x)h + f(x) \geqslant 0. \tag{*}
+> \frac{M}{2}h^2 + f'(x)h + f(x) \geqslant 0. \qquad\text{(*)}
 > ```
 >
 > 式 $`(*)`$ 表明：关于 $`h`$ 的二次三项式 $`\varphi(h) = \dfrac{M}{2}h^2 + f'(x)h + f(x)`$ 恒非负。其二次项系数 $`\dfrac{M}{2} > 0`$，故其判别式非正：

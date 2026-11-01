@@ -1,0 +1,11 @@
+{
+  "name": "cmc-math-checks",
+  "private": true,
+  "scripts": {
+    "check": "node check_math.js ../.."
+  },
+  "dependencies": {
+    "katex": "0.16.25",
+    "mathjax-full": "3.2.2"
+  }
+}

@@ -1,9 +1,9 @@
 // 用法: node check_katex.js <md文件或目录>
 // 提取 Markdown 中的行内公式、$$ 块与 GitHub math 围栏，用 KaTeX 验证语法
-// 依赖: C:/Users/15861/.ml-pdf-export/node_modules/katex (用户既有管线)
+// 依赖：在本目录运行 npm ci。
 const fs = require('fs');
 const path = require('path');
-const katex = require('C:/Users/15861/.ml-pdf-export/node_modules/katex');
+const katex = require('katex');
 
 function collectFiles(p) {
   const st = fs.statSync(p);

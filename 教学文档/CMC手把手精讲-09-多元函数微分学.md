@@ -683,25 +683,25 @@ $`\Theta=x+2y-3z`$ 是常数（因为 $`2\sin\Theta=\Theta`$ 的解为常数）�
 设切点 $`(x_0,y_0,z_0)`$（$`x_0,y_0,z_0>0`$）。法向量共线：
 
 ```math
-y_0z_0=\frac{2x_0}{a^2}\lambda,\qquad x_0z_0=\frac{2y_0}{b^2}\lambda,\qquad x_0y_0=\frac{2z_0}{c^2}\lambda. \tag{1}
+y_0z_0=\frac{2x_0}{a^2}\lambda,\qquad x_0z_0=\frac{2y_0}{b^2}\lambda,\qquad x_0y_0=\frac{2z_0}{c^2}\lambda. \qquad\text{(1)}
 ```
 
 三式分别乘 $`x_0,y_0,z_0`$，利用 $`x_0y_0z_0=\mu`$：
 
 ```math
-\mu=2\lambda\frac{x_0^2}{a^2}=2\lambda\frac{y_0^2}{b^2}=2\lambda\frac{z_0^2}{c^2}. \tag{2}
+\mu=2\lambda\frac{x_0^2}{a^2}=2\lambda\frac{y_0^2}{b^2}=2\lambda\frac{z_0^2}{c^2}. \qquad\text{(2)}
 ```
 
 **（2）三式相加**，并利用切点满足椭球方程（$`\frac{x_0^2}{a^2}+\frac{y_0^2}{b^2}+\frac{z_0^2}{c^2}=1`$）：
 
 ```math
-3\mu=2\lambda. \tag{3}
+3\mu=2\lambda. \qquad\text{(3)}
 ```
 
 **（2）三式相乘**：$`\mu^3=\dfrac{8\lambda^3}{a^2b^2c^2}\cdot(x_0y_0z_0)^2=\dfrac{8\lambda^3\mu^2}{a^2b^2c^2}`$，约去 $`\mu^2`$：
 
 ```math
-\mu=\frac{8\lambda^3}{a^2b^2c^2}. \tag{4}
+\mu=\frac{8\lambda^3}{a^2b^2c^2}. \qquad\text{(4)}
 ```
 
 把 (3) 的 $`\lambda=\dfrac{3\mu}{2}`$ 代入 (4)：$`\mu=\dfrac{8}{a^2b^2c^2}\cdot\dfrac{27\mu^3}{8}`$，即 $`a^2b^2c^2=27\mu^2`$，由 $`\mu>0`$：
@@ -777,7 +777,7 @@ y_0z_0=\frac{2x_0}{a^2}\lambda,\qquad x_0z_0=\frac{2y_0}{b^2}\lambda,\qquad x_0y
 令 $`y=au`$，整理得
 
 ```math
-u^3f''(u)+2f''\left(\frac1u\right)=a^3bu^4. \tag{1}
+u^3f''(u)+2f''\left(\frac1u\right)=a^3bu^4. \qquad\text{(1)}
 ```
 
 在 (1) 中以 $`\dfrac1u`$ 换 $`u`$：
@@ -786,7 +786,7 @@ u^3f''(u)+2f''\left(\frac1u\right)=a^3bu^4. \tag{1}
 \begin{gathered}
 f''\left(\frac1u\right)+2u^3f''(u)=\frac{a^3b}{u^4}\cdot u^3=\frac{a^3b}{u},\\
 \text{即}\quad 2f''\left(\frac1u\right)+4u^3f''(u)=\frac{2a^3b}{u}.
-\end{gathered}\tag{2}
+\end{gathered}\qquad\text{(2)}
 ```
 
 (2) − (1)：$`3u^3f''(u)=\dfrac{2a^3b}{u}-a^3bu^4`$，故
@@ -918,13 +918,13 @@ $`H`$ 正定时二次型 $`\ge\lambda_{\min}(H)\big(\Delta x^2+\Delta y^2\big)>0
 **（1）降维求切点（5 分）**：设过 $`(0,4)`$ 的直线与椭圆 $`\dfrac{x^2}{3}+\dfrac{y^2}{4}=1`$ 相切于 $`(x_0,y_0)`$。切点满足
 
 ```math
-\frac{x_0^2}{3}+\frac{y_0^2}{4}=1, \tag{1}
+\frac{x_0^2}{3}+\frac{y_0^2}{4}=1, \qquad\text{(1)}
 ```
 
 且切线斜率（对 $`x`$ 隐式求导：$`\frac{2x}{3}+\frac{yy'}{2}=0\Rightarrow y'=-\frac{4x}{3y}`$）与割线斜率相等：
 
 ```math
-\frac{y_0-4}{x_0}=-\frac{4x_0}{3y_0} \quad\Longrightarrow\quad 3y_0(y_0-4)=-4x_0^2 \quad\Longrightarrow\quad x_0^2=3y_0-\frac{3}{4}y_0^2. \tag{2}
+\frac{y_0-4}{x_0}=-\frac{4x_0}{3y_0} \quad\Longrightarrow\quad 3y_0(y_0-4)=-4x_0^2 \quad\Longrightarrow\quad x_0^2=3y_0-\frac{3}{4}y_0^2. \qquad\text{(2)}
 ```
 
 （1）给 $`x_0^2=3-\dfrac34y_0^2`$，与（2）比较得 $`y_0=1`$，$`x_0^2=\dfrac94`$，即 $`x_0=\pm\dfrac32`$，$`y_0=1`$。

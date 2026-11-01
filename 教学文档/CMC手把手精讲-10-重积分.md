@@ -381,7 +381,7 @@ d^2=x^2+y^2+z^2-(ax+by+cz)^2
 **【关键公式】**
 
 ```math
-\iint_D f\,\mathrm{d}x\,\mathrm{d}y=\int_a^b\!\mathrm{d}x\int_{y_1(x)}^{y_2(x)}f\,\mathrm{d}y\ \xleftrightarrow{\ \text{换序}\ }\ \int_c^d\!\mathrm{d}y\int_{x_1(y)}^{x_2(y)}f\,\mathrm{d}x .
+\iint_D f\,\mathrm{d}x\,\mathrm{d}y=\int_a^b\!\mathrm{d}x\int_{y_1(x)}^{y_2(x)}f\,\mathrm{d}y\ \overset{\text{换序}}{\longleftrightarrow}\ \int_c^d\!\mathrm{d}y\int_{x_1(y)}^{x_2(y)}f\,\mathrm{d}x .
 ```
 
 换序口诀：**"横看成岭侧成峰"**——同一片区域，横着扫和竖着扫是两种写法；把域写成"不等式组"$`\{a\le x\le b,\ y_1(x)\le y\le y_2(x)\}`$，再改写成以 $`y`$ 为主序的不等式组，就是换序。

@@ -103,7 +103,7 @@
 ```
 
 ```math
-\oiint_{\Sigma_{\text{外}}} P\,\mathrm dy\mathrm dz+Q\,\mathrm dz\mathrm dx+R\,\mathrm dx\mathrm dy=\iiint_\Omega\Big(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\Big)\mathrm dV \qquad\text{(Gauss)},
+\mathop{∯}\nolimits_{\Sigma_{\text{外}}} P\,\mathrm dy\mathrm dz+Q\,\mathrm dz\mathrm dx+R\,\mathrm dx\mathrm dy=\iiint_\Omega\Big(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\Big)\mathrm dV \qquad\text{(Gauss)},
 ```
 
 ```math
@@ -241,7 +241,7 @@ $`\mathrm dS`$ 是面积微元，恒正；积分与曲面的"朝向"无关。计
 **第 2 幕：Gauss 公式（三维版）。** 完全相同的剧本：把空间区域切成小立方体，内部公共面上的通量互相抵消（相邻小体在公共面上的外法向正好相反），只剩外表面：
 
 ```math
-\oiint_{\Sigma_{\text{外}}} P\,\mathrm dy\mathrm dz+Q\,\mathrm dz\mathrm dx+R\,\mathrm dx\mathrm dy=\iiint_\Omega\Big(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\Big)\mathrm dV .
+\mathop{∯}\nolimits_{\Sigma_{\text{外}}} P\,\mathrm dy\mathrm dz+Q\,\mathrm dz\mathrm dx+R\,\mathrm dx\mathrm dy=\iiint_\Omega\Big(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\Big)\mathrm dV .
 ```
 
 被翻译的对象从"环流↔旋度"换成了"通量↔散度"：**散度** $`\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}`$ 是"这一点往外冒的源强度"（正=源、负=汇）。Gauss 公式的物理一句话：**从闭曲面流出的净流量 = 里面所有源头的总产出**。
@@ -439,7 +439,7 @@ u(x,y)=\int_{(x_0,y_0)}^{(x,y)}P\,\mathrm dx+Q\,\mathrm dy\ (\text{与路径无�
 $`\Sigma`$ 写成 $`z=5-y`$，$`\mathrm dS=\sqrt{1+0^2+(-1)^2}\,\mathrm dx\mathrm dy=\sqrt2\,\mathrm dx\mathrm dy`$；投影 $`D_{xy}: x^2+y^2\le25`$；被积函数 $`x+y+z=x+5`$：
 
 ```math
-I=\sqrt2\iint_{D_{xy}}(x+5)\,\mathrm dx\mathrm dy\xlongequal{\text{对称性删 }x}5\sqrt2\cdot\pi\cdot25=125\sqrt2\,\pi .
+I=\sqrt2\iint_{D_{xy}}(x+5)\,\mathrm dx\mathrm dy\overset{\text{对称性删 }x}{=}5\sqrt2\cdot\pi\cdot25=125\sqrt2\,\pi .
 ```
 
 > ⏱️ 全程 90 秒。三个知识点：$`\mathrm dS`$ 的因子是**常数** $`\sqrt2`$（平面块的标志）；投影区域是**柱面的底圆**；圆盘上的 $`x`$ 项**一删了之**。（完整过程见精讲 6。）
@@ -680,7 +680,7 @@ I=\int_0^{2\pi}\left|2\sqrt3\sin\theta-2\cos\theta\right|\cdot(-2\sin\theta)\,\m
 利用 $`\frac12\cos\theta-\frac{\sqrt3}{2}\sin\theta=\cos\Big(\theta+\frac{\pi}{3}\Big)`$：
 
 ```math
-I=-8\int_0^{2\pi}\left|\cos\Big(\theta+\frac{\pi}{3}\Big)\right|\sin\theta\,\mathrm d\theta\xlongequal{t=\theta+\pi/3}-8\int_{\pi/3}^{2\pi+\pi/3}|\cos t|\sin\Big(t-\frac{\pi}{3}\Big)\mathrm dt .
+I=-8\int_0^{2\pi}\left|\cos\Big(\theta+\frac{\pi}{3}\Big)\right|\sin\theta\,\mathrm d\theta\overset{t=\theta+\pi/3}{=}-8\int_{\pi/3}^{2\pi+\pi/3}|\cos t|\sin\Big(t-\frac{\pi}{3}\Big)\mathrm dt .
 ```
 
 由周期函数的积分性质（区间长正好一个周期，可平移到 $`[-\pi,\pi]`$）：
@@ -803,7 +803,7 @@ $`\Sigma`$ 的方程为 $`z=5-y`$，故 $`\mathrm dS=\sqrt{1+z_x^2+z_y^2}\,\math
 
 ```math
 I=\sqrt2\iint_{D_{xy}}\big(x+y+(5-y)\big)\mathrm dx\mathrm dy=\sqrt2\iint_{D_{xy}}(x+5)\,\mathrm dx\mathrm dy
-\xlongequal{\iint_Dx=0}5\sqrt2\iint_{D_{xy}}\mathrm dx\mathrm dy=5\sqrt2\cdot25\pi=125\sqrt2\,\pi .
+\overset{\iint_Dx=0}{=}5\sqrt2\iint_{D_{xy}}\mathrm dx\mathrm dy=5\sqrt2\cdot25\pi=125\sqrt2\,\pi .
 ```
 
 **答案 $`125\sqrt2\,\pi`$。**
@@ -871,7 +871,7 @@ I=\iint_S(x^2-x)\,\mathrm dy\mathrm dz+(y^2-y)\,\mathrm dz\mathrm dx+(z^2-z)\,\m
 其中 $`\Omega=\{z\ge0,\ x^2+y^2+z^2\le R^2\}`$。在 $`\Sigma`$ 上 $`z=0`$，被积式为 $`z^2-z=0`$，故补面积分为 0：
 
 ```math
-I=\iiint_\Omega\big(2(x+y+z)-3\big)\mathrm dV\xlongequal{\text{对称性}}\iiint_\Omega(2z-3)\,\mathrm dV .
+I=\iiint_\Omega\big(2(x+y+z)-3\big)\mathrm dV\overset{\text{对称性}}{=}\iiint_\Omega(2z-3)\,\mathrm dV .
 ```
 
 用球坐标（$`x=r\cos\theta\sin\varphi`$ 等，$`\mathrm dV=r^2\sin\varphi\,\mathrm dr\mathrm d\varphi\mathrm d\theta`$）：
@@ -910,7 +910,7 @@ f(x,y,z)=a_1x^4+a_2y^4+a_3z^4+3a_4x^2y^2+3a_5y^2z^2+3a_6x^2z^2,
 ① 单位球面上外法向的方向余弦就是 $`(\cos\alpha,\cos\beta,\cos\gamma)=(x,y,z)`$——"法向与坐标同构"，这是球面的独门特征；
 ② 若能把 $`\iint_\Sigma f\,\mathrm dS`$ 写成 $`\iint_\Sigma\big(P\cos\alpha+Q\cos\beta+R\cos\gamma\big)\mathrm dS`$ 的形式，就能翻成第二类曲面积分、进而 Gauss 化成体积分——但 $`P,Q,R`$ 该取什么？需要 $`xP+yQ+zR=f`$ 的分解；
 ③ **4 次齐次**是钥匙：欧拉定理说 $`xf_x'+yf_y'+zf_z'=4f`$，于是 $`f=\frac14(xf_x'+yf_y'+zf_z')`$，恰好是 ② 要的分解（取 $`P=f_x',\ Q=f_y',\ R=f_z'`$）！
-路线打通：$`\iint_\Sigma f\,\mathrm dS=\frac14\iint_\Sigma(f_x'\mathrm dy\mathrm dz+f_y'\mathrm dz\mathrm dx+f_z'\mathrm dx\mathrm dy)\xlongequal{\text{Gauss}}\frac14\iiint_{B}\Delta f\,\mathrm dV`$——最后 $`\Delta f`$ 虽然系数多，但每一项都是 $`x^2,y^2,z^2`$，用**轮换对称**一秒钟合并。
+路线打通：$`\iint_\Sigma f\,\mathrm dS=\frac14\iint_\Sigma(f_x'\mathrm dy\mathrm dz+f_y'\mathrm dz\mathrm dx+f_z'\mathrm dx\mathrm dy)\overset{\text{Gauss}}{=}\frac14\iiint_{B}\Delta f\,\mathrm dV`$——最后 $`\Delta f`$ 虽然系数多，但每一项都是 $`x^2,y^2,z^2`$，用**轮换对称**一秒钟合并。
 
 **完整解答**：
 $`f`$ 为 4 次齐次函数，故对 $`f(tx,ty,tz)=t^4f(x,y,z)`$ 两边关于 $`t`$ 求导并取 $`t=1`$，得欧拉定理
@@ -1112,7 +1112,7 @@ I=\frac12-\frac{\pi}{2\sqrt2}=\frac12-\frac{\sqrt2\,\pi}{4}.
 **挖洞**：取 $`L_1:x^2+y^2=1`$ 取顺时针方向，环域 Green 得 $`\oint_L=-\oint_{L_1}=\oint_{-L_1}`$（$`-L_1`$ 为逆时针的单位圆）。在 $`L_1`$ 上分母 $`x^2+y^2=1`$，于是
 
 ```math
-\oint_L=\oint_{-L_1}\big[(x-y)\,\mathrm dx+(x+y)\,\mathrm dy\big]\xlongequal{\text{Green}}\iint_{x^2+y^2\le1}\big(1-(-1)\big)\mathrm dx\mathrm dy=2\pi .
+\oint_L=\oint_{-L_1}\big[(x-y)\,\mathrm dx+(x+y)\,\mathrm dy\big]\overset{\text{Green}}{=}\iint_{x^2+y^2\le1}\big(1-(-1)\big)\mathrm dx\mathrm dy=2\pi .
 ```
 
 （参数化验证：$`x=\cos t,\ y=\sin t`$，被积式 $`=(x-y)\mathrm dx+(x+y)\mathrm dy=(1)\,\mathrm dt`$，$`\int_0^{2\pi}\mathrm dt=2\pi`$ ✓）

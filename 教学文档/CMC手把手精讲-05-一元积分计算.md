@@ -980,19 +980,19 @@ f(x)=x^3+x^2\lim_{x\to 0}\frac{f(x)}{x}-x\int_0^1f(x)\,\mathrm{d}x,
 记 $`a=f'(0)`$，$`b=\displaystyle\int_0^1f(x)\,\mathrm{d}x`$，则原式变成
 
 ```math
-f(x)=x^3+ax^2-bx.\tag{1}
+f(x)=x^3+ax^2-bx.\qquad\text{(1)}
 ```
 
 **造第一个方程**（对 (1) 两边取 $`x\to0`$ 的 $`\dfrac{f(x)}{x}`$ 极限）：
 
 ```math
-a=\lim_{x\to 0}\big(x^2+ax-b\big)=-b.\tag{2}
+a=\lim_{x\to 0}\big(x^2+ax-b\big)=-b.\qquad\text{(2)}
 ```
 
 **造第二个方程**（对 (1) 两边在 $`[0,1]`$ 上积分）：
 
 ```math
-b=\int_0^1x^3\,\mathrm{d}x+a\int_0^1x^2\,\mathrm{d}x-b\int_0^1x\,\mathrm{d}x=\frac{1}{4}+\frac{a}{3}-\frac{b}{2}.\tag{3}
+b=\int_0^1x^3\,\mathrm{d}x+a\int_0^1x^2\,\mathrm{d}x-b\int_0^1x\,\mathrm{d}x=\frac{1}{4}+\frac{a}{3}-\frac{b}{2}.\qquad\text{(3)}
 ```
 
 联立 (2)(3)：$`a=-b`$ 代入 (3) 得 $`b=\dfrac14-\dfrac{b}{3}-\dfrac{b}{2}=\dfrac14-\dfrac{5b}{6}`$，即 $`\dfrac{11b}{6}=\dfrac14`$，解得 $`b=\dfrac{3}{22}`$，$`a=-\dfrac{3}{22}`$。所以

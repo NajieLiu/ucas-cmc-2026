@@ -622,7 +622,7 @@ a_n\le\Bigl(\frac{3\sqrt{3}}{8}\Bigr)^{\frac{2n}{3}}=\Bigl[\Bigl(\frac{3\sqrt{3}
 两式合起来给出误差控制：$`\Bigl|\sum_{k=1}^{N}\frac{1}{k^2+n^2}-\frac{\pi}{2n}\Bigr|\le\frac{\pi}{2n}-\frac{1}{n}\Bigl(\arctan\frac{N+1}{n}-\arctan\frac{1}{n}\Bigr)`$。令 $`N\to\infty`$（$`\arctan\frac{N+1}{n}\to\frac{\pi}{2}`$）：
 
 ```math
-\Bigl|\sum_{k=1}^{\infty}\frac{1}{k^2+n^2}-\frac{\pi}{2n}\Bigr|\ \le\ \frac{1}{n}\arctan\frac{1}{n}.\tag{$*$}
+\Bigl|\sum_{k=1}^{\infty}\frac{1}{k^2+n^2}-\frac{\pi}{2n}\Bigr|\ \le\ \frac{1}{n}\arctan\frac{1}{n}.\qquad\text{(*)}
 ```
 
 **第二段（拆解降维）**：记内层和 $`T_n=\sum_{k=1}^{\infty}\frac{1}{n^2+k^2}`$，把通项按"**主项 + 误差**"拆开：
