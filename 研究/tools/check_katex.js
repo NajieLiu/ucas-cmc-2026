@@ -1,5 +1,5 @@
 // 用法: node check_katex.js <md文件或目录>
-// 提取 Markdown 中所有 $...$ 与 $$...$$ 公式，用 KaTeX 逐个编译验证语法
+// 提取 Markdown 中的行内公式、$$ 块与 GitHub math 围栏，用 KaTeX 验证语法
 // 依赖: C:/Users/15861/.ml-pdf-export/node_modules/katex (用户既有管线)
 const fs = require('fs');
 const path = require('path');
@@ -19,8 +19,12 @@ function collectFiles(p) {
 // 从文本里提取公式片段：先摘 $$...$$，再摘 $...$
 function extractFormulas(text) {
   const formulas = [];
-  // 去掉代码块（``` ... ```）避免误报
-  const noCode = text.replace(/```[\s\S]*?```/g, '');
+  // math 围栏是公式；先提取它们，再去掉真正的代码块，避免漏检。
+  const noMathFences = text.replace(/^[ \t]*(?:>[ \t]*)*```math[ \t]*\r?\n([\s\S]*?)^[ \t]*(?:>[ \t]*)*```[ \t]*$/gm, (m, body) => {
+    formulas.push({ display: true, body: body.replace(/^[ \t]*(?:>[ \t]*)*/gm, '') });
+    return '';
+  });
+  const noCode = noMathFences.replace(/```[\s\S]*?```/g, '');
   let work = noCode;
   // $$...$$ （跨行）
   work = work.replace(/\$\$([\s\S]+?)\$\$/g, (m, body) => {
@@ -29,7 +33,8 @@ function extractFormulas(text) {
   });
   // 剩余的单 $...$（跨行也收，行内公式不应跨行，但检测出跨行也说明问题）
   work = work.replace(/\$([^$\n]+?)\$/g, (m, body) => {
-    formulas.push({ display: false, body });
+    // GitHub 的 $`...`$ 写法用反引号保护公式，反引号不属于 LaTeX。
+    formulas.push({ display: false, body: body.startsWith('`') && body.endsWith('`') ? body.slice(1, -1) : body });
     return '';
   });
   // 剩余未配对的 $（奇数个）也要报，并给出上下文便于定位

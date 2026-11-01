@@ -22,40 +22,43 @@
 
 ## 一、填空题（本题 30 分，每小题 6 分）
 
-**(1)** $\lim\limits_{x\to 0}\dfrac{\mathrm{e}^{x}+\mathrm{e}^{-x}-2}{1-\cos x} = \underline{\qquad}$。
+**(1)** $`\lim\limits_{x\to 0}\dfrac{\mathrm{e}^{x}+\mathrm{e}^{-x}-2}{1-\cos x} = \underline{\qquad}`$。
 
-**(2)** 设 $z = z(x,y)$ 由方程 $z + \ln z = xy$（$z>0$）确定，则 $\mathrm{d}z = \underline{\qquad}$。
+**(2)** 设 $`z = z(x,y)`$ 由方程 $`z + \ln z = xy`$（$`z>0`$）确定，则 $`\mathrm{d}z = \underline{\qquad}`$。
 
-**(3)** $\displaystyle\int_0^{\frac{\pi}{4}}\tan^2 x\,\mathrm{d}x = \underline{\qquad}$。
+**(3)** $`\displaystyle\int_0^{\frac{\pi}{4}}\tan^2 x\,\mathrm{d}x = \underline{\qquad}`$。
 
-**(4)** 微分方程 $\dfrac{\mathrm{d}y}{\mathrm{d}x} = (x+y)^2$ 满足 $y(0) = 0$ 的解为 $y = \underline{\qquad}$。
+**(4)** 微分方程 $`\dfrac{\mathrm{d}y}{\mathrm{d}x} = (x+y)^2`$ 满足 $`y(0) = 0`$ 的解为 $`y = \underline{\qquad}`$。
 
-**(5)** 幂级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{(x+2)^n}{n^2\cdot 3^n}$ 的收敛域为 $\underline{\qquad}$。
+**(5)** 幂级数 $`\displaystyle\sum_{n=1}^{\infty}\dfrac{(x+2)^n}{n^2\cdot 3^n}`$ 的收敛域为 $`\underline{\qquad}`$。
 
 ---
 
 ## 二、（本题 14 分）
 
-已知直线 $L$：$x = t$，$y = 1$，$z = t-1$（$t\in\mathbb{R}$），平面 $\pi$：$x + y = 3$。
+已知直线 $`L`$：$`x = t`$，$`y = 1`$，$`z = t-1`$（$`t\in\mathbb{R}`$），平面 $`\pi`$：$`x + y = 3`$。
 
-**(1)** 求直线 $L$ 与平面 $\pi$ 的交点；
+**(1)** 求直线 $`L`$ 与平面 $`\pi`$ 的交点；
 
-**(2)** 求直线 $L$ 在平面 $\pi$ 上的投影直线方程（用两平面交线的形式表示）。
+**(2)** 求直线 $`L`$ 在平面 $`\pi`$ 上的投影直线方程（用两平面交线的形式表示）。
 
 ---
 
 ## 三、（本题 14 分）
 
-设 $L$ 为正方形区域 $D = \{(x,y)\mid 0\le x\le 1,\ 0\le y\le 1\}$ 的正向（逆时针）边界，计算曲线积分
-$$\oint_L x^2\,\mathrm{d}x + \left(\mathrm{e}^x + x^2 + y\right)\mathrm{d}y.$$
+设 $`L`$ 为正方形区域 $`D = \{(x,y)\mid 0\le x\le 1,\ 0\le y\le 1\}`$ 的正向（逆时针）边界，计算曲线积分
+
+```math
+\oint_L x^2\,\mathrm{d}x + \left(\mathrm{e}^x + x^2 + y\right)\mathrm{d}y.
+```
 
 ---
 
 ## 四、（本题 14 分）
 
-**(1)** 证明：当 $0 < x < \dfrac{\pi}{2}$ 时，$\tan x > x$；
+**(1)** 证明：当 $`0 < x < \dfrac{\pi}{2}`$ 时，$`\tan x > x`$；
 
-**(2)** 证明：当 $0 < x < \dfrac{\pi}{2}$ 时，$\tan x > x + \dfrac{x^3}{3}$。
+**(2)** 证明：当 $`0 < x < \dfrac{\pi}{2}`$ 时，$`\tan x > x + \dfrac{x^3}{3}`$。
 
 ---
 
@@ -63,19 +66,18 @@ $$\oint_L x^2\,\mathrm{d}x + \left(\mathrm{e}^x + x^2 + y\right)\mathrm{d}y.$$
 
 计算下列定积分：
 
-**(1)** $I = \displaystyle\int_0^{\frac{\pi}{4}}\ln\left(1+\tan x\right)\mathrm{d}x$；
+**(1)** $`I = \displaystyle\int_0^{\frac{\pi}{4}}\ln\left(1+\tan x\right)\mathrm{d}x`$；
 
-**(2)** $J = \displaystyle\int_0^{\pi}\frac{x\sin x}{1+\cos^2 x}\,\mathrm{d}x$。
+**(2)** $`J = \displaystyle\int_0^{\pi}\frac{x\sin x}{1+\cos^2 x}\,\mathrm{d}x`$。
 
 ---
 
 ## 六、（本题 14 分）
 
-**(1)** 求幂级数 $\displaystyle S(x) = \sum_{n=1}^{\infty}\frac{x^n}{n\cdot 2^n}$ 的收敛半径与和函数（写出 $|x|<2$ 上的初等表达式）；
+**(1)** 求幂级数 $`\displaystyle S(x) = \sum_{n=1}^{\infty}\frac{x^n}{n\cdot 2^n}`$ 的收敛半径与和函数（写出 $`|x|<2`$ 上的初等表达式）；
 
-**(2)** 利用 (1) 求数项级数 $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n\cdot 2^n}$ 的和。
+**(2)** 利用 (1) 求数项级数 $`\displaystyle\sum_{n=1}^{\infty}\frac{1}{n\cdot 2^n}`$ 的和。
 
 ---
-
 
 > （命题双向细目表含答案数值，已移至「答案册」版本。）

@@ -22,56 +22,74 @@
 
 ## 一、填空题（本题 30 分，每小题 6 分）
 
-**(1)** 设 $f(x) = \displaystyle\int_0^{x}\arctan t\,\mathrm{d}t$，则 $\lim\limits_{x\to 0}\dfrac{f(x)-\dfrac{x^2}{2}}{x^4} = \underline{\qquad}$。
+**(1)** 设 $`f(x) = \displaystyle\int_0^{x}\arctan t\,\mathrm{d}t`$，则 $`\lim\limits_{x\to 0}\dfrac{f(x)-\dfrac{x^2}{2}}{x^4} = \underline{\qquad}`$。
 
-**(2)** 设 $f(x) = x^2\mathrm{e}^{2x}$，则 $f^{(n)}(0) = \underline{\qquad}$（用 $n$ 表示，$n\ge 2$）。
+**(2)** 设 $`f(x) = x^2\mathrm{e}^{2x}`$，则 $`f^{(n)}(0) = \underline{\qquad}`$（用 $`n`$ 表示，$`n\ge 2`$）。
 
-**(3)** 经过两平面 $2x - y + 3z - 5 = 0$ 与 $x + 2y - z + 2 = 0$ 的交线，且平行于 $z$ 轴的平面方程为 $\underline{\qquad}$。
+**(3)** 经过两平面 $`2x - y + 3z - 5 = 0`$ 与 $`x + 2y - z + 2 = 0`$ 的交线，且平行于 $`z`$ 轴的平面方程为 $`\underline{\qquad}`$。
 
-**(4)** $\displaystyle\int_0^{\frac{\pi}{2}}\mathrm{e}^{x}\cos x\,\mathrm{d}x = \underline{\qquad}$。
+**(4)** $`\displaystyle\int_0^{\frac{\pi}{2}}\mathrm{e}^{x}\cos x\,\mathrm{d}x = \underline{\qquad}`$。
 
-**(5)** 设 $L$ 为圆周 $(x-1)^2 + y^2 = 1$，则 $\displaystyle\oint_L \left(x^2+y^2\right)\mathrm{d}s = \underline{\qquad}$。
+**(5)** 设 $`L`$ 为圆周 $`(x-1)^2 + y^2 = 1`$，则 $`\displaystyle\oint_L \left(x^2+y^2\right)\mathrm{d}s = \underline{\qquad}`$。
 
 ---
 
 ## 二、（本题 14 分）
 
 求微分方程
-$$2xy\,\dfrac{\mathrm{d}y}{\mathrm{d}x} = x^2 + y^2 \qquad (x > 0)$$
-的通解；并求满足 $y(1) = 2$ 的特解（写出 $y$ 关于 $x$ 的显式表达式）。
+
+```math
+2xy\,\dfrac{\mathrm{d}y}{\mathrm{d}x} = x^2 + y^2 \qquad (x > 0)
+```
+
+的通解；并求满足 $`y(1) = 2`$ 的特解（写出 $`y`$ 关于 $`x`$ 的显式表达式）。
 
 ---
 
 ## 三、（本题 14 分）
 
 计算曲面积分
-$$I = \iint_S x^3\,\mathrm{d}y\,\mathrm{d}z + y^3\,\mathrm{d}z\,\mathrm{d}x + z^3\,\mathrm{d}x\,\mathrm{d}y,$$
-其中 $S$ 为上半球面 $x^2 + y^2 + z^2 = 1$（$z\ge 0$）取上侧。
+
+```math
+I = \iint_S x^3\,\mathrm{d}y\,\mathrm{d}z + y^3\,\mathrm{d}z\,\mathrm{d}x + z^3\,\mathrm{d}x\,\mathrm{d}y,
+```
+
+其中 $`S`$ 为上半球面 $`x^2 + y^2 + z^2 = 1`$（$`z\ge 0`$）取上侧。
 
 ---
 
 ## 四、（本题 14 分）
 
 求函数
-$$f(x,y) = x^2 + 2y^2 - x^2y^2$$
-在闭区域 $D = \left\{(x,y)\ \middle|\ x^2+y^2\le 4\right\}$ 上的最大值与最小值。
+
+```math
+f(x,y) = x^2 + 2y^2 - x^2y^2
+```
+
+在闭区域 $`D = \left\{(x,y)\ \middle|\ x^2+y^2\le 4\right\}`$ 上的最大值与最小值。
 
 ---
 
 ## 五、（本题 14 分）
 
-设函数 $f(x)$ 在 $[0,1]$ 上连续，在 $(0,1)$ 内可导，$f(0) = 0$，$f(1) = 3$。证明：存在**两两互异**的点 $\xi_1,\xi_2,\xi_3\in(0,1)$，使得
-$$f'(\xi_1)\,f'(\xi_2)\,\left(2-\xi_3\right)\ \ge\ 6.$$
+设函数 $`f(x)`$ 在 $`[0,1]`$ 上连续，在 $`(0,1)`$ 内可导，$`f(0) = 0`$，$`f(1) = 3`$。证明：存在**两两互异**的点 $`\xi_1,\xi_2,\xi_3\in(0,1)`$，使得
+
+```math
+f'(\xi_1)\,f'(\xi_2)\,\left(2-\xi_3\right)\ \ge\ 6.
+```
 
 ---
 
 ## 六、（本题 14 分）
 
-设 $p$ 为实数，讨论级数
-$$\sum_{n=1}^{\infty}(-1)^n\left(\sqrt{n+1}-\sqrt{n}\right)^p$$
+设 $`p`$ 为实数，讨论级数
+
+```math
+\sum_{n=1}^{\infty}(-1)^n\left(\sqrt{n+1}-\sqrt{n}\right)^p
+```
+
 的收敛性（须区分绝对收敛、条件收敛与发散）。
 
 ---
-
 
 > （命题双向细目表含答案数值，已移至「答案册」版本。）
