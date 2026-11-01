@@ -12,3 +12,5 @@ npm run check
 MathJax 只加载 base、ams、newcommand 和 boldsymbol，避免本地开启额外扩展后掩盖网页兼容问题。公式编号用普通文字编号；带注释等号使用 `\overset{说明}{=}`；闭曲面积分使用 `\mathop{∯}\nolimits`，保留原有数学含义。
 
 编译检查验证的是语法和上述扩展兼容性，不能替代浏览器中的最终显示检查。
+
+第五篇的精讲 5–10 使用仓库内 SVG 展示公式，以便在公式组件无法加载时仍可阅读。修改 `教学文档/公式源码/05-精讲5至10.md` 后，在本目录运行 `node render_integral_examples.js`，同步更新正文及明暗主题图片；原始 LaTeX 保留在源码文件及图片的替代文本中。

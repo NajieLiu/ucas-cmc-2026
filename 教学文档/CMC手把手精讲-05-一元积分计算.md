@@ -765,248 +765,200 @@ t^2x^2\cdot x(1-t)=x^2\ \Rightarrow\ x=\frac{1}{t^2(1-t)},\qquad y=tx=\frac{1}{t
 
 ---
 
-### 精讲 5：区间再现——$`1+\tan x`$ 的经典一幕（第 13 届非数学类·初赛补赛填空第 2 题，2021，6 分）
+<!-- integral-examples:start -->
 
-**题面**：积分 $`\displaystyle\int_0^{\frac{\pi}{2}}\frac{\cos x}{1+\tan x}\,\mathrm{d}x=\underline{\qquad}`$。
+> [查看精讲 5–10 的 LaTeX 源码](公式源码/05-精讲5至10.md)
 
-**思路分析（真实思考）**：先验型：这不是"积分不出来"，而是"原函数很烦"。信号出现了——**区间 $`[0,\pi/2]`$ + 三角式**，几乎就是在邀请你**区间再现**。真做一下镜像换元 $`x\to\dfrac{\pi}{2}-x`$：
+### 精讲 5：区间再现——<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a684d3aef0b3f820-dark.svg"><img src="图/05-精讲公式/a684d3aef0b3f820-light.svg" alt="1+\tan x"></picture> 的经典一幕（第 13 届非数学类·初赛补赛填空第 2 题，2021，6 分）
 
-```math
-I=\int_0^{\pi/2}\frac{\cos x}{1+\tan x}\,\mathrm{d}x\ \xrightarrow{\ x=\frac{\pi}{2}-t\ }\ \int_0^{\pi/2}\frac{\sin t}{1+\cot t}\,\mathrm{d}t.
-```
+**题面**：积分 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/7c867d6ed5fce916-dark.svg"><img src="图/05-精讲公式/7c867d6ed5fce916-light.svg" alt="\displaystyle\int_0^{\frac{\pi}{2}}\frac{\cos x}{1+\tan x}\,\mathrm{d}x=\underline{\qquad}"></picture>。
 
-现在 $`I`$ 有两副面孔：分母一个 $`1+\tan x`$、一个 $`1+\cot x`$。**两式相加**，分母竟然合并成同一个：
+**思路分析（真实思考）**：先验型：这不是"积分不出来"，而是"原函数很烦"。信号出现了——**区间 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0e5293859c1e2d07-dark.svg"><img src="图/05-精讲公式/0e5293859c1e2d07-light.svg" alt="[0,\pi/2]"></picture> + 三角式**，几乎就是在邀请你**区间再现**。真做一下镜像换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/70ad062d3f0a5c11-dark.svg"><img src="图/05-精讲公式/70ad062d3f0a5c11-light.svg" alt="x\to\dfrac{\pi}{2}-x"></picture>：
 
-```math
-\frac{\cos x}{1+\tan x}+\frac{\sin x}{1+\cot x}=\cos x\cdot\frac{\cos x}{\cos x+\sin x}+\sin x\cdot\frac{\sin x}{\sin x+\cos x}=\frac{\cos^2x+\sin^2x}{\sin x+\cos x}=\frac{1}{\sin x+\cos x}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/706af24f81229d6c-dark.svg"><img src="图/05-精讲公式/706af24f81229d6c-light.svg" alt="I=\int_0^{\pi/2}\frac{\cos x}{1+\tan x}\,\mathrm{d}x\ \xrightarrow{\ x=\frac{\pi}{2}-t\ }\ \int_0^{\pi/2}\frac{\sin t}{1+\cot t}\,\mathrm{d}t."></picture>
 
-"妖怪"消失了，剩下纯正的 $`\dfrac{1}{\sin x+\cos x}`$——辅助角公式归拢成 $`\sin\big(x+\frac{\pi}{4}\big)`$，套 $`\csc`$ 积分公式。
+现在 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/70a4ee2718be81af-dark.svg"><img src="图/05-精讲公式/70a4ee2718be81af-light.svg" alt="I"></picture> 有两副面孔：分母一个 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a684d3aef0b3f820-dark.svg"><img src="图/05-精讲公式/a684d3aef0b3f820-light.svg" alt="1+\tan x"></picture>、一个 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e664b5affa5849d6-dark.svg"><img src="图/05-精讲公式/e664b5affa5849d6-light.svg" alt="1+\cot x"></picture>。**两式相加**，分母竟然合并成同一个：
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f782d2d1710be76e-dark.svg"><img src="图/05-精讲公式/f782d2d1710be76e-light.svg" alt="\frac{\cos x}{1+\tan x}+\frac{\sin x}{1+\cot x}=\cos x\cdot\frac{\cos x}{\cos x+\sin x}+\sin x\cdot\frac{\sin x}{\sin x+\cos x}=\frac{\cos^2x+\sin^2x}{\sin x+\cos x}=\frac{1}{\sin x+\cos x}."></picture>
+
+"妖怪"消失了，剩下纯正的 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/135ee9b3e30e617d-dark.svg"><img src="图/05-精讲公式/135ee9b3e30e617d-light.svg" alt="\dfrac{1}{\sin x+\cos x}"></picture>——辅助角公式归拢成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/6e9e488f83fd2341-dark.svg"><img src="图/05-精讲公式/6e9e488f83fd2341-light.svg" alt="\sin\big(x+\frac{\pi}{4}\big)"></picture>，套 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/80197c712bc061d8-dark.svg"><img src="图/05-精讲公式/80197c712bc061d8-light.svg" alt="\csc"></picture> 积分公式。
 
 **完整解答**：
 
-```math
-I=\frac{1}{2}\Big[\int_0^{\pi/2}\frac{\cos x}{1+\tan x}\,\mathrm{d}x+\int_0^{\pi/2}\frac{\sin x}{1+\cot x}\,\mathrm{d}x\Big]=\frac{1}{2}\int_0^{\pi/2}\frac{\mathrm{d}x}{\sin x+\cos x}
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/8536bf99666a0548-dark.svg"><img src="图/05-精讲公式/8536bf99666a0548-light.svg" alt="I=\frac{1}{2}\Big[\int_0^{\pi/2}\frac{\cos x}{1+\tan x}\,\mathrm{d}x+\int_0^{\pi/2}\frac{\sin x}{1+\cot x}\,\mathrm{d}x\Big]=\frac{1}{2}\int_0^{\pi/2}\frac{\mathrm{d}x}{\sin x+\cos x}"></picture>
 
-```math
-=\frac{1}{2\sqrt{2}}\int_0^{\pi/2}\csc\Big(x+\frac{\pi}{4}\Big)\mathrm{d}\Big(x+\frac{\pi}{4}\Big)=\frac{1}{2\sqrt{2}}\ln\Big\lvert\csc\Big(x+\frac{\pi}{4}\Big)-\cot\Big(x+\frac{\pi}{4}\Big)\Big\rvert\Big|_0^{\pi/2}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4b88f4518c19dec4-dark.svg"><img src="图/05-精讲公式/4b88f4518c19dec4-light.svg" alt="=\frac{1}{2\sqrt{2}}\int_0^{\pi/2}\csc\Big(x+\frac{\pi}{4}\Big)\mathrm{d}\Big(x+\frac{\pi}{4}\Big)=\frac{1}{2\sqrt{2}}\ln\Big\lvert\csc\Big(x+\frac{\pi}{4}\Big)-\cot\Big(x+\frac{\pi}{4}\Big)\Big\rvert\Big|_0^{\pi/2}."></picture>
 
-代入两个限：上限处 $`\csc\dfrac{3\pi}{4}-\cot\dfrac{3\pi}{4}=\sqrt{2}+1`$；下限处 $`\csc\dfrac{\pi}{4}-\cot\dfrac{\pi}{4}=\sqrt{2}-1`$。于是
+代入两个限：上限处 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2880c96d53dbe31d-dark.svg"><img src="图/05-精讲公式/2880c96d53dbe31d-light.svg" alt="\csc\dfrac{3\pi}{4}-\cot\dfrac{3\pi}{4}=\sqrt{2}+1"></picture>；下限处 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/fb91473ea81a2718-dark.svg"><img src="图/05-精讲公式/fb91473ea81a2718-light.svg" alt="\csc\dfrac{\pi}{4}-\cot\dfrac{\pi}{4}=\sqrt{2}-1"></picture>。于是
 
-```math
-I=\frac{1}{2\sqrt{2}}\ln\frac{\sqrt{2}+1}{\sqrt{2}-1}=\frac{1}{2\sqrt{2}}\ln(\sqrt{2}+1)^2=\frac{1}{\sqrt{2}}\ln(1+\sqrt{2})
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f9c36d6256bb310d-dark.svg"><img src="图/05-精讲公式/f9c36d6256bb310d-light.svg" alt="I=\frac{1}{2\sqrt{2}}\ln\frac{\sqrt{2}+1}{\sqrt{2}-1}=\frac{1}{2\sqrt{2}}\ln(\sqrt{2}+1)^2=\frac{1}{\sqrt{2}}\ln(1+\sqrt{2})"></picture>
 
-（用到了 $`\dfrac{\sqrt{2}+1}{\sqrt{2}-1}=(\sqrt{2}+1)^2`$，即 $`(\sqrt2-1)(\sqrt2+1)=1`$ 的共轭有理化）。**与官方答案一致**；$`\ln(\sqrt2-1)`$ 与 $`-\ln(1+\sqrt2)`$ 是同一个数的两种写法，填空推荐写成官方形式。
+（用到了 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a177d21b7e36925d-dark.svg"><img src="图/05-精讲公式/a177d21b7e36925d-light.svg" alt="\dfrac{\sqrt{2}+1}{\sqrt{2}-1}=(\sqrt{2}+1)^2"></picture>，即 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d1c2c3fd371b7856-dark.svg"><img src="图/05-精讲公式/d1c2c3fd371b7856-light.svg" alt="(\sqrt2-1)(\sqrt2+1)=1"></picture> 的共轭有理化）。**与官方答案一致**；<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/38431cfd48c9dd75-dark.svg"><img src="图/05-精讲公式/38431cfd48c9dd75-light.svg" alt="\ln(\sqrt2-1)"></picture> 与 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0ae9891796d34ea3-dark.svg"><img src="图/05-精讲公式/0ae9891796d34ea3-light.svg" alt="-\ln(1+\sqrt2)"></picture> 是同一个数的两种写法，填空推荐写成官方形式。
 
-**点评**：官方答案 $`\dfrac{1}{\sqrt{2}}\ln(1+\sqrt{2})`$。三个教学点：① **区间再现的触发信号是"区间 $`[0,\pi/2]`$（或 $`[0,\pi]`$）+ 三角式"**，换元后"互换角色"（$`\cos\leftrightarrow\sin`$、$`\tan\leftrightarrow\cot`$）；② **"$`I=\frac12(I+I')`$"的写法**：把两副面孔加起来除以 2——这个"除以 2"是形式上的恒等变形，不是魔法（因为 $`I=I'`$，所以 $`I=\frac{I+I'}{2}`$）；③ 最后 $`\ln(\sqrt2-1)`$ 与 $`-\ln(\sqrt2+1)`$ 互换是填空题的"面子分"——**有理化共轭是它们之间的桥**。
+**点评**：官方答案 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/45ef67b9e94529e0-dark.svg"><img src="图/05-精讲公式/45ef67b9e94529e0-light.svg" alt="\dfrac{1}{\sqrt{2}}\ln(1+\sqrt{2})"></picture>。三个教学点：① **区间再现的触发信号是"区间 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0e5293859c1e2d07-dark.svg"><img src="图/05-精讲公式/0e5293859c1e2d07-light.svg" alt="[0,\pi/2]"></picture>（或 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9c79690ea8c7c414-dark.svg"><img src="图/05-精讲公式/9c79690ea8c7c414-light.svg" alt="[0,\pi]"></picture>）+ 三角式"**，换元后"互换角色"（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/aade2e6a798d0800-dark.svg"><img src="图/05-精讲公式/aade2e6a798d0800-light.svg" alt="\cos\leftrightarrow\sin"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/11b9b4e9044bdc80-dark.svg"><img src="图/05-精讲公式/11b9b4e9044bdc80-light.svg" alt="\tan\leftrightarrow\cot"></picture>）；② **"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/cd09c91667afd47a-dark.svg"><img src="图/05-精讲公式/cd09c91667afd47a-light.svg" alt="I=\frac12(I+I')"></picture>"的写法**：把两副面孔加起来除以 2——这个"除以 2"是形式上的恒等变形，不是魔法（因为 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/17d6d431a6332f89-dark.svg"><img src="图/05-精讲公式/17d6d431a6332f89-light.svg" alt="I=I'"></picture>，所以 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c942ac20f19e6d35-dark.svg"><img src="图/05-精讲公式/c942ac20f19e6d35-light.svg" alt="I=\frac{I+I'}{2}"></picture>）；③ 最后 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/38431cfd48c9dd75-dark.svg"><img src="图/05-精讲公式/38431cfd48c9dd75-light.svg" alt="\ln(\sqrt2-1)"></picture> 与 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f4635c643ddff788-dark.svg"><img src="图/05-精讲公式/f4635c643ddff788-light.svg" alt="-\ln(\sqrt2+1)"></picture> 互换是填空题的"面子分"——**有理化共轭是它们之间的桥**。
 ⏱️ 目标用时：**4 分钟**（含验算）。
 
 ---
 
-### 精讲 6：对称反演——凭空冒出的 $`\dfrac{\pi}{2}`$（第 5 届非数学类·第二题，2013，12 分）
+### 精讲 6：对称反演——凭空冒出的 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/6fa0fc9e0b5c9e4a-dark.svg"><img src="图/05-精讲公式/6fa0fc9e0b5c9e4a-light.svg" alt="\dfrac{\pi}{2}"></picture>（第 5 届非数学类·第二题，2013，12 分）
 
-**题面**：计算定积分 $`\displaystyle I=\int_{-\pi}^{\pi}\frac{x\sin x\cdot\arctan e^x}{1+\cos^2x}\,\mathrm{d}x`$。
+**题面**：计算定积分 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/dc84c2daece73a7a-dark.svg"><img src="图/05-精讲公式/dc84c2daece73a7a-light.svg" alt="\displaystyle I=\int_{-\pi}^{\pi}\frac{x\sin x\cdot\arctan e^x}{1+\cos^2x}\,\mathrm{d}x"></picture>。
 
-**思路分析（真实思考）**：第一眼：$`\dfrac{x\sin x\arctan e^x}{1+\cos^2x}`$——原函数不可能初等积出来（$`\arctan e^x`$ 是著名的"积不动"）。所以出路只有一条：**对称化简**。检查信号：① 区间 $`[-\pi,\pi]`$ 关于原点对称 ✓；② 出现了"$`e^x`$ 型怪物" $`\arctan e^x`$ ✓——这正是"反演配对"的经典目标，因为 $`\arctan e^x+\arctan e^{-x}=\dfrac{\pi}{2}`$。
+**思路分析（真实思考）**：第一眼：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0cff74d880e37e4c-dark.svg"><img src="图/05-精讲公式/0cff74d880e37e4c-light.svg" alt="\dfrac{x\sin x\arctan e^x}{1+\cos^2x}"></picture>——原函数不可能初等积出来（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/fd5efec278dcf5ba-dark.svg"><img src="图/05-精讲公式/fd5efec278dcf5ba-light.svg" alt="\arctan e^x"></picture> 是著名的"积不动"）。所以出路只有一条：**对称化简**。检查信号：① 区间 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0d9dd36ff6894b39-dark.svg"><img src="图/05-精讲公式/0d9dd36ff6894b39-light.svg" alt="[-\pi,\pi]"></picture> 关于原点对称 ✓；② 出现了"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b2fcf9887b613aaf-dark.svg"><img src="图/05-精讲公式/b2fcf9887b613aaf-light.svg" alt="e^x"></picture> 型怪物" <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/fd5efec278dcf5ba-dark.svg"><img src="图/05-精讲公式/fd5efec278dcf5ba-light.svg" alt="\arctan e^x"></picture> ✓——这正是"反演配对"的经典目标，因为 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e62702fa339f4758-dark.svg"><img src="图/05-精讲公式/e62702fa339f4758-light.svg" alt="\arctan e^x+\arctan e^{-x}=\dfrac{\pi}{2}"></picture>。
 
-但 $`f(x)+f(-x)`$ 不能直接套（$`\arctan e^x`$ 既非奇也非偶，整个被积函数不是奇偶型）……**修正动作**：把积分拆成 $`\int_{-\pi}^0+\int_0^{\pi}`$，在前一段换元 $`x\to-x`$ "反演"到 $`[0,\pi]`$，这样两段落在同一个区间上，可以**逐点合并**。
+但 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/36c0da58fe1b62f5-dark.svg"><img src="图/05-精讲公式/36c0da58fe1b62f5-light.svg" alt="f(x)+f(-x)"></picture> 不能直接套（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/fd5efec278dcf5ba-dark.svg"><img src="图/05-精讲公式/fd5efec278dcf5ba-light.svg" alt="\arctan e^x"></picture> 既非奇也非偶，整个被积函数不是奇偶型）……**修正动作**：把积分拆成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a3e1d618a094fb77-dark.svg"><img src="图/05-精讲公式/a3e1d618a094fb77-light.svg" alt="\int_{-\pi}^0+\int_0^{\pi}"></picture>，在前一段换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/289272e9bf80aaff-dark.svg"><img src="图/05-精讲公式/289272e9bf80aaff-light.svg" alt="x\to-x"></picture> "反演"到 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9c79690ea8c7c414-dark.svg"><img src="图/05-精讲公式/9c79690ea8c7c414-light.svg" alt="[0,\pi]"></picture>，这样两段落在同一个区间上，可以**逐点合并**。
 
 **完整解答**：
 
-```math
-I=\int_{-\pi}^{0}\frac{x\sin x\arctan e^x}{1+\cos^2x}\,\mathrm{d}x+\int_{0}^{\pi}\frac{x\sin x\arctan e^x}{1+\cos^2x}\,\mathrm{d}x.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/44788fd08555f895-dark.svg"><img src="图/05-精讲公式/44788fd08555f895-light.svg" alt="I=\int_{-\pi}^{0}\frac{x\sin x\arctan e^x}{1+\cos^2x}\,\mathrm{d}x+\int_{0}^{\pi}\frac{x\sin x\arctan e^x}{1+\cos^2x}\,\mathrm{d}x."></picture>
 
-第一段换元 $`x\to-x`$（注意 $`(-x)\sin(-x)=x\sin x`$，区间翻成 $`[0,\pi]`$）：
+第一段换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/289272e9bf80aaff-dark.svg"><img src="图/05-精讲公式/289272e9bf80aaff-light.svg" alt="x\to-x"></picture>（注意 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/1f7140f7dcbbb6a1-dark.svg"><img src="图/05-精讲公式/1f7140f7dcbbb6a1-light.svg" alt="(-x)\sin(-x)=x\sin x"></picture>，区间翻成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9c79690ea8c7c414-dark.svg"><img src="图/05-精讲公式/9c79690ea8c7c414-light.svg" alt="[0,\pi]"></picture>）：
 
-```math
-I=\int_{0}^{\pi}\frac{x\sin x\arctan e^{-x}}{1+\cos^2x}\,\mathrm{d}x+\int_{0}^{\pi}\frac{x\sin x\arctan e^{x}}{1+\cos^2x}\,\mathrm{d}x=\int_{0}^{\pi}\frac{x\sin x\big(\arctan e^{-x}+\arctan e^{x}\big)}{1+\cos^2x}\,\mathrm{d}x.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0bebeeb7ba652d3b-dark.svg"><img src="图/05-精讲公式/0bebeeb7ba652d3b-light.svg" alt="I=\int_{0}^{\pi}\frac{x\sin x\arctan e^{-x}}{1+\cos^2x}\,\mathrm{d}x+\int_{0}^{\pi}\frac{x\sin x\arctan e^{x}}{1+\cos^2x}\,\mathrm{d}x=\int_{0}^{\pi}\frac{x\sin x\big(\arctan e^{-x}+\arctan e^{x}\big)}{1+\cos^2x}\,\mathrm{d}x."></picture>
 
-用恒等式 $`\arctan e^{-x}+\arctan e^{x}=\dfrac{\pi}{2}`$（$`e^x\cdot e^{-x}=1`$，而 $`\arctan t+\arctan\frac{1}{t}=\frac{\pi}{2}\ (t>0)`$）：
+用恒等式 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c8cb7c90ede8891d-dark.svg"><img src="图/05-精讲公式/c8cb7c90ede8891d-light.svg" alt="\arctan e^{-x}+\arctan e^{x}=\dfrac{\pi}{2}"></picture>（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/7e163dd8dfeb35d3-dark.svg"><img src="图/05-精讲公式/7e163dd8dfeb35d3-light.svg" alt="e^x\cdot e^{-x}=1"></picture>，而 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/75b583d2aa86c990-dark.svg"><img src="图/05-精讲公式/75b583d2aa86c990-light.svg" alt="\arctan t+\arctan\frac{1}{t}=\frac{\pi}{2}\ (t&gt;0)"></picture>）：
 
-```math
-I=\frac{\pi}{2}\int_{0}^{\pi}\frac{x\sin x}{1+\cos^2x}\,\mathrm{d}x.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5966554d6b26faa1-dark.svg"><img src="图/05-精讲公式/5966554d6b26faa1-light.svg" alt="I=\frac{\pi}{2}\int_{0}^{\pi}\frac{x\sin x}{1+\cos^2x}\,\mathrm{d}x."></picture>
 
-剩下的（记为 $`J`$）用**区间再现赠品** $`\int_0^{\pi}xf(\sin x)\,\mathrm{d}x=\dfrac{\pi}{2}\int_0^{\pi}f(\sin x)\,\mathrm{d}x`$（这里 $`f(\sin x)=\dfrac{\sin x}{1+\cos^2x}`$）：
+剩下的（记为 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a9b5416bf19141e6-dark.svg"><img src="图/05-精讲公式/a9b5416bf19141e6-light.svg" alt="J"></picture>）用**区间再现赠品** <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ee9f210365ac6201-dark.svg"><img src="图/05-精讲公式/ee9f210365ac6201-light.svg" alt="\int_0^{\pi}xf(\sin x)\,\mathrm{d}x=\dfrac{\pi}{2}\int_0^{\pi}f(\sin x)\,\mathrm{d}x"></picture>（这里 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/6d114270020b14d5-dark.svg"><img src="图/05-精讲公式/6d114270020b14d5-light.svg" alt="f(\sin x)=\dfrac{\sin x}{1+\cos^2x}"></picture>）：
 
-```math
-J=\frac{\pi}{2}\int_{0}^{\pi}\frac{\sin x}{1+\cos^2x}\,\mathrm{d}x=\frac{\pi}{2}\Big[-\arctan(\cos x)\Big]_0^{\pi}=\frac{\pi}{2}\Big[\frac{\pi}{4}-\Big(-\frac{\pi}{4}\Big)\Big]=\frac{\pi^2}{4}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b01410585d53953a-dark.svg"><img src="图/05-精讲公式/b01410585d53953a-light.svg" alt="J=\frac{\pi}{2}\int_{0}^{\pi}\frac{\sin x}{1+\cos^2x}\,\mathrm{d}x=\frac{\pi}{2}\Big[-\arctan(\cos x)\Big]_0^{\pi}=\frac{\pi}{2}\Big[\frac{\pi}{4}-\Big(-\frac{\pi}{4}\Big)\Big]=\frac{\pi^2}{4}."></picture>
 
-```math
-I=\frac{\pi}{2}\cdot\frac{\pi^2}{4}=\frac{\pi^3}{8}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b5e264c90a001f17-dark.svg"><img src="图/05-精讲公式/b5e264c90a001f17-light.svg" alt="I=\frac{\pi}{2}\cdot\frac{\pi^2}{4}=\frac{\pi^3}{8}."></picture>
 
-**点评**：官方答案 $`\dfrac{\pi^3}{8}`$。这道题是"**对称反演四步曲**"的教学标本：拆区间 → 换元反演 → 用 $`\arctan e^x+\arctan e^{-x}=\frac{\pi}{2}`$ 消怪 → 赠品公式收尾。$`\arctan e^x`$ 这个"考点怪物"在历年卷里反复出现，**见到 $`e^x`$ 配 $`\arctan`$（或类似的反函数组合），反射性地做反演配对**。⚠️ 小的自查点：$`J`$ 的被积函数 $`\dfrac{x\sin x}{1+\cos^2x}`$ 本身是偶函数，用"偶函数减半区间"也可以辅助验算。⚠️ **数值层面的彩蛋**：$`\dfrac{\pi^3}{8}\approx3.876`$——如果你在别的资料上见到 $`\dfrac{\pi^3}{4}`$，那是错的（$`\approx7.75`$，直接把答案放大了一倍；本题官方参考解答明确印着 $`\dfrac{\pi^3}{8}`$）。
+**点评**：官方答案 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5259a3d53dd724db-dark.svg"><img src="图/05-精讲公式/5259a3d53dd724db-light.svg" alt="\dfrac{\pi^3}{8}"></picture>。这道题是"**对称反演四步曲**"的教学标本：拆区间 → 换元反演 → 用 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d5dd8f186b641817-dark.svg"><img src="图/05-精讲公式/d5dd8f186b641817-light.svg" alt="\arctan e^x+\arctan e^{-x}=\frac{\pi}{2}"></picture> 消怪 → 赠品公式收尾。<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/fd5efec278dcf5ba-dark.svg"><img src="图/05-精讲公式/fd5efec278dcf5ba-light.svg" alt="\arctan e^x"></picture> 这个"考点怪物"在历年卷里反复出现，**见到 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b2fcf9887b613aaf-dark.svg"><img src="图/05-精讲公式/b2fcf9887b613aaf-light.svg" alt="e^x"></picture> 配 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2640da1d23395289-dark.svg"><img src="图/05-精讲公式/2640da1d23395289-light.svg" alt="\arctan"></picture>（或类似的反函数组合），反射性地做反演配对**。⚠️ 小的自查点：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a9b5416bf19141e6-dark.svg"><img src="图/05-精讲公式/a9b5416bf19141e6-light.svg" alt="J"></picture> 的被积函数 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/61d21e32c9c07042-dark.svg"><img src="图/05-精讲公式/61d21e32c9c07042-light.svg" alt="\dfrac{x\sin x}{1+\cos^2x}"></picture> 本身是偶函数，用"偶函数减半区间"也可以辅助验算。⚠️ **数值层面的彩蛋**：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/345db8e9a2690af9-dark.svg"><img src="图/05-精讲公式/345db8e9a2690af9-light.svg" alt="\dfrac{\pi^3}{8}\approx3.876"></picture>——如果你在别的资料上见到 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a4966545d65eacab-dark.svg"><img src="图/05-精讲公式/a4966545d65eacab-light.svg" alt="\dfrac{\pi^3}{4}"></picture>，那是错的（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4497fa4255efc220-dark.svg"><img src="图/05-精讲公式/4497fa4255efc220-light.svg" alt="\approx7.75"></picture>，直接把答案放大了一倍；本题官方参考解答明确印着 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5259a3d53dd724db-dark.svg"><img src="图/05-精讲公式/5259a3d53dd724db-light.svg" alt="\dfrac{\pi^3}{8}"></picture>）。
 ⏱️ 目标用时：**6 分钟**。
 
 ---
 
 ### 精讲 7：绝对值 + 周期——"数周期"的艺术（第 6 届非数学类·第二题，2014，12 分）
 
-**题面**：设 $`n`$ 为正整数，计算 $`\displaystyle I=\int_{e^{-2n\pi}}^{1}\Big\lvert\frac{\mathrm{d}}{\mathrm{d}x}\cos\Big(\ln\frac{1}{x}\Big)\Big\rvert\,\mathrm{d}x`$。
+**题面**：设 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/50e51d8d432b2520-dark.svg"><img src="图/05-精讲公式/50e51d8d432b2520-light.svg" alt="n"></picture> 为正整数，计算 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/96970ff9a6c1baae-dark.svg"><img src="图/05-精讲公式/96970ff9a6c1baae-light.svg" alt="\displaystyle I=\int_{e^{-2n\pi}}^{1}\Big\lvert\frac{\mathrm{d}}{\mathrm{d}x}\cos\Big(\ln\frac{1}{x}\Big)\Big\rvert\,\mathrm{d}x"></picture>。
 
-**思路分析（真实思考）**：三个"雷点"逐一定位：① 被积函数是**导数加绝对值**——先**把导数算出来化简**（绝对值的处理必须知道导数的精确形状）；② 区间 $`[e^{-2n\pi},1]`$ 的端点形状诡异（$`e^{-2n\pi}`$ = "$`2n\pi`$ 的指数式"），强烈暗示换元后会出现**周期区间**；③ $`\cos`$ 里套 $`\ln`$，换元 $`t=\ln x`$ 能把"复合"拉直。
+**思路分析（真实思考）**：三个"雷点"逐一定位：① 被积函数是**导数加绝对值**——先**把导数算出来化简**（绝对值的处理必须知道导数的精确形状）；② 区间 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/16ac1d976e9100e8-dark.svg"><img src="图/05-精讲公式/16ac1d976e9100e8-light.svg" alt="[e^{-2n\pi},1]"></picture> 的端点形状诡异（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9b9e901710a6fd86-dark.svg"><img src="图/05-精讲公式/9b9e901710a6fd86-light.svg" alt="e^{-2n\pi}"></picture> = "<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bedea1173e86a2cc-dark.svg"><img src="图/05-精讲公式/bedea1173e86a2cc-light.svg" alt="2n\pi"></picture> 的指数式"），强烈暗示换元后会出现**周期区间**；③ <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4b4aeaa31d720e50-dark.svg"><img src="图/05-精讲公式/4b4aeaa31d720e50-light.svg" alt="\cos"></picture> 里套 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/8e037d9284d3df9c-dark.svg"><img src="图/05-精讲公式/8e037d9284d3df9c-light.svg" alt="\ln"></picture>，换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/43151bc100d0b8d3-dark.svg"><img src="图/05-精讲公式/43151bc100d0b8d3-light.svg" alt="t=\ln x"></picture> 能把"复合"拉直。
 
-先算导数：$`\cos\big(\ln\frac1x\big)=\cos(\ln x)`$（因为 $`\ln\frac1x=-\ln x`$，而 $`\cos`$ 是偶函数），故导数为 $`-\dfrac{\sin(\ln x)}{x}`$，取绝对值后为 $`\dfrac{\lvert\sin(\ln x)\rvert}{x}`$。注意原来的"减号"被绝对值吃掉了——**这正是命题人用绝对值包装的原因**。
+先算导数：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/28b6eb49a6de47ca-dark.svg"><img src="图/05-精讲公式/28b6eb49a6de47ca-light.svg" alt="\cos\big(\ln\frac1x\big)=\cos(\ln x)"></picture>（因为 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4ee4a9b35aa8fe2e-dark.svg"><img src="图/05-精讲公式/4ee4a9b35aa8fe2e-light.svg" alt="\ln\frac1x=-\ln x"></picture>，而 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4b4aeaa31d720e50-dark.svg"><img src="图/05-精讲公式/4b4aeaa31d720e50-light.svg" alt="\cos"></picture> 是偶函数），故导数为 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b8b1ff3dde0b3c7f-dark.svg"><img src="图/05-精讲公式/b8b1ff3dde0b3c7f-light.svg" alt="-\dfrac{\sin(\ln x)}{x}"></picture>，取绝对值后为 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/19fc3bea7900f2e9-dark.svg"><img src="图/05-精讲公式/19fc3bea7900f2e9-light.svg" alt="\dfrac{\lvert\sin(\ln x)\rvert}{x}"></picture>。注意原来的"减号"被绝对值吃掉了——**这正是命题人用绝对值包装的原因**。
 
 **完整解答**：
 
-```math
-I=\int_{e^{-2n\pi}}^{1}\Big\lvert-\frac{\sin(\ln x)}{x}\Big\rvert\,\mathrm{d}x=\int_{e^{-2n\pi}}^{1}\frac{\lvert\sin(\ln x)\rvert}{x}\,\mathrm{d}x.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/833a8b59d2327149-dark.svg"><img src="图/05-精讲公式/833a8b59d2327149-light.svg" alt="I=\int_{e^{-2n\pi}}^{1}\Big\lvert-\frac{\sin(\ln x)}{x}\Big\rvert\,\mathrm{d}x=\int_{e^{-2n\pi}}^{1}\frac{\lvert\sin(\ln x)\rvert}{x}\,\mathrm{d}x."></picture>
 
-换元 $`t=\ln x`$（$`\mathrm{d}t=\dfrac{\mathrm{d}x}{x}`$；限：$`x=e^{-2n\pi}\to t=-2n\pi`$，$`x=1\to t=0`$）：
+换元 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/43151bc100d0b8d3-dark.svg"><img src="图/05-精讲公式/43151bc100d0b8d3-light.svg" alt="t=\ln x"></picture>（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e24f093a397df4b7-dark.svg"><img src="图/05-精讲公式/e24f093a397df4b7-light.svg" alt="\mathrm{d}t=\dfrac{\mathrm{d}x}{x}"></picture>；限：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/51ce9c0bda47c9c0-dark.svg"><img src="图/05-精讲公式/51ce9c0bda47c9c0-light.svg" alt="x=e^{-2n\pi}\to t=-2n\pi"></picture>，<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2ba64cdfe41c4f5f-dark.svg"><img src="图/05-精讲公式/2ba64cdfe41c4f5f-light.svg" alt="x=1\to t=0"></picture>）：
 
-```math
-I=\int_{-2n\pi}^{0}\lvert\sin t\rvert\,\mathrm{d}t=\int_{0}^{2n\pi}\lvert\sin t\rvert\,\mathrm{d}t=2n\times2=4n.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ccb39bd97e887da6-dark.svg"><img src="图/05-精讲公式/ccb39bd97e887da6-light.svg" alt="I=\int_{-2n\pi}^{0}\lvert\sin t\rvert\,\mathrm{d}t=\int_{0}^{2n\pi}\lvert\sin t\rvert\,\mathrm{d}t=2n\times2=4n."></picture>
 
-（最后一步：$`\lvert\sin t\rvert`$ 以 $`\pi`$ 为周期、单周期积分 $`\int_0^{\pi}\sin t\,\mathrm{d}t=2`$，区间 $`[0,2n\pi]`$ 恰含 $`2n`$ 个完整周期，故 $`I=2n\times2=4n`$。官方解答写法相同。）
+（最后一步：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f84ab47e366d500f-dark.svg"><img src="图/05-精讲公式/f84ab47e366d500f-light.svg" alt="\lvert\sin t\rvert"></picture> 以 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d44480573ab3a006-dark.svg"><img src="图/05-精讲公式/d44480573ab3a006-light.svg" alt="\pi"></picture> 为周期、单周期积分 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a00a098aed26883d-dark.svg"><img src="图/05-精讲公式/a00a098aed26883d-light.svg" alt="\int_0^{\pi}\sin t\,\mathrm{d}t=2"></picture>，区间 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a8166e8ebb37d1a7-dark.svg"><img src="图/05-精讲公式/a8166e8ebb37d1a7-light.svg" alt="[0,2n\pi]"></picture> 恰含 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/fe33439d81099f50-dark.svg"><img src="图/05-精讲公式/fe33439d81099f50-light.svg" alt="2n"></picture> 个完整周期，故 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/fd398f1235559e56-dark.svg"><img src="图/05-精讲公式/fd398f1235559e56-light.svg" alt="I=2n\times2=4n"></picture>。官方解答写法相同。）
 
-**点评**：官方答案 $`4n`$。这道题的"骗术"设计值得回味：如果你**不化简导数**就硬碰绝对值，会陷入 $`\lvert\sin\ln x\rvert`$ 的分段地狱；而先化简会发现正负号全被吃掉，干净利落。三个教学点：① **绝对值的题目，先算清楚里面是谁**（先化简、再分段、最后积分）；② 端点 $`e^{-2n\pi}`$ 这种"指数的等差数列"是**换元信号**（换完必得周期区间）；③ 周期性配"算总账"：**别一段一段加，先数有几个周期**。同款思路在精讲 9 的无穷积分里再来一遍。
+**点评**：官方答案 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/1b665c92aaf37de7-dark.svg"><img src="图/05-精讲公式/1b665c92aaf37de7-light.svg" alt="4n"></picture>。这道题的"骗术"设计值得回味：如果你**不化简导数**就硬碰绝对值，会陷入 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9338a49b223a1d23-dark.svg"><img src="图/05-精讲公式/9338a49b223a1d23-light.svg" alt="\lvert\sin\ln x\rvert"></picture> 的分段地狱；而先化简会发现正负号全被吃掉，干净利落。三个教学点：① **绝对值的题目，先算清楚里面是谁**（先化简、再分段、最后积分）；② 端点 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9b9e901710a6fd86-dark.svg"><img src="图/05-精讲公式/9b9e901710a6fd86-light.svg" alt="e^{-2n\pi}"></picture> 这种"指数的等差数列"是**换元信号**（换完必得周期区间）；③ 周期性配"算总账"：**别一段一段加，先数有几个周期**。同款思路在精讲 9 的无穷积分里再来一遍。
 ⏱️ 目标用时：**5 分钟**。
 
 ---
 
 ### 精讲 8：配对分部——两个积分"互相抵消"（第 11 届非数学类·填空第 3 题，2019，6 分）
 
-**题面**：定积分 $`\displaystyle\int_0^{\frac{\pi}{2}}\frac{e^x(1+\sin x)}{1+\cos x}\,\mathrm{d}x=\underline{\qquad}`$。
+**题面**：定积分 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/3f3b6fa917b7618d-dark.svg"><img src="图/05-精讲公式/3f3b6fa917b7618d-light.svg" alt="\displaystyle\int_0^{\frac{\pi}{2}}\frac{e^x(1+\sin x)}{1+\cos x}\,\mathrm{d}x=\underline{\qquad}"></picture>。
 
-**思路分析（真实思考）**：扫结构——"$`e^x`$ 乘三角分式"，**优先想"凑导数"**（$`e^x`$ 求导不变，最有希望配成 $`[e^x\varphi(x)]'`$）。但 $`\varphi`$ 不好直接看出，于是用官方骨架：**配对分部**——把原积分拆成"先积 $`\dfrac{e^x}{1+\cos x}`$"与"把 $`\dfrac{\sin x}{1+\cos x}`$ 塞进 $`\mathrm{d}(e^x)`$"两块，分部之后会发现**第二块产生的积分恰好是第一块的相反数**，两下抵消。
+**思路分析（真实思考）**：扫结构——"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b2fcf9887b613aaf-dark.svg"><img src="图/05-精讲公式/b2fcf9887b613aaf-light.svg" alt="e^x"></picture> 乘三角分式"，**优先想"凑导数"**（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b2fcf9887b613aaf-dark.svg"><img src="图/05-精讲公式/b2fcf9887b613aaf-light.svg" alt="e^x"></picture> 求导不变，最有希望配成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f4ed389c5dffa9a5-dark.svg"><img src="图/05-精讲公式/f4ed389c5dffa9a5-light.svg" alt="[e^x\varphi(x)]'"></picture>）。但 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a8bfabfece8d2886-dark.svg"><img src="图/05-精讲公式/a8bfabfece8d2886-light.svg" alt="\varphi"></picture> 不好直接看出，于是用官方骨架：**配对分部**——把原积分拆成"先积 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/27b45464269fb253-dark.svg"><img src="图/05-精讲公式/27b45464269fb253-light.svg" alt="\dfrac{e^x}{1+\cos x}"></picture>"与"把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/59127e83f71fec2b-dark.svg"><img src="图/05-精讲公式/59127e83f71fec2b-light.svg" alt="\dfrac{\sin x}{1+\cos x}"></picture> 塞进 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/7ec31e92c9962e7a-dark.svg"><img src="图/05-精讲公式/7ec31e92c9962e7a-light.svg" alt="\mathrm{d}(e^x)"></picture>"两块，分部之后会发现**第二块产生的积分恰好是第一块的相反数**，两下抵消。
 
 **完整解答（官方，配对分部）**：拆项：
 
-```math
-\int_0^{\pi/2}\frac{e^x(1+\sin x)}{1+\cos x}\,\mathrm{d}x=\int_0^{\pi/2}\frac{e^x}{1+\cos x}\,\mathrm{d}x+\int_0^{\pi/2}\frac{\sin x}{1+\cos x}\,\mathrm{d}(e^x).
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5d9870346da1365d-dark.svg"><img src="图/05-精讲公式/5d9870346da1365d-light.svg" alt="\int_0^{\pi/2}\frac{e^x(1+\sin x)}{1+\cos x}\,\mathrm{d}x=\int_0^{\pi/2}\frac{e^x}{1+\cos x}\,\mathrm{d}x+\int_0^{\pi/2}\frac{\sin x}{1+\cos x}\,\mathrm{d}(e^x)."></picture>
 
 第二块分部：
 
-```math
-\int_0^{\pi/2}\frac{\sin x}{1+\cos x}\,\mathrm{d}(e^x)=\frac{e^x\sin x}{1+\cos x}\Big|_0^{\pi/2}-\int_0^{\pi/2}e^x\cdot\frac{\cos x(1+\cos x)+\sin^2x}{(1+\cos x)^2}\,\mathrm{d}x.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/241a12c92efec885-dark.svg"><img src="图/05-精讲公式/241a12c92efec885-light.svg" alt="\int_0^{\pi/2}\frac{\sin x}{1+\cos x}\,\mathrm{d}(e^x)=\frac{e^x\sin x}{1+\cos x}\Big|_0^{\pi/2}-\int_0^{\pi/2}e^x\cdot\frac{\cos x(1+\cos x)+\sin^2x}{(1+\cos x)^2}\,\mathrm{d}x."></picture>
 
-化简导出的分母式子：$`\cos x(1+\cos x)+\sin^2x=1+\cos x`$（用 $`\sin^2x+\cos^2x=1`$），所以
+化简导出的分母式子：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2ad91aa3de791754-dark.svg"><img src="图/05-精讲公式/2ad91aa3de791754-light.svg" alt="\cos x(1+\cos x)+\sin^2x=1+\cos x"></picture>（用 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ac5c8c25959b0322-dark.svg"><img src="图/05-精讲公式/ac5c8c25959b0322-light.svg" alt="\sin^2x+\cos^2x=1"></picture>），所以
 
-```math
-\int_0^{\pi/2}\frac{\sin x}{1+\cos x}\,\mathrm{d}(e^x)=\frac{e^x\sin x}{1+\cos x}\Big|_0^{\pi/2}-\int_0^{\pi/2}\frac{e^x}{1+\cos x}\,\mathrm{d}x.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/87a9c0eeacdcdab0-dark.svg"><img src="图/05-精讲公式/87a9c0eeacdcdab0-light.svg" alt="\int_0^{\pi/2}\frac{\sin x}{1+\cos x}\,\mathrm{d}(e^x)=\frac{e^x\sin x}{1+\cos x}\Big|_0^{\pi/2}-\int_0^{\pi/2}\frac{e^x}{1+\cos x}\,\mathrm{d}x."></picture>
 
-**"抵消时刻"**：代回原式，两个 $`\int\dfrac{e^x}{1+\cos x}\mathrm{d}x`$ 一正一负同归于尽：
+**"抵消时刻"**：代回原式，两个 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f1ec815162347581-dark.svg"><img src="图/05-精讲公式/f1ec815162347581-light.svg" alt="\int\dfrac{e^x}{1+\cos x}\mathrm{d}x"></picture> 一正一负同归于尽：
 
-```math
-\text{原式}=\frac{e^x\sin x}{1+\cos x}\Big|_0^{\pi/2}=\frac{e^{\pi/2}\cdot1}{1}-\frac{e^0\cdot0}{2}=e^{\pi/2}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/cb4150eaafe2347c-dark.svg"><img src="图/05-精讲公式/cb4150eaafe2347c-light.svg" alt="\text{原式}=\frac{e^x\sin x}{1+\cos x}\Big|_0^{\pi/2}=\frac{e^{\pi/2}\cdot1}{1}-\frac{e^0\cdot0}{2}=e^{\pi/2}."></picture>
 
-**完整解答（教学另解，凑导数直读）**：用半角公式 $`\dfrac{1+\sin x}{1+\cos x}=\dfrac{1}{2}\sec^2\dfrac{x}{2}+\tan\dfrac{x}{2}`$（验算：$`\frac12\sec^2\frac x2=\frac{1}{1+\cos x}`$、$`\tan\frac x2=\frac{\sin x}{1+\cos x}`$，两式相加即得），恰好有
+**完整解答（教学另解，凑导数直读）**：用半角公式 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ec6283f88817f14f-dark.svg"><img src="图/05-精讲公式/ec6283f88817f14f-light.svg" alt="\dfrac{1+\sin x}{1+\cos x}=\dfrac{1}{2}\sec^2\dfrac{x}{2}+\tan\dfrac{x}{2}"></picture>（验算：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/db5e77490ae95a87-dark.svg"><img src="图/05-精讲公式/db5e77490ae95a87-light.svg" alt="\frac12\sec^2\frac x2=\frac{1}{1+\cos x}"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4c478c27ab52ad54-dark.svg"><img src="图/05-精讲公式/4c478c27ab52ad54-light.svg" alt="\tan\frac x2=\frac{\sin x}{1+\cos x}"></picture>，两式相加即得），恰好有
 
-```math
-\Big(e^x\tan\frac{x}{2}\Big)'=e^x\tan\frac{x}{2}+\frac{1}{2}e^x\sec^2\frac{x}{2}=e^x\cdot\frac{1+\sin x}{1+\cos x},
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0861962de43ccb92-dark.svg"><img src="图/05-精讲公式/0861962de43ccb92-light.svg" alt="\Big(e^x\tan\frac{x}{2}\Big)'=e^x\tan\frac{x}{2}+\frac{1}{2}e^x\sec^2\frac{x}{2}=e^x\cdot\frac{1+\sin x}{1+\cos x},"></picture>
 
 于是
 
-```math
-\int_0^{\pi/2}\frac{e^x(1+\sin x)}{1+\cos x}\,\mathrm{d}x=e^x\tan\frac{x}{2}\Big|_0^{\pi/2}=e^{\pi/2}\tan\frac{\pi}{4}=e^{\pi/2}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0cc6d64051506346-dark.svg"><img src="图/05-精讲公式/0cc6d64051506346-light.svg" alt="\int_0^{\pi/2}\frac{e^x(1+\sin x)}{1+\cos x}\,\mathrm{d}x=e^x\tan\frac{x}{2}\Big|_0^{\pi/2}=e^{\pi/2}\tan\frac{\pi}{4}=e^{\pi/2}."></picture>
 
 （两行结束——但前提是你要先"看穿"半角结构。）
 
-**点评**：官方答案 $`e^{\pi/2}`$。**"配对分部"是"$`e^x\times`$ 三角分式"题型的第一解法**（对比：循环法处理 $`e^x\sin x`$ 型，配对互消处理本题这种分式结构）。两个训练动作：① 记住 $`\dfrac{1+\sin x}{1+\cos x}=\dfrac{1}{2}\sec^2\dfrac{x}{2}+\tan\dfrac{x}{2}`$ 这个恒等式——它和 $`\arctan e^x+\arctan e^{-x}=\dfrac{\pi}{2}`$ 一起，是"三角恒等式武器库"的两件常备货；② 分部积分产生的"新积分"要**先化简再看**（本题不减化就看不出抵消）。
+**点评**：官方答案 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/61a0f653a72d9f78-dark.svg"><img src="图/05-精讲公式/61a0f653a72d9f78-light.svg" alt="e^{\pi/2}"></picture>。**"配对分部"是"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/70f35361a1e7d0f6-dark.svg"><img src="图/05-精讲公式/70f35361a1e7d0f6-light.svg" alt="e^x\times"></picture> 三角分式"题型的第一解法**（对比：循环法处理 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/cf8212ec06494a52-dark.svg"><img src="图/05-精讲公式/cf8212ec06494a52-light.svg" alt="e^x\sin x"></picture> 型，配对互消处理本题这种分式结构）。两个训练动作：① 记住 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ec6283f88817f14f-dark.svg"><img src="图/05-精讲公式/ec6283f88817f14f-light.svg" alt="\dfrac{1+\sin x}{1+\cos x}=\dfrac{1}{2}\sec^2\dfrac{x}{2}+\tan\dfrac{x}{2}"></picture> 这个恒等式——它和 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e62702fa339f4758-dark.svg"><img src="图/05-精讲公式/e62702fa339f4758-light.svg" alt="\arctan e^x+\arctan e^{-x}=\dfrac{\pi}{2}"></picture> 一起，是"三角恒等式武器库"的两件常备货；② 分部积分产生的"新积分"要**先化简再看**（本题不减化就看不出抵消）。
 ⏱️ 目标用时：**4 分钟**。
 
 ---
 
 ### 精讲 9：广义积分——周期分段 + 等比级数（第 4 届非数学类·第二题，2012，10 分）
 
-**题面**：计算 $`\displaystyle\int_0^{+\infty}e^{-2x}\lvert\sin x\rvert\,\mathrm{d}x`$。
+**题面**：计算 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/335e8a6ffdc78b02-dark.svg"><img src="图/05-精讲公式/335e8a6ffdc78b02-light.svg" alt="\displaystyle\int_0^{+\infty}e^{-2x}\lvert\sin x\rvert\,\mathrm{d}x"></picture>。
 
-**思路分析（真实思考）**：含无穷上限 + 被积函数带 $`|\sin x|`$——**两件套信号同时出现，路线唯一**：按 $`\lvert\sin x\rvert`$ 的周期（$`T=\pi`$）把 $`[0,+\infty)`$ 切成 $`[(k-1)\pi,k\pi]`$，每段上算一遍"母积分"，由于每段都带着 $`e^{-2x}`$ 的衰减因子 $`e^{-2(k-1)\pi}`$，各段贡献构成**等比级数**。三个动作：① 分段；② 平移把每段归到 $`[0,\pi]`$、算"母积分"；③ 等比求和。
+**思路分析（真实思考）**：含无穷上限 + 被积函数带 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/1ec1cdc93cf22e5a-dark.svg"><img src="图/05-精讲公式/1ec1cdc93cf22e5a-light.svg" alt="|\sin x|"></picture>——**两件套信号同时出现，路线唯一**：按 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/347526308aa15cb5-dark.svg"><img src="图/05-精讲公式/347526308aa15cb5-light.svg" alt="\lvert\sin x\rvert"></picture> 的周期（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b155eaf5149cf016-dark.svg"><img src="图/05-精讲公式/b155eaf5149cf016-light.svg" alt="T=\pi"></picture>）把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/88592ee824c21158-dark.svg"><img src="图/05-精讲公式/88592ee824c21158-light.svg" alt="[0,+\infty)"></picture> 切成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/1e29b303f67fd3f5-dark.svg"><img src="图/05-精讲公式/1e29b303f67fd3f5-light.svg" alt="[(k-1)\pi,k\pi]"></picture>，每段上算一遍"母积分"，由于每段都带着 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c19fd58951803e31-dark.svg"><img src="图/05-精讲公式/c19fd58951803e31-light.svg" alt="e^{-2x}"></picture> 的衰减因子 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/80912cd833111e52-dark.svg"><img src="图/05-精讲公式/80912cd833111e52-light.svg" alt="e^{-2(k-1)\pi}"></picture>，各段贡献构成**等比级数**。三个动作：① 分段；② 平移把每段归到 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9c79690ea8c7c414-dark.svg"><img src="图/05-精讲公式/9c79690ea8c7c414-light.svg" alt="[0,\pi]"></picture>、算"母积分"；③ 等比求和。
 
-**完整解答（照官方结构）**：先算"母积分"$`\displaystyle\int_0^{\pi}e^{-2t}\sin t\,\mathrm{d}t`$（用公式 $`\int e^{at}\sin bt\,\mathrm{d}t=\dfrac{e^{at}(a\sin bt-b\cos bt)}{a^2+b^2}`$，取 $`a=-2,b=1`$）：
+**完整解答（照官方结构）**：先算"母积分"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/eda4732c0a23c1c0-dark.svg"><img src="图/05-精讲公式/eda4732c0a23c1c0-light.svg" alt="\displaystyle\int_0^{\pi}e^{-2t}\sin t\,\mathrm{d}t"></picture>（用公式 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/eb5ad7bd43bf652a-dark.svg"><img src="图/05-精讲公式/eb5ad7bd43bf652a-light.svg" alt="\int e^{at}\sin bt\,\mathrm{d}t=\dfrac{e^{at}(a\sin bt-b\cos bt)}{a^2+b^2}"></picture>，取 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f2170643f37a0956-dark.svg"><img src="图/05-精讲公式/f2170643f37a0956-light.svg" alt="a=-2,b=1"></picture>）：
 
-```math
-\int_0^{\pi}e^{-2t}\sin t\,\mathrm{d}t=-\frac{e^{-2t}(2\sin t+\cos t)}{5}\Big|_0^{\pi}=\frac{1+e^{-2\pi}}{5}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a30432bae9fc88d1-dark.svg"><img src="图/05-精讲公式/a30432bae9fc88d1-light.svg" alt="\int_0^{\pi}e^{-2t}\sin t\,\mathrm{d}t=-\frac{e^{-2t}(2\sin t+\cos t)}{5}\Big|_0^{\pi}=\frac{1+e^{-2\pi}}{5}."></picture>
 
-分段（第 $`k`$ 段上 $`\lvert\sin x\rvert=(-1)^{k-1}\sin x`$，且 $`e^{-2x}=e^{-2(k-1)\pi}e^{-2t}`$，其中 $`x=(k-1)\pi+t`$）：
+分段（第 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/7cef662c3e948812-dark.svg"><img src="图/05-精讲公式/7cef662c3e948812-light.svg" alt="k"></picture> 段上 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/cfd9d64c575ac9c9-dark.svg"><img src="图/05-精讲公式/cfd9d64c575ac9c9-light.svg" alt="\lvert\sin x\rvert=(-1)^{k-1}\sin x"></picture>，且 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/af5d8973061c3b6d-dark.svg"><img src="图/05-精讲公式/af5d8973061c3b6d-light.svg" alt="e^{-2x}=e^{-2(k-1)\pi}e^{-2t}"></picture>，其中 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b547dcae5a7f9047-dark.svg"><img src="图/05-精讲公式/b547dcae5a7f9047-light.svg" alt="x=(k-1)\pi+t"></picture>）：
 
-```math
-\int_0^{n\pi}e^{-2x}\lvert\sin x\rvert\,\mathrm{d}x=\sum_{k=1}^{n}\int_{(k-1)\pi}^{k\pi}(-1)^{k-1}e^{-2x}\sin x\,\mathrm{d}x=\frac{1+e^{-2\pi}}{5}\sum_{k=1}^{n}e^{-2(k-1)\pi}
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/b287ec637b493efa-dark.svg"><img src="图/05-精讲公式/b287ec637b493efa-light.svg" alt="\int_0^{n\pi}e^{-2x}\lvert\sin x\rvert\,\mathrm{d}x=\sum_{k=1}^{n}\int_{(k-1)\pi}^{k\pi}(-1)^{k-1}e^{-2x}\sin x\,\mathrm{d}x=\frac{1+e^{-2\pi}}{5}\sum_{k=1}^{n}e^{-2(k-1)\pi}"></picture>
 
-```math
-=\frac{1+e^{-2\pi}}{5}\cdot\frac{1-e^{-2n\pi}}{1-e^{-2\pi}}\ \xrightarrow{\ n\to\infty\ }\ \frac{1+e^{-2\pi}}{5(1-e^{-2\pi})}=\frac{1}{5}\cdot\frac{e^{2\pi}+1}{e^{2\pi}-1}.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/af36c2b2acbd2514-dark.svg"><img src="图/05-精讲公式/af36c2b2acbd2514-light.svg" alt="=\frac{1+e^{-2\pi}}{5}\cdot\frac{1-e^{-2n\pi}}{1-e^{-2\pi}}\ \xrightarrow{\ n\to\infty\ }\ \frac{1+e^{-2\pi}}{5(1-e^{-2\pi})}=\frac{1}{5}\cdot\frac{e^{2\pi}+1}{e^{2\pi}-1}."></picture>
 
-（最后一个等号：分子分母同乘 $`e^{2\pi}`$——这就是官方答案的形式。）
-**收尾的严谨性（官方「注」提醒的点）**：由 $`\int_0^{n\pi}\le\int_0^{x}\le\int_0^{(n+1)\pi}`$ 对 $`n\pi\le x\le(n+1)\pi`$ **夹逼**，或先说明广义积分收敛再取子列极限，两种写法均可——**这一步是给分点，别省**。
+（最后一个等号：分子分母同乘 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4a39dac5b488ba1d-dark.svg"><img src="图/05-精讲公式/4a39dac5b488ba1d-light.svg" alt="e^{2\pi}"></picture>——这就是官方答案的形式。）
+**收尾的严谨性（官方「注」提醒的点）**：由 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/57ae7d210e9f62f8-dark.svg"><img src="图/05-精讲公式/57ae7d210e9f62f8-light.svg" alt="\int_0^{n\pi}\le\int_0^{x}\le\int_0^{(n+1)\pi}"></picture> 对 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/1ef1b0d73de0505b-dark.svg"><img src="图/05-精讲公式/1ef1b0d73de0505b-light.svg" alt="n\pi\le x\le(n+1)\pi"></picture> **夹逼**，或先说明广义积分收敛再取子列极限，两种写法均可——**这一步是给分点，别省**。
 
-**点评**：官方答案 $`\dfrac{1}{5}\cdot\dfrac{e^{2\pi}+1}{e^{2\pi}-1}`$（与 $`\dfrac{1+e^{-2\pi}}{5(1-e^{-2\pi})}`$ 等价）。这道题把"广义积分"与"级数"焊在一起：**周期切片之后，每个周期是一个等比项**——这是广义积分求值的第一个万能模板（第二个模板是 §3.9 微例里的"换元化归 Dirichlet"）。⚠️ 常见失分：段平移时**符号因子 $`(-1)^{k-1}`$ 写丢**（$`|\sin|`$ 让 $`\sin`$ 逐段翻号），或把 $`e^{-2x}`$ 平移成 $`e^{-2(k-1)\pi}e^{-2t}`$ 时算错指数。写完检查一遍：等比级数的公比必须是 $`e^{-2\pi}<1`$——它同时也是收敛性的判据。
+**点评**：官方答案 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4649df42e4e7085f-dark.svg"><img src="图/05-精讲公式/4649df42e4e7085f-light.svg" alt="\dfrac{1}{5}\cdot\dfrac{e^{2\pi}+1}{e^{2\pi}-1}"></picture>（与 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/62eaebc096f07e5e-dark.svg"><img src="图/05-精讲公式/62eaebc096f07e5e-light.svg" alt="\dfrac{1+e^{-2\pi}}{5(1-e^{-2\pi})}"></picture> 等价）。这道题把"广义积分"与"级数"焊在一起：**周期切片之后，每个周期是一个等比项**——这是广义积分求值的第一个万能模板（第二个模板是 §3.9 微例里的"换元化归 Dirichlet"）。⚠️ 常见失分：段平移时**符号因子 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/020baa0bb84a6ad2-dark.svg"><img src="图/05-精讲公式/020baa0bb84a6ad2-light.svg" alt="(-1)^{k-1}"></picture> 写丢**（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/f8a460c18ba1e928-dark.svg"><img src="图/05-精讲公式/f8a460c18ba1e928-light.svg" alt="|\sin|"></picture> 让 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a1bb26fd0bc01ac1-dark.svg"><img src="图/05-精讲公式/a1bb26fd0bc01ac1-light.svg" alt="\sin"></picture> 逐段翻号），或把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c19fd58951803e31-dark.svg"><img src="图/05-精讲公式/c19fd58951803e31-light.svg" alt="e^{-2x}"></picture> 平移成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9182185db0fd246e-dark.svg"><img src="图/05-精讲公式/9182185db0fd246e-light.svg" alt="e^{-2(k-1)\pi}e^{-2t}"></picture> 时算错指数。写完检查一遍：等比级数的公比必须是 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/52e710aadfb6460f-dark.svg"><img src="图/05-精讲公式/52e710aadfb6460f-light.svg" alt="e^{-2\pi}&lt;1"></picture>——它同时也是收敛性的判据。
 ⏱️ 目标用时：**8 分钟**（10 分题）。
 
 ---
 
 ### 精讲 10：定积分为常数的函数方程（14 分大题模板）（第 17 届非数学 A 类·解答题第二题，2025，14 分）
 
-**题面**：设 $`f(x)`$ 在 $`(-\infty,+\infty)`$ 上连续，在 $`x=0`$ 处可导，且满足
+**题面**：设 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e827cdf016fed3d7-dark.svg"><img src="图/05-精讲公式/e827cdf016fed3d7-light.svg" alt="f(x)"></picture> 在 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2c53c47adb456f6e-dark.svg"><img src="图/05-精讲公式/2c53c47adb456f6e-light.svg" alt="(-\infty,+\infty)"></picture> 上连续，在 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5c5cb9962a3d1baa-dark.svg"><img src="图/05-精讲公式/5c5cb9962a3d1baa-light.svg" alt="x=0"></picture> 处可导，且满足
 
-```math
-f(x)=x^3+x^2\lim_{x\to 0}\frac{f(x)}{x}-x\int_0^1f(x)\,\mathrm{d}x,
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/de6f2f27e8c01252-dark.svg"><img src="图/05-精讲公式/de6f2f27e8c01252-light.svg" alt="f(x)=x^3+x^2\lim_{x\to 0}\frac{f(x)}{x}-x\int_0^1f(x)\,\mathrm{d}x,"></picture>
 
-求函数 $`f(x)`$ 的表达式。
+求函数 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e827cdf016fed3d7-dark.svg"><img src="图/05-精讲公式/e827cdf016fed3d7-light.svg" alt="f(x)"></picture> 的表达式。
 
-**思路分析（真实思考）**：式中藏着两个"妖怪"：$`\lim\limits_{x\to 0}\dfrac{f(x)}{x}`$ 和 $`\displaystyle\int_0^1f(x)\,\mathrm{d}x`$。**命门在这里**——它们虽然写在 $`f`$ 的解析式里，但**都是数**（定值）！注意那个 $`\lim`$ 里的 $`x`$ 是"哑变量"，与式子外面的 $`x`$ 毫无关系（命题人故意用同一个字母迷惑人，这是本题最大的坑）。
+**思路分析（真实思考）**：式中藏着两个"妖怪"：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/66166f27a8677e77-dark.svg"><img src="图/05-精讲公式/66166f27a8677e77-light.svg" alt="\lim\limits_{x\to 0}\dfrac{f(x)}{x}"></picture> 和 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/deaa86466b93ad52-dark.svg"><img src="图/05-精讲公式/deaa86466b93ad52-light.svg" alt="\displaystyle\int_0^1f(x)\,\mathrm{d}x"></picture>。**命门在这里**——它们虽然写在 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c929f0631aff2b0f-dark.svg"><img src="图/05-精讲公式/c929f0631aff2b0f-light.svg" alt="f"></picture> 的解析式里，但**都是数**（定值）！注意那个 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5c9bcf6e54920426-dark.svg"><img src="图/05-精讲公式/5c9bcf6e54920426-light.svg" alt="\lim"></picture> 里的 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd17c3345d8ec87a-dark.svg"><img src="图/05-精讲公式/bd17c3345d8ec87a-light.svg" alt="x"></picture> 是"哑变量"，与式子外面的 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd17c3345d8ec87a-dark.svg"><img src="图/05-精讲公式/bd17c3345d8ec87a-light.svg" alt="x"></picture> 毫无关系（命题人故意用同一个字母迷惑人，这是本题最大的坑）。
 于是策略变得无比清晰：**先设常数锁定形状，再造两个方程解出它们**。
-- 设 $`a=\lim\limits_{x\to0}\dfrac{f(x)}{x}`$——它等于什么？读到"$`x=0`$ 处可导"这个条件就该警觉：若 $`f(0)=0`$，它恰是 $`f'(0)`$！（**题目给的每个条件都有用**）；再设 $`b=\int_0^1f`$；
-- 于是 $`f(x)=x^3+ax^2-bx`$——三次多项式，只剩两个未知数；
-- **方程 1**：让 $`x\to0`$ 取 $`\frac{f(x)}{x}`$ 的极限，得 $`a`$ 与 $`b`$ 的关系；
-- **方程 2**：两边在 $`[0,1]`$ 上积分，得另一个方程。
+- 设 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/01dc6f58b5875592-dark.svg"><img src="图/05-精讲公式/01dc6f58b5875592-light.svg" alt="a=\lim\limits_{x\to0}\dfrac{f(x)}{x}"></picture>——它等于什么？读到"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5c5cb9962a3d1baa-dark.svg"><img src="图/05-精讲公式/5c5cb9962a3d1baa-light.svg" alt="x=0"></picture> 处可导"这个条件就该警觉：若 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/758a471d2f64dfcb-dark.svg"><img src="图/05-精讲公式/758a471d2f64dfcb-light.svg" alt="f(0)=0"></picture>，它恰是 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/98cb36b28f0b2370-dark.svg"><img src="图/05-精讲公式/98cb36b28f0b2370-light.svg" alt="f'(0)"></picture>！（**题目给的每个条件都有用**）；再设 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/1d2a361974944fe1-dark.svg"><img src="图/05-精讲公式/1d2a361974944fe1-light.svg" alt="b=\int_0^1f"></picture>；
+- 于是 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/069f90884236c061-dark.svg"><img src="图/05-精讲公式/069f90884236c061-light.svg" alt="f(x)=x^3+ax^2-bx"></picture>——三次多项式，只剩两个未知数；
+- **方程 1**：让 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ec9c36c18c43a10c-dark.svg"><img src="图/05-精讲公式/ec9c36c18c43a10c-light.svg" alt="x\to0"></picture> 取 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/4d2e1e6dbddd1299-dark.svg"><img src="图/05-精讲公式/4d2e1e6dbddd1299-light.svg" alt="\frac{f(x)}{x}"></picture> 的极限，得 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/be91f45821083498-dark.svg"><img src="图/05-精讲公式/be91f45821083498-light.svg" alt="a"></picture> 与 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0e18bc49d2784c23-dark.svg"><img src="图/05-精讲公式/0e18bc49d2784c23-light.svg" alt="b"></picture> 的关系；
+- **方程 2**：两边在 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2eb2250576ee090a-dark.svg"><img src="图/05-精讲公式/2eb2250576ee090a-light.svg" alt="[0,1]"></picture> 上积分，得另一个方程。
 
 **完整解答**：
-由原式取 $`x\to0`$：右边 $`\to0`$（$`x^3\to0`$、$`x^2\cdot a\to0`$、$`bx\to0`$），而 $`f`$ 连续，故 $`f(0)=0`$。于是
+由原式取 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ec9c36c18c43a10c-dark.svg"><img src="图/05-精讲公式/ec9c36c18c43a10c-light.svg" alt="x\to0"></picture>：右边 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/69477e4fcf8ccd1c-dark.svg"><img src="图/05-精讲公式/69477e4fcf8ccd1c-light.svg" alt="\to0"></picture>（<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d6b820fcf8b22a37-dark.svg"><img src="图/05-精讲公式/d6b820fcf8b22a37-light.svg" alt="x^3\to0"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9e8cdcec9290e89f-dark.svg"><img src="图/05-精讲公式/9e8cdcec9290e89f-light.svg" alt="x^2\cdot a\to0"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/23cc5b12ed1fe18d-dark.svg"><img src="图/05-精讲公式/23cc5b12ed1fe18d-light.svg" alt="bx\to0"></picture>），而 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c929f0631aff2b0f-dark.svg"><img src="图/05-精讲公式/c929f0631aff2b0f-light.svg" alt="f"></picture> 连续，故 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/758a471d2f64dfcb-dark.svg"><img src="图/05-精讲公式/758a471d2f64dfcb-light.svg" alt="f(0)=0"></picture>。于是
 
-```math
-\lim_{x\to 0}\frac{f(x)}{x}=\lim_{x\to 0}\frac{f(x)-f(0)}{x-0}=f'(0)\quad(\text{导数定义}).
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c10d17638c3419fe-dark.svg"><img src="图/05-精讲公式/c10d17638c3419fe-light.svg" alt="\lim_{x\to 0}\frac{f(x)}{x}=\lim_{x\to 0}\frac{f(x)-f(0)}{x-0}=f'(0)\quad(\text{导数定义})."></picture>
 
-记 $`a=f'(0)`$，$`b=\displaystyle\int_0^1f(x)\,\mathrm{d}x`$，则原式变成
+记 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5bed8b3b9a30a5d4-dark.svg"><img src="图/05-精讲公式/5bed8b3b9a30a5d4-light.svg" alt="a=f'(0)"></picture>，<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/19e83ca5025227ab-dark.svg"><img src="图/05-精讲公式/19e83ca5025227ab-light.svg" alt="b=\displaystyle\int_0^1f(x)\,\mathrm{d}x"></picture>，则原式变成
 
-```math
-f(x)=x^3+ax^2-bx.\qquad\text{(1)}
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/d9566d44db4d0632-dark.svg"><img src="图/05-精讲公式/d9566d44db4d0632-light.svg" alt="f(x)=x^3+ax^2-bx.\qquad\text{(1)}"></picture>
 
-**造第一个方程**（对 (1) 两边取 $`x\to0`$ 的 $`\dfrac{f(x)}{x}`$ 极限）：
+**造第一个方程**（对 (1) 两边取 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/ec9c36c18c43a10c-dark.svg"><img src="图/05-精讲公式/ec9c36c18c43a10c-light.svg" alt="x\to0"></picture> 的 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/7efff67f20ac0514-dark.svg"><img src="图/05-精讲公式/7efff67f20ac0514-light.svg" alt="\dfrac{f(x)}{x}"></picture> 极限）：
 
-```math
-a=\lim_{x\to 0}\big(x^2+ax-b\big)=-b.\qquad\text{(2)}
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/91b7225933f75ba8-dark.svg"><img src="图/05-精讲公式/91b7225933f75ba8-light.svg" alt="a=\lim_{x\to 0}\big(x^2+ax-b\big)=-b.\qquad\text{(2)}"></picture>
 
-**造第二个方程**（对 (1) 两边在 $`[0,1]`$ 上积分）：
+**造第二个方程**（对 (1) 两边在 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/2eb2250576ee090a-dark.svg"><img src="图/05-精讲公式/2eb2250576ee090a-light.svg" alt="[0,1]"></picture> 上积分）：
 
-```math
-b=\int_0^1x^3\,\mathrm{d}x+a\int_0^1x^2\,\mathrm{d}x-b\int_0^1x\,\mathrm{d}x=\frac{1}{4}+\frac{a}{3}-\frac{b}{2}.\qquad\text{(3)}
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9ce18224bfa4831c-dark.svg"><img src="图/05-精讲公式/9ce18224bfa4831c-light.svg" alt="b=\int_0^1x^3\,\mathrm{d}x+a\int_0^1x^2\,\mathrm{d}x-b\int_0^1x\,\mathrm{d}x=\frac{1}{4}+\frac{a}{3}-\frac{b}{2}.\qquad\text{(3)}"></picture>
 
-联立 (2)(3)：$`a=-b`$ 代入 (3) 得 $`b=\dfrac14-\dfrac{b}{3}-\dfrac{b}{2}=\dfrac14-\dfrac{5b}{6}`$，即 $`\dfrac{11b}{6}=\dfrac14`$，解得 $`b=\dfrac{3}{22}`$，$`a=-\dfrac{3}{22}`$。所以
+联立 (2)(3)：<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9f2072c4a4afd29d-dark.svg"><img src="图/05-精讲公式/9f2072c4a4afd29d-light.svg" alt="a=-b"></picture> 代入 (3) 得 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/777cad914a1114b3-dark.svg"><img src="图/05-精讲公式/777cad914a1114b3-light.svg" alt="b=\dfrac14-\dfrac{b}{3}-\dfrac{b}{2}=\dfrac14-\dfrac{5b}{6}"></picture>，即 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/1d251496a3deb683-dark.svg"><img src="图/05-精讲公式/1d251496a3deb683-light.svg" alt="\dfrac{11b}{6}=\dfrac14"></picture>，解得 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/56d3c6e383136514-dark.svg"><img src="图/05-精讲公式/56d3c6e383136514-light.svg" alt="b=\dfrac{3}{22}"></picture>，<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/a957765a58f30324-dark.svg"><img src="图/05-精讲公式/a957765a58f30324-light.svg" alt="a=-\dfrac{3}{22}"></picture>。所以
 
-```math
-f(x)=x^3-\frac{3}{22}x^2-\frac{3}{22}x,\qquad -\infty<x<+\infty.
-```
+<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/33422951d4fc63d5-dark.svg"><img src="图/05-精讲公式/33422951d4fc63d5-light.svg" alt="f(x)=x^3-\frac{3}{22}x^2-\frac{3}{22}x,\qquad -\infty&lt;x&lt;+\infty."></picture>
 
-**点评**：这是**最新一届（2025）的解答题第一题**，也是本系列 S10 考点的"原题模板"。官方按 **6／10／14 分**三档给分：写出"设 $`a,b`$、$`f=x^3+ax^2-bx`$"并得到 $`a=-b`$ 已进入 6 分档；两个方程齐了到 10 分档；解出答案拿满 14 分。哪怕方程没解完，**前六分是"动笔就有"的**——这就是"模板题"的仁慈之处。
-三个易错读数点：① $`\lim\limits_{x\to0}\dfrac{f(x)}{x}`$ 是常数，别试图对它"洛必达到底"（它只是一次数）；② 式子里的 $`x`$ 和 $`\lim`$ 里的 $`x`$ 是两个世界（心里把后者改名 $`t`$ 就不会晕）；③ **考场最后 30 秒做代回自检**：验证 $`f'(0)=-\dfrac{3}{22}`$、$`\displaystyle\int_0^1f=\dfrac{3}{22}`$，代回原方程两边相等 ✓。
-🎯 同类变体预警：把 $`\lim`$ 换成 $`\int_0^2f`$（第 1 届一(2)）、换成二重积分、换成"$`f`$ 在若干点的值"——**骨架永远是"设常数 → 取极限/积分造方程 → 解方程组"**。这个模板值 14 分，务必默写到“闭卷心跳不加速”。
+**点评**：这是**最新一届（2025）的解答题第一题**，也是本系列 S10 考点的"原题模板"。官方按 **6／10／14 分**三档给分：写出"设 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/dd0ac3b27dfddb42-dark.svg"><img src="图/05-精讲公式/dd0ac3b27dfddb42-light.svg" alt="a,b"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5e96b252b9d33d8f-dark.svg"><img src="图/05-精讲公式/5e96b252b9d33d8f-light.svg" alt="f=x^3+ax^2-bx"></picture>"并得到 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9f2072c4a4afd29d-dark.svg"><img src="图/05-精讲公式/9f2072c4a4afd29d-light.svg" alt="a=-b"></picture> 已进入 6 分档；两个方程齐了到 10 分档；解出答案拿满 14 分。哪怕方程没解完，**前六分是"动笔就有"的**——这就是"模板题"的仁慈之处。
+三个易错读数点：① <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bc53854703c9efa6-dark.svg"><img src="图/05-精讲公式/bc53854703c9efa6-light.svg" alt="\lim\limits_{x\to0}\dfrac{f(x)}{x}"></picture> 是常数，别试图对它"洛必达到底"（它只是一次数）；② 式子里的 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd17c3345d8ec87a-dark.svg"><img src="图/05-精讲公式/bd17c3345d8ec87a-light.svg" alt="x"></picture> 和 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5c9bcf6e54920426-dark.svg"><img src="图/05-精讲公式/5c9bcf6e54920426-light.svg" alt="\lim"></picture> 里的 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/bd17c3345d8ec87a-dark.svg"><img src="图/05-精讲公式/bd17c3345d8ec87a-light.svg" alt="x"></picture> 是两个世界（心里把后者改名 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/9c1d2a3a6024e581-dark.svg"><img src="图/05-精讲公式/9c1d2a3a6024e581-light.svg" alt="t"></picture> 就不会晕）；③ **考场最后 30 秒做代回自检**：验证 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/e649f2488b2e15cb-dark.svg"><img src="图/05-精讲公式/e649f2488b2e15cb-light.svg" alt="f'(0)=-\dfrac{3}{22}"></picture>、<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/306c95466172a4c3-dark.svg"><img src="图/05-精讲公式/306c95466172a4c3-light.svg" alt="\displaystyle\int_0^1f=\dfrac{3}{22}"></picture>，代回原方程两边相等 ✓。
+🎯 同类变体预警：把 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/5c9bcf6e54920426-dark.svg"><img src="图/05-精讲公式/5c9bcf6e54920426-light.svg" alt="\lim"></picture> 换成 <picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/0fe59eb78b75bb49-dark.svg"><img src="图/05-精讲公式/0fe59eb78b75bb49-light.svg" alt="\int_0^2f"></picture>（第 1 届一(2)）、换成二重积分、换成"<picture><source media="(prefers-color-scheme: dark)" srcset="图/05-精讲公式/c929f0631aff2b0f-dark.svg"><img src="图/05-精讲公式/c929f0631aff2b0f-light.svg" alt="f"></picture> 在若干点的值"——**骨架永远是"设常数 → 取极限/积分造方程 → 解方程组"**。这个模板值 14 分，务必默写到“闭卷心跳不加速”。
 ⏱️ 目标用时：**8–10 分钟**。（同题另见 01 篇精讲 10。）
 
 ---
+
+<!-- integral-examples:end -->
 
 # 五、易错点清单（每条都是"考场上真丢过分的地方"）
 
